@@ -1,219 +1,327 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
+  <!-- header section start -->
+  <header class="header bright-turquoise-content pt-30 pb-30 header-sticky header-static">
+    <div class="container-fluid">
+        <div class="header-nav header-nav-2 position-relative">
+                <div class="row align-items-center">
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                </div>
-            </div>
 
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <!-- Teams Dropdown -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="ms-3 relative">
-                        <x-dropdown align="right" width="60">
-                            <x-slot name="trigger">
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                        {{ Auth::user()->currentTeam->name }}
+                    <div class="col-xl-5 col-lg-6 hidden-md position-static">
+                        <div class="header-nav">
+                            <nav>
+                                <ul>
+                                    <li><a href="/" class="active"><span>Home </a>
 
-                                        <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            </x-slot>
 
-                            <x-slot name="content">
-                                <div class="w-60">
-                                    <!-- Team Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        {{ __('Manage Team') }}
-                                    </div>
+                                    </li>
+                                    <li class="position-static"><a href="javascript:void(0)"><span>Shop  <i class="fal fa-angle-down"></i></span></a>
+                                        <div class="mega-menu">
+                                            <div class="pl-0 col-xl-7 position-static">
+                                                <ul>
+                                                    <li><a href="shop.html">Shop Layout</a></li>
+                                                    <li><a href="shop4.html">Masonry – Grid</a></li>
+                                                    <li><a href="shop3.html">Pagination</a></li>
+                                                    <li><a href="shop2.html">Ajax Load More</a></li>
+                                                    <li><a href="shop2.html">Infinite Scroll</a></li>
+                                                    <li><a href="shop2.html">Sidebar Right</a></li>
+                                                    <li><a href="shop.html">Sidebar Left</a></li>
+                                                </ul>
 
-                                    <!-- Team Settings -->
-                                    <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                        {{ __('Team Settings') }}
-                                    </x-dropdown-link>
+                                                <ul>
+                                                    <li><a href="shop.html">Shop Pages</a></li>
+                                                    <li><a href="shop2.html">List View</a></li>
+                                                    <li><a href="shop3.html">Small Products</a></li>
+                                                    <li><a href="shop2.html">Large Products</a></li>
+                                                    <li><a href="shop3.html">Shop — 3 Items</a></li>
+                                                    <li><a href="shop3.html">Shop — 4 Items</a></li>
+                                                    <li><a href="shop4.html">Shop — 5 Items</a></li>
+                                                </ul>
 
-                                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <x-dropdown-link href="{{ route('teams.create') }}">
-                                            {{ __('Create New Team') }}
-                                        </x-dropdown-link>
-                                    @endcan
-
-                                    <!-- Team Switcher -->
-                                    @if (Auth::user()->allTeams()->count() > 1)
-                                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
-                                            {{ __('Switch Teams') }}
+                                                <ul>
+                                                    <li><a href="single-product-2.html">Product Layout</a></li>
+                                                    <li><a href="single-product.html">Description Sticky</a></li>
+                                                    <li><a href="single-product-2.html">Product Carousels</a></li>
+                                                    <li><a href="single-product-3.html">Gallery Modern</a></li>
+                                                    <li><a href="single-product-4.html">Thumbnail Left</a></li>
+                                                    <li><a href="single-product-5.html">Thumbnail Right</a></li>
+                                                    <li><a href="single-product-6.html">Thumbnail Botttom</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
+                                    </li>
+                                    <li><a href="javascript:void(0)"><span>Blog <i class="fal fa-angle-down"></i></span> </a>
+                                        <ul class="submenu bold-content">
+                                            <li><a href="blog.html">Grid layout</a></li>
+                                            <li><a href="blog2.html">Large image</a></li>
+                                            <li><a href="blog3.html">Left Sidebar</a></li>
+                                            <li><a href="blog4.html">Right Sidebar</a></li>
+                                            <li><a href="blog5.html">No sidebar</a></li>
+                                        </ul>
+                                    </li>
 
-                                        @foreach (Auth::user()->allTeams() as $team)
-                                            <x-switchable-team :team="$team" />
-                                        @endforeach
-                                    @endif
-                                </div>
-                            </x-slot>
-                        </x-dropdown>
-                    </div>
-                @endif
+                                    <li><a href="javascript:void(0)"><span>More</span> <i class="fal fa-angle-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/faq">Frequently Questions</a></li>
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </li>
 
-                <!-- Settings Dropdown -->
-                <div class="ms-3 relative">
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                                </button>
-                            @else
-                                <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 active:bg-gray-50 dark:active:bg-gray-700 transition ease-in-out duration-150">
-                                        {{ Auth::user()->name }}
-
-                                        <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                        </svg>
-                                    </button>
-                                </span>
-                            @endif
-                        </x-slot>
-
-                        <x-slot name="content">
-                            <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
-                            </div>
-
-                            <x-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
-                            </x-dropdown-link>
-
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
-                                </x-dropdown-link>
-                            @endif
-
-                            <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" x-data>
-                                @csrf
-
-                                <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                            </form>
-                        </x-slot>
-                    </x-dropdown>
-                </div>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-            <div class="flex items-center px-4">
-                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <div class="shrink-0 me-3">
-                        <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                    </div>
-                @endif
-
-                <div>
-                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-                </div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <!-- Account Management -->
-                <x-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                    <x-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                        {{ __('API Tokens') }}
-                    </x-responsive-nav-link>
-                @endif
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}" x-data>
-                    @csrf
-
-                    <x-responsive-nav-link href="{{ route('logout') }}"
-                                   @click.prevent="$root.submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-
-                <!-- Team Management -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Manage Team') }}
-                    </div>
-
-                    <!-- Team Settings -->
-                    <x-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
-                        {{ __('Team Settings') }}
-                    </x-responsive-nav-link>
-
-                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                        <x-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
-                            {{ __('Create New Team') }}
-                        </x-responsive-nav-link>
-                    @endcan
-
-                    <!-- Team Switcher -->
-                    @if (Auth::user()->allTeams()->count() > 1)
-                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
-
-                        <div class="block px-4 py-2 text-xs text-gray-400">
-                            {{ __('Switch Teams') }}
+                                </ul>
+                            </nav>
                         </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-3">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo1.png" alt=""></a>
+                        </div>
+                    </div>
 
-                        @foreach (Auth::user()->allTeams() as $team)
-                            <x-switchable-team :team="$team" component="responsive-nav-link" />
-                        @endforeach
-                    @endif
-                @endif
+                    <div class="col-xl-4 col-lg-3 col-6 col-md-6 col-sm-6 col-9">
+                        <div class="header-right">
+                            <ul class="text-right">
+
+
+                             @auth
+                             <li><a href="/register" class="account"> <article class="account-registar d-inline-block">User Name</article></a></li>
+
+                             @endauth
+                             @guest
+                                  <li><a href="/register" class="account"><i class="fal fa-user-friends"></i> <article class="account-registar d-inline-block">Login/Sign up</article></a></li>
+
+                             @endguest
+
+
+                                <li><a href="javascript:void(0)"><i class="fal fa-search"></i></a>
+
+                                    <!-- search popup -->
+                                    <div id="search-popup">
+                                        <div class="close-search-popup">
+                                            <i class="fal fa-times"></i>
+                                        </div>
+                                        <div class="search-popup-inner mt-135">
+                                            <div class="text-center search-title">
+                                                <h2>Search</h2>
+                                            </div>
+
+                                            <div class="search-content pt-55">
+                                                <ul class="text-center">
+                                                    <li><a href="javascript:void(0)" class="active">All categories</a></li>
+                                                    <li><a href="javascript:void(0)">Clothing</a></li>
+                                                    <li><a href="javascript:void(0)">Gift Cards</a></li>
+                                                    <li><a href="javascript:void(0)">Handbag</a></li>
+                                                    <li><a href="javascript:void(0)">Kids</a></li>
+                                                    <li><a href="javascript:void(0)">Shoes</a></li>
+                                                    <li><a href="javascript:void(0)">Sneaker</a></li>
+                                                    <li><a  href="javascript:void(0)">Women</a></li>
+                                                </ul>
+
+                                                <div class="search-form mt-35">
+                                                    <form action="#" method="post">
+                                                        <input type="text" placeholder="Search Products...">
+                                                        <button type="submit"><i class="fal fa-search"></i></button>
+                                                    </form>
+                                                </div>
+
+                                                <div class="search-result-list">
+                                                    <ul class="text-left">
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/1.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/2.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/3.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/1.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/2.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-block d-flex align-items-center">
+                                                            <div class="search-result-img">
+                                                                <img src="img/product/3.jpg" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="pl-10 search-result-desc">
+                                                                <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>
+                                                                <div class="price">$<span>399</span></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="wishlist.html" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
+                                <li><a href="cart.html"><i class="fal fa-shopping-bag"><span>5</span></i></a>
+                                    <div class="minicart">
+                                        <div class="minicart-body">
+                                            <div class="minicart-content">
+                                                <ul class="text-left">
+                                                    <li>
+                                                        <div class="minicart-img">
+                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/1.jpg" class="w-100" alt=""></a>
+                                                        </div>
+                                                        <div class="minicart-desc">
+                                                            <a href="single-product-2.html" class="p-0">Capitalize on low hanging fruit t</a>
+                                                            <strong>1 × $250.00</strong>
+                                                        </div>
+                                                        <div class="remove">
+                                                            <i class="fal fa-times"></i>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="minicart-img">
+                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/2.jpg" class="w-100" alt=""></a>
+                                                        </div>
+                                                        <div class="minicart-desc">
+                                                            <a href="single-product-2.html" class="p-0">Leather Courriere duffle ba</a>
+                                                            <strong>1 × $150.00</strong>
+                                                        </div>
+                                                        <div class="remove">
+                                                            <i class="fal fa-times"></i>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li>
+                                                        <div class="minicart-img">
+                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/3.jpg" class="w-100" alt=""></a>
+                                                        </div>
+                                                        <div class="minicart-desc">
+                                                            <a href="single-product-2.html" class="p-0">Party Supplies Around Cupcake</a>
+                                                            <strong>1 × $150.00</strong>
+                                                        </div>
+                                                        <div class="remove">
+                                                            <i class="fal fa-times"></i>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="minicart-checkout">
+                                            <div class="mt-8 overflow-hidden minicart-checkout-heading mb-25">
+                                                <strong class="float-left">Subtotal:</strong>
+                                                <span class="float-right price">503.00</span>
+                                            </div>
+                                            <div class="minicart-checkout-links">
+                                                <a href="cart.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
+                                                <a href="checkout.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="fal fa-align-right"></i></a>
+                                    <ul class="text-right submenu bold-content">
+                                        <li><a href="registar.html">My Account</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="question.html">Frequently</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="mobile-menu visible-sm">
+            <div id="mobile-menu">
+                <ul>
+                    <li><a  class="pl-3" href="javascript:void(0)">Home</a>
+                        <ul class="pl-4">
+                            <li><a href="index.html">Home Fashion 1</a></li>
+                            <li><a href="index2.html">Home Fashion 2</a></li>
+                            <li><a href="index3.html">Home Fashion 3</a></li>
+                            <li><a href="index4.html">Home Fashion 4</a></li>
+                            <li><a href="index5.html">Home Fashion 5</a></li>
+                            <li><a href="index6.html">Home Fashion 6</a></li>
+                            <li><a href="index7.html">Home Fashion 7</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a  class="pl-3" href="javascript:void(0)">Shop</a>
+                        <ul>
+                            <li><a href="shop.html">Shop Layout</a></li>
+                            <li><a href="shop4.html">Masonry – Grid</a></li>
+                            <li><a href="shop3.html">Pagination</a></li>
+                            <li><a href="shop2.html">Ajax Load More</a></li>
+                            <li><a href="shop2.html">Infinite Scroll</a></li>
+                            <li><a href="shop2.html">Sidebar Right</a></li>
+                            <li><a href="shop.html">Sidebar Left</a></li>
+                            <li><a href="shop.html">Shop Pages</a></li>
+                            <li><a href="shop2.html">List View</a></li>
+                            <li><a href="shop3.html">Small Products</a></li>
+                            <li><a href="shop2.html">Large Products</a></li>
+                            <li><a href="shop3.html">Shop — 3 Items</a></li>
+                            <li><a href="shop3.html">Shop — 4 Items</a></li>
+                            <li><a href="shop4.html">Shop — 5 Items</a></li>
+                            <li><a href="single-product-2.html">Product Layout</a></li>
+                            <li><a href="single-product.html">Description Sticky</a></li>
+                            <li><a href="single-product-2.html">Product Carousels</a></li>
+                            <li><a href="single-product-3.html">Gallery Modern</a></li>
+                            <li><a href="single-product-4.html">Thumbnail Left</a></li>
+                            <li><a href="single-product-5.html">Thumbnail Right</a></li>
+                            <li><a href="single-product-6.html">Thumbnail Botttom</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Blog</a>
+                        <ul>
+                            <li><a href="blog.html">Grid layout</a></li>
+                            <li><a href="blog2.html">Large image</a></li>
+                            <li><a href="blog3.html">Left Sidebar</a></li>
+                            <li><a href="blog4.html">Right Sidebar</a></li>
+                            <li><a href="blog5.html">No sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Portfolio</a>
+                        <ul>
+                            <li><a href="portfolio.html">Single project</a></li>
+                            <li><a href="portfolio2.html">Two Columns</a></li>
+                            <li><a href="portfolio3.html">Three Columns</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </div>
+        <!-- /. mobile nav -->
     </div>
-</nav>
+</header>
+<!-- header section end -->
+
