@@ -263,17 +263,8 @@
         <div class="mobile-menu visible-sm">
             <div id="mobile-menu">
                 <ul>
-                    <li><a  class="pl-3" href="javascript:void(0)">Home</a>
-                        <ul class="pl-4">
-                            <li><a href="index.html">Home Fashion 1</a></li>
-                            <li><a href="index2.html">Home Fashion 2</a></li>
-                            <li><a href="index3.html">Home Fashion 3</a></li>
-                            <li><a href="index4.html">Home Fashion 4</a></li>
-                            <li><a href="index5.html">Home Fashion 5</a></li>
-                            <li><a href="index6.html">Home Fashion 6</a></li>
-                            <li><a href="index7.html">Home Fashion 7</a></li>
+                    <li><a  class="pl-3" href="/">Home</a>
 
-                        </ul>
                     </li>
                     <li><a  class="pl-3" href="javascript:void(0)">Shop</a>
                         <ul>
@@ -309,14 +300,8 @@
                             <li><a href="blog5.html">No sidebar</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Portfolio</a>
-                        <ul>
-                            <li><a href="portfolio.html">Single project</a></li>
-                            <li><a href="portfolio2.html">Two Columns</a></li>
-                            <li><a href="portfolio3.html">Three Columns</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+
+
                 </ul>
             </div>
         </div>
