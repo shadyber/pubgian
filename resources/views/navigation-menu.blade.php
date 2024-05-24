@@ -16,45 +16,24 @@
                                     <li class="position-static"><a href="javascript:void(0)"><span>Shop  <i class="fal fa-angle-down"></i></span></a>
                                         <div class="mega-menu">
                                             <div class="pl-0 col-xl-7 position-static">
-                                                <ul>
-                                                    <li><a href="shop.html">Shop Layout</a></li>
-                                                    <li><a href="shop4.html">Masonry – Grid</a></li>
-                                                    <li><a href="shop3.html">Pagination</a></li>
-                                                    <li><a href="shop2.html">Ajax Load More</a></li>
-                                                    <li><a href="shop2.html">Infinite Scroll</a></li>
-                                                    <li><a href="shop2.html">Sidebar Right</a></li>
-                                                    <li><a href="shop.html">Sidebar Left</a></li>
-                                                </ul>
 
                                                 <ul>
-                                                    <li><a href="shop.html">Shop Pages</a></li>
-                                                    <li><a href="shop2.html">List View</a></li>
-                                                    <li><a href="shop3.html">Small Products</a></li>
-                                                    <li><a href="shop2.html">Large Products</a></li>
-                                                    <li><a href="shop3.html">Shop — 3 Items</a></li>
-                                                    <li><a href="shop3.html">Shop — 4 Items</a></li>
-                                                    <li><a href="shop4.html">Shop — 5 Items</a></li>
-                                                </ul>
+                                                    <li><a href="/shop?list=latest">Latest Products</a></li>
+                                                    <li><a href="/shop?list=popular">Most Popular</a></li>
+                                                    <li><a href="/offers">Offer</a></li>
+                                                    <li><a href="/shop?list=discount">Discounts</a></li>
 
-                                                <ul>
-                                                    <li><a href="single-product-2.html">Product Layout</a></li>
-                                                    <li><a href="single-product.html">Description Sticky</a></li>
-                                                    <li><a href="single-product-2.html">Product Carousels</a></li>
-                                                    <li><a href="single-product-3.html">Gallery Modern</a></li>
-                                                    <li><a href="single-product-4.html">Thumbnail Left</a></li>
-                                                    <li><a href="single-product-5.html">Thumbnail Right</a></li>
-                                                    <li><a href="single-product-6.html">Thumbnail Botttom</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </li>
                                     <li><a href="javascript:void(0)"><span>Blog <i class="fal fa-angle-down"></i></span> </a>
                                         <ul class="submenu bold-content">
-                                            <li><a href="blog.html">Grid layout</a></li>
-                                            <li><a href="blog2.html">Large image</a></li>
-                                            <li><a href="blog3.html">Left Sidebar</a></li>
-                                            <li><a href="blog4.html">Right Sidebar</a></li>
-                                            <li><a href="blog5.html">No sidebar</a></li>
+                                            <li><a href="/blog">Blog Categoryt</a></li>
+                                            <li><a href="/blog">Blog Category 2</a></li>
+                                            <li><a href="/blog">Blog Category 3</a></li>
+                                            <li><a href="/blog">Blog Category 4</a></li>
+                                            <li><a href="/blog">Blog Category 5</a></li>
                                         </ul>
                                     </li>
 

@@ -47,7 +47,8 @@
                 <!-- Page Heading -->
                     @if (isset($header))
                     <!-- breadcrumb-area-start -->
-                <section class="breadcrumb-area" data-background="img/bg/page-title.png">
+
+                <section class="breadcrumb-area" data-background="/img/bg/page-title.png">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-12">
@@ -96,15 +97,16 @@
         </ul>
 
         <div class="tab-content mt-25">
-           
+
         <div class="tab-pane fade show active" id="main-tab-1">
                 <div class="product-content-inner">
                     <div class="product-grid">
                         <div class="row">
+
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
                                     <div class="row">
-                                        
+
                                     <div class="col-xl-12">
                                             <div class="mb-40 product-box position-relative middle-view">
                                                 <div class="product-box-wrapper">
@@ -333,6 +335,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!-- /. product grid left -->
                             <div class="col-xl-6">
                                 <div class="product-grid-right">
@@ -566,13 +569,14 @@
                                 </div>
                             </div>
                             <!-- /. product grid right -->
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="tab-pane fade pl-15" id="main-tab-2">
-            
+
             <div class="product-grid">
                         <div class="row">
                             <div class="col-xl-6">
@@ -1040,7 +1044,7 @@
                             <!-- /. product grid right -->
                         </div>
                     </div>
-            
+
                 </div>
 
             <div class="tab-pane fade pl-15" id="main-tab-3">

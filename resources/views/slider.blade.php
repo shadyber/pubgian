@@ -1,9 +1,9 @@
 
             <!-- slider section start -->
             <section class="slider">
-                <div class="container">
+
                     <div class="slider-active center-dots number-dots">
-                        <div class="single-slider large-content h-790 d-flex align-items-center" data-background="img/slider/20.jpg">
+                        <div class="single-slider large-content h-790 d-flex align-items-center" data-background="/img/slider/20.jpg">
                             <div class="container-fluid">
                                 <div class="single-slider-inner">
                                     <div class="pl-10 text-left single-slider-content light-content" style="text-align: left !important;">
@@ -58,6 +58,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
             </section>
             <!-- slider section end -->
