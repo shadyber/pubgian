@@ -79,31 +79,33 @@
 <section class="our-products mt-120">
     <div class="container">
         <div class="text-center generic-title">
-            <h2 class="mb-20">#Our Products</h2>
-            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil</p>
-            <p>doming id quod mazim placerat facer possim assum typi non habent claritatem insitam.</p>
+            <h2 class="mb-20">#Our Items</h2>
+            <p>Feel Free to choose any product in our shop </p>
+            <p>and you can order anytime.</p>
         </div>
         <ul class="mb-3 nav nav-pills nav-2 pl-15 left-tab-link justify-content-center mt-65" >
             <li class="nav-item">
-              <a class="active" data-toggle="pill" href="#main-tab-1">clothing <sup>(15)</sup></a>
+              <a class="active" data-toggle="pill" href="#main-tab-1">Vertual Coins <sup>(15)</sup></a>
             </li>
             <li class="nav-item">
               <a class="" data-toggle="pill" href="#main-tab-2">Accessories <sup>(10)</sup></a>
             </li>
             <li class="nav-item">
-              <a class=""  data-toggle="pill" href="#main-tab-3">Handbag <sup>(18)</sup></a>
+              <a class=""  data-toggle="pill" href="#main-tab-3">Devices <sup>(18)</sup></a>
             </li>
         </ul>
 
         <div class="tab-content mt-25">
-            <div class="tab-pane fade show active" id="main-tab-1">
+           
+        <div class="tab-pane fade show active" id="main-tab-1">
                 <div class="product-content-inner">
                     <div class="product-grid">
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
                                     <div class="row">
-                                        <div class="col-xl-12">
+                                        
+                                    <div class="col-xl-12">
                                             <div class="mb-40 product-box position-relative middle-view">
                                                 <div class="product-box-wrapper">
                                                     <div class="product-img">
@@ -131,6 +133,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                             <div class="mb-40 product-box position-relative middle-view">
                                                 <div class="product-box-wrapper">
@@ -567,8 +570,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="tab-pane fade pl-15" id="main-tab-2">
-               <div class="product-grid">
+            
+            <div class="product-grid">
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
@@ -1035,7 +1040,9 @@
                             <!-- /. product grid right -->
                         </div>
                     </div>
-            </div>
+            
+                </div>
+
             <div class="tab-pane fade pl-15" id="main-tab-3">
                <div class="product-grid">
                         <div class="row">
