@@ -29,11 +29,11 @@
                                     </li>
                                     <li><a href="javascript:void(0)"><span>Blog <i class="fal fa-angle-down"></i></span> </a>
                                         <ul class="submenu bold-content">
-                                            <li><a href="/blog">Blog Categoryt</a></li>
-                                            <li><a href="/blog">Blog Category 2</a></li>
-                                            <li><a href="/blog">Blog Category 3</a></li>
-                                            <li><a href="/blog">Blog Category 4</a></li>
-                                            <li><a href="/blog">Blog Category 5</a></li>
+
+                                            @foreach(\App\Models\BlogCategory::allCategories() as $blogcategory)
+                                            <li><a href="/blog/{{$blogcategory->slug}}"> {{$blogcategory->title}} </a></li>
+                                            @endforeach
+
                                         </ul>
                                     </li>
 

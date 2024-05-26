@@ -24,7 +24,7 @@ class BlogFactory extends Factory
             'photo' => $this->faker->imageUrl('1024','768'),
             'thumb' => $this->faker->imageUrl('640','480'),
             'user_id' => $this->faker->randomNumber(1,3),
-            'blog_category_id' => $this->faker->randomNumber(1,2),
+            'blog_category_id' =>$this->faker->randomNumber(1,3),
          ];
     }
 }

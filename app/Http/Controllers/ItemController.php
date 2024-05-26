@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use Illuminate\Http\Request;
 
+use Cviebrock\EloquentSluggable\Services\SlugService;
 class ItemController extends Controller
 {
     /**
@@ -13,6 +14,7 @@ class ItemController extends Controller
     public function index()
     {
         //
+        return 'index';
     }
 
     /**
@@ -20,7 +22,8 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+
+        $slug = SlugService::createSlug(Post::class, 'slug', 'My First Post');
     }
 
     /**
@@ -34,9 +37,11 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Item $item)
+    public function show($slug)
     {
-        //
+        $item = Item::whereSlug($slug)->get()[0];
+
+        return view('shop.show')->with(['item'=>$item]);
     }
 
     /**

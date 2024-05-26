@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/shop', function () {
+    $items=\App\Models\Item::lastN(12);
+    return view('shop.index')->with(['items'=>$items]);
+});
+
+Route::resource('/item',\App\Http\Controllers\ItemController::class);
 
 Route::middleware([
     'auth:sanctum',

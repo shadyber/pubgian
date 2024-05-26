@@ -52,7 +52,7 @@
                 @if (isset($header))
                 <!-- breadcrumb-area-start -->
             <section class="breadcrumb-area" data-background="img/bg/page-title.png">
-                <div class="container">
+                <div class="container p-2 m-2">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="breadcrumb-content" style="flex-direction: column;">

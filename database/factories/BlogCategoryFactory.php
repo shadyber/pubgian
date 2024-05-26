@@ -17,7 +17,8 @@ class BlogCategoryFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>$this->faker->word,
+        'title'=>$this->faker->word,
+        'slug'=>$this->faker->word,
         'photo'=>$this->faker->imageUrl(640,480,'fashion'),
         'detail'=>$this->faker->sentence,
         ];

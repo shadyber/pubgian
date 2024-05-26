@@ -18,21 +18,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
-   
-        User::factory(10)->create();
-         
+
         $this->call([
-         
+
           ItemCategorySeeder::class,
+
             AdminSeeder::class,
-            
-           
+
+
+
           ]);
-  Item::factory(30)->create();
-     
-     
-   
+
+        User::factory(10)->create();
+
+        Item::factory(30)->create();
+       BlogCategory::factory(5)->create();
+
+
+
     }
 }
