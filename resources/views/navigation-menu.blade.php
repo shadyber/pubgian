@@ -31,7 +31,7 @@
                                         <ul class="submenu bold-content">
 
                                             @foreach(\App\Models\BlogCategory::allCategories() as $blogcategory)
-                                            <li><a href="/blog/{{$blogcategory->slug}}"> {{$blogcategory->title}} </a></li>
+                                            <li><a href="/blogcategory/{{$blogcategory->slug}}"> {{$blogcategory->title}} </a></li>
                                             @endforeach
 
                                         </ul>

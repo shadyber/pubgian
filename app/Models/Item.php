@@ -10,10 +10,10 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Item extends Model
 {
     use HasFactory;
-    use Sluggable; 
+    use Sluggable;
 
     protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo','color','price','user_id','tags','weight','init_qnt','status','badge'];
- 
+
     public function sluggable(): array
     {
         // TODO: Implement sluggable() method.
@@ -22,7 +22,7 @@ class Item extends Model
         ];
     }
 
-    
+
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -42,10 +42,10 @@ class Item extends Model
     }
 
 
-public function reviews(){
-    return $this->hasMany(Review::class);
-}
-    
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+
     public static function lastN($n){
         return Item::orderBy('id', 'desc')->take($n)->get();
     }
@@ -53,5 +53,5 @@ public function reviews(){
     public static function popularN($n){
         return Item::orderBy('visit', 'desc')->take($n)->get();
     }
- 
+
 }

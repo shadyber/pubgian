@@ -39,9 +39,16 @@ class ItemController extends Controller
      */
     public function show($slug)
     {
-        $item = Item::whereSlug($slug)->get()[0];
 
-        return view('shop.show')->with(['item'=>$item]);
+        $item=Item::where('slug',$slug)->get();
+
+
+          if(count($item)>0){
+
+              return view('shop.show')->with(['item'=>$item[0]]);
+          }
+
+              return  view('shop.index')->with(['error'=>'item not found','items'=>Item::lastN(12)]);
     }
 
     /**

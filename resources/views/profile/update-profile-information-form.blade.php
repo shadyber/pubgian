@@ -16,6 +16,7 @@
                             wire:model.live="photo"
                             x-ref="photo"
                             x-on:change="
+
                                     photoName = $refs.photo.files[0].name;
                                     const reader = new FileReader();
                                     reader.onload = (e) => {

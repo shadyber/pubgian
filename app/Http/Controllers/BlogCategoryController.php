@@ -12,7 +12,8 @@ class BlogCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $blogcategory=BlogCategory::all();
+       return view('blogcategory.index')->with(['blogcategory'=>$blogcategory]);
     }
 
     /**
@@ -36,7 +37,9 @@ class BlogCategoryController extends Controller
      */
     public function show(BlogCategory $blogCategory)
     {
-        //
+        dd($blogCategory->blogs);
+       $blogs=$blogCategory->blogs;
+
     }
 
     /**

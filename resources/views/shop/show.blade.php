@@ -138,7 +138,7 @@
                                             <a data-toggle="pill" href="#desc-tab-3">Additional information</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="" data-toggle="pill" href="#desc-tab-2">Reviews (0)</a>
+                                            <a class="" data-toggle="pill" href="#desc-tab-2">Reviews ({{count($item->reviews)}})</a>
                                         </li>
                                     </ul>
                                     <div class="container container-1200">
@@ -153,12 +153,15 @@
                                             <div class="tab-pane fade" id="desc-tab-2">
                                                 <div class="single-product-tab-content">
                                                     <h3 class="title mb-30">Reviews</h3>
+
+                                                    @foreach($item->reviews as $rv)
                                                     <div class="review-box-item">
                                                         <div class="row">
                                                             <div class="col-xl-1 col-lg-2 col-md-2 col-3 pr-xl-0">
                                                                 <div class="review-box-img d-block text-right">
-                                                                    <img src="/img/small-img/1.jpg" width="60" height="60"
-                                                                         class="avatar-img" alt="">
+
+                                                                    <img src="{{$rv->user->profile_photo_url}}" width="60" height="60"
+                                                                         class="avatar-img" alt="{{$rv->user->name}}">
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-11 col-lg-10 col-9 pl-0">
@@ -166,14 +169,15 @@
                                                                     <div class="row">
                                                                         <div class="col-7">
                                                                             <div class="author-name">
-                                                                                <h6>John96</h6>
+                                                                                <h6>{{$rv->user->name}}</h6>
                                                                                 <div class="content">
-                                                                                    <p class="mb-0">Awesome</p>
+                                                                                    <p class="mb-0">{{$rv->comment}}</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-5 pr-5-px pl-0">
                                                                             <div class="rating text-right">
+                                                                                ({{$rv->stars}})
                                                                                 <i class="fal fa-star red-color"></i>
                                                                                 <i class="fal fa-star red-color"></i>
                                                                                 <i class="fal fa-star red-color"></i>
@@ -186,7 +190,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p>There are no reviews yet.</p>
+
+                                                    @endforeach
+                                                    <p>There are no more reviews yet.</p>
                                                     <h4>Add a review</h4>
 
                                                     <form action="#" method="POST">
@@ -206,21 +212,7 @@
                                                         <textarea name="review" id="review" cols="30" rows="6"
                                                                   class="form-control"></textarea>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="name">Name <span class="required">*</span></label>
-                                                        <input type="text" name="name" id="name" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email">Email <span class="required">*</span></label>
-                                                        <input type="email" name="email" id="email" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <div class="checkbox-input">
-                                                            <input type="checkbox" id="condition" name="condition">
-                                                        </div>
-                                                        <label for="condition">Save my name, email, and website in this browser for the
-                                                            next time I comment.</label>
-                                                    </div>
+
                                                     <div class="form-group">
                                                         <button type="submit" class="generic-btn red-hover-btn"
                                                                 style="font-size: 14px !important;">Submit</button>
@@ -234,7 +226,8 @@
                                                         <tbody>
                                                         <tr>
                                                             <th>size</th>
-                                                            
+                                                            <th>Other spec</th>
+
                                                         </tr>
                                                         <tr>
 
