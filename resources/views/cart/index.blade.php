@@ -30,25 +30,26 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach(\App\Models\Cart::myCart() as $cart)
                                                 <tr>
                                                     <td>
                                                         <div class="table-data">
-                                                            <button class="close-btn"><i class="fal fa-times"></i></button>
+                                                            <a href="/removecart/{{$cart['id']}}"><i class="fa fa-times"></i></a>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="table-data">
-                                                            <img src="img/product/1.jpg" width="80" alt="">
+                                                            <img src="{{$cart['thumb']}}" width="80" alt="">
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="table-data">
-                                                            <h6><a href="single-product-3.html" class="title">Blandit vel eros condimentum ulla</a></h6>
+                                                            <h6><a href="/item/{{$cart['slug']}}" class="title">{{$cart['name']}}</a></h6>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="table-data">
-                                                            <span class="price">$90.00</span>
+                                                            <span class="price">$ETB {{$cart['price']}}</span>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -58,42 +59,13 @@
                                                     </td>
                                                     <td>
                                                         <div class="table-data">
-                                                            <span class="total">$90.00</span>
+                                                            <span class="total">$ETB{{$cart['price'] * $cart['quantity']}}</span>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <button class="close-btn"><i class="fal fa-times"></i></button>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <img src="img/product/2.jpg" width="80" alt="">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <h6><a href="single-product-3.html" class="title">Blossom Porcelain Side Plates</a></h6>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <span class="price">$90.00</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <input type="number" value="1" style="margin-right: 20px; width: 119px;">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="table-data">
-                                                            <span class="total">$90.00</span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                @endforeach
+
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -114,7 +86,7 @@
                                         <tbody>
                                         <tr>
                                             <th>Subtotal</th>
-                                            <td>$134.00</td>
+                                            <td>$ETB {{\App\Models\Cart::totalCart()}}</td>
                                         </tr>
                                         <tr>
                                             <th>Shipping</th>
@@ -149,7 +121,7 @@
                                         </tr>
                                         <tr>
                                             <th>Total</th>
-                                            <td><strong>$134.00</strong></td>
+                                            <td><strong>$ETB {{\App\Models\Cart::totalCart()}}</strong></td>
                                         </tr>
                                         </tbody>
                                     </table>

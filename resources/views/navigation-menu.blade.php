@@ -166,61 +166,37 @@
                                     </div>
                                 </li>
                                 <li><a href="wishlist.html" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-                                <li><a href="/mycart"><i class="fal fa-shopping-bag"><span>5</span></i></a>
+                                <li><a href="/mycart"><i class="fal fa-shopping-bag"><span>{{count(\App\Models\Cart::myCart())}}</span></i></a>
                                     <div class="minicart">
                                         <div class="minicart-body">
                                             <div class="minicart-content">
                                                 <ul class="text-left">
+                                                 @foreach(\App\Models\Cart::myCart() as $cart)
                                                     <li>
                                                         <div class="minicart-img">
-                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/1.jpg" class="w-100" alt=""></a>
+                                                            <a href="/item/{{$cart['slug']}}" class="p-0"><img src="{{$cart['thumb']}}" class="w-100" alt=""></a>
                                                         </div>
                                                         <div class="minicart-desc">
-                                                            <a href="single-product-2.html" class="p-0">Capitalize on low hanging fruit t</a>
-                                                            <strong>1 × $250.00</strong>
+                                                            <a href="/item/{{$cart['slug']}}" class="p-0">{{$cart['name']}}</a>
+                                                            <strong>{{$cart['quantity']}} × $ETB {{$cart['price']}}</strong>
                                                         </div>
                                                         <div class="remove">
-                                                            <i class="fal fa-times"></i>
+                                                            <a href="/removecart/{{$cart['id']}}"><i class="fa fa-times"></i></a>
                                                         </div>
                                                     </li>
+                                                    @endforeach
 
-                                                    <li>
-                                                        <div class="minicart-img">
-                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/2.jpg" class="w-100" alt=""></a>
-                                                        </div>
-                                                        <div class="minicart-desc">
-                                                            <a href="single-product-2.html" class="p-0">Leather Courriere duffle ba</a>
-                                                            <strong>1 × $150.00</strong>
-                                                        </div>
-                                                        <div class="remove">
-                                                            <i class="fal fa-times"></i>
-                                                        </div>
-                                                    </li>
-
-
-                                                    <li>
-                                                        <div class="minicart-img">
-                                                            <a href="single-product-2.html" class="p-0"><img src="img/product/3.jpg" class="w-100" alt=""></a>
-                                                        </div>
-                                                        <div class="minicart-desc">
-                                                            <a href="single-product-2.html" class="p-0">Party Supplies Around Cupcake</a>
-                                                            <strong>1 × $150.00</strong>
-                                                        </div>
-                                                        <div class="remove">
-                                                            <i class="fal fa-times"></i>
-                                                        </div>
-                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="minicart-checkout">
                                             <div class="mt-8 overflow-hidden minicart-checkout-heading mb-25">
                                                 <strong class="float-left">Subtotal:</strong>
-                                                <span class="float-right price">503.00</span>
+                                                <span class="float-right price">{{\App\Models\Cart::totalCart()}}</span>
                                             </div>
                                             <div class="minicart-checkout-links">
                                                 <a href="/mycart" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
-                                                <a href="checkout.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
+                                                <a href="/checkout" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
                                             </div>
                                         </div>
                                     </div>
