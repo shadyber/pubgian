@@ -38,7 +38,7 @@ class Item extends Model
     }
 
     public function itemPhotos(){
-        return $this->hasMany(ItemPhotos::class);
+        return $this->hasMany(ItemPhoto::class);
     }
 
 
@@ -52,6 +52,12 @@ class Item extends Model
 
     public static function popularN($n){
         return Item::orderBy('visit', 'desc')->take($n)->get();
+    }
+    public static function lastNCategory($n, $cat){
+        return Item::where('item_category_id',$cat)->orderBy('id','desc')->take($n)->get();
+    }
+    public static function popularNCategory($n,$cat){
+        return Item::where('item_category_id',$cat)->orderBy('visit', 'desc')->take($n)->get();
     }
 
 }

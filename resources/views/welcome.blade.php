@@ -98,7 +98,7 @@
 
         <div class="tab-content mt-25">
 
-        <div class="tab-pane fade show active" id="main-tab-1">
+            <div class="tab-pane fade show active" id="main-tab-1">
                 <div class="product-content-inner">
                     <div class="product-grid">
                         <div class="row">
@@ -106,14 +106,15 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
                                     <div class="row">
+                                        @foreach(\App\Models\Item::popularNCategory(9,1) as $it1)
 
-                                    <div class="col-xl-12">
+                                        <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
                                             <div class="mb-40 product-box position-relative middle-view">
                                                 <div class="product-box-wrapper">
                                                     <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
+                                                        <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                        <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <img src="{{$it1->photo}}" alt="" class="w-100">
                                                         </div></a>
                                                         <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                     </div>
@@ -121,217 +122,22 @@
                                                     <div class="product-desc">
                                                         <div class="product-desc-top">
                                                             <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
+                                                                <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
                                                             </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
+                                                        <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
                                                         <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        @endforeach
 
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-4.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-4-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-5.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-5-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-6.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-6-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-10.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-10-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -340,231 +146,37 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-right">
                                     <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-11.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-11-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @foreach(\App\Models\Item::lastNCategory(9,2) as $it1)
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
+                                                <div class="mb-40 product-box position-relative middle-view">
+                                                    <div class="product-box-wrapper">
+                                                        <div class="product-img">
+                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
+                                                                </div></a>
+                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+
+                                                        <div class="product-desc">
+                                                            <div class="product-desc-top">
+                                                                <div class="categories">
+                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
+                                                                </div>
+                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            </div>
+                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
+                                                            <div class="price-switcher">
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-12.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-12-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
                                                             </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-13.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-13-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-14.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-14-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-15.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-15-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-16.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-16-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -582,230 +194,38 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
                                     <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @foreach(\App\Models\Item::lastNCategory(9,2) as $it1)
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
+                                                <div class="mb-40 product-box position-relative middle-view">
+                                                    <div class="product-box-wrapper">
+                                                        <div class="product-img">
+                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
+                                                                </div></a>
+                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+
+                                                        <div class="product-desc">
+                                                            <div class="product-desc-top">
+                                                                <div class="categories">
+                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
+                                                                </div>
+                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            </div>
+                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
+                                                            <div class="price-switcher">
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @endforeach
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-4.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-4-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-5.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-5-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-6.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-6-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-10.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-10-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -813,231 +233,38 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-right">
                                     <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-11.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-11-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @foreach(\App\Models\Item::popularNCategory(9,2) as $it1)
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
+                                                <div class="mb-40 product-box position-relative middle-view">
+                                                    <div class="product-box-wrapper">
+                                                        <div class="product-img">
+                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
+                                                                </div></a>
+                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+
+                                                        <div class="product-desc">
+                                                            <div class="product-desc-top">
+                                                                <div class="categories">
+                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
+                                                                </div>
+                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            </div>
+                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
+                                                            <div class="price-switcher">
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-12.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-12-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
                                                             </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-13.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-13-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @endforeach
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-14.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-14-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-15.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-15-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-16.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-16-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1053,230 +280,38 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-left">
                                     <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @foreach(\App\Models\Item::popularNCategory(9,3) as $it1)
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
+                                                <div class="mb-40 product-box position-relative middle-view">
+                                                    <div class="product-box-wrapper">
+                                                        <div class="product-img">
+                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
+                                                                </div></a>
+                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+
+                                                        <div class="product-desc">
+                                                            <div class="product-desc-top">
+                                                                <div class="categories">
+                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
+                                                                </div>
+                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            </div>
+                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
+                                                            <div class="price-switcher">
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @endforeach
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-4.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-4-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-5.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-5-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-6.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-6-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-2.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-2-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-10.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-10-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1284,231 +319,38 @@
                             <div class="col-xl-6">
                                 <div class="product-grid-right">
                                     <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-11.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-11-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @foreach(\App\Models\Item::lastNCategory(9,3) as $it1)
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
+                                                <div class="mb-40 product-box position-relative middle-view">
+                                                    <div class="product-box-wrapper">
+                                                        <div class="product-img">
+                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
+                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
+                                                                </div></a>
+                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
                                                         </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
+
+                                                        <div class="product-desc">
+                                                            <div class="product-desc-top">
+                                                                <div class="categories">
+                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+
+                                                                </div>
+                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
+                                                            </div>
+                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
+                                                            <div class="price-switcher">
+                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
                                                                 <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-12.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-12-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
                                                             </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-13.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-13-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                                        @endforeach
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-14.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-14-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-15.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-15-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-16.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-16-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-1.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-1-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="img/product/farniture-3.jpg" class="w-100" alt="">
-                                                        <a href="single-product-2.html" class="d-block"><div class="second-img">
-                                                            <img src="img/product/farniture-3-hover.jpg" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
-
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="shop2.html" class="product-category"><span>Sneaker</span></a>
-                                                                <a href="shop2.html" class="product-category"><span>Woman</span></a>
-                                                            </div>
-                                                            <a href="wishlist.html" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$3.00</span>
-                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1520,7 +362,7 @@
     </div>
 <div class="container gray-border-bottom pb-110 load-btn">
         <div class="text-center mt-60">
-            <a href="shop.html" class="load-more">MORE PRODUCTS</a>
+            <a href="/shop" class="load-more">MORE PRODUCTS</a>
        </div>
     </div>
 
@@ -1531,8 +373,7 @@
 
 
 
-
-                </main>
+  </main>
 
                 @include('footer')
             </div>
