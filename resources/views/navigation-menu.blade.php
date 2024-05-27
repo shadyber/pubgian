@@ -204,7 +204,7 @@
                                 <li><a href="javascript:void(0)"><i class="fal fa-align-right"></i></a>
                                     <ul class="text-right submenu bold-content">
                                         <li><a href="registar.html">My Account</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="/checkout">Checkout</a></li>
                                         <li><a href="shop.html">Shop</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                         <li><a href="question.html">Frequently</a></li>

@@ -125,7 +125,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
-                                    <a href="checkout.html" class="mt-40 generic-btn red-hover-btn w-100 d-block" style="height: 50px;">Procced to checkout</a>
+                                    <a href="/checkout" class="mt-40 generic-btn red-hover-btn w-100 d-block" style="height: 50px;">Procced to checkout</a>
                                 </div>
                                 <!-- /. cart widget -->
                             </div>

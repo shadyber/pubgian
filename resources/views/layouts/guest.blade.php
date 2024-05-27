@@ -291,7 +291,7 @@
                                                 </div>
                                                 <div class="minicart-checkout-links">
                                                     <a href="/mycart" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
-                                                    <a href="checkout.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
+                                                    <a href="/checkout" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,7 +299,7 @@
                                     <li><a href="javascript:void(0)"><i class="fal fa-align-right"></i></a>
                                         <ul class="text-right submenu bold-content">
                                             <li><a href="login.html">My Account</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="/checkout">Checkout</a></li>
                                             <li><a href="shop.html">Shop</a></li>
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                             <li><a href="question.html">Frequently</a></li>
@@ -443,7 +443,7 @@
                                         <ul>
                                             <li><a href="javascript:void(0)" class="title">MY ACCOUNT</a></li>
                                             <li><a href="login.html">My account</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="/checkout">Checkout</a></li>
                                             <li><a href="shop2.html">Shop</a></li>
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                             <li><a href="question.html">Frequently</a></li>

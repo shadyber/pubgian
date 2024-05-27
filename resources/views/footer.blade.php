@@ -28,7 +28,7 @@
                                                     <ul>
                                                         <li><a href="javascript:void(0)" class="title">MY ACCOUNT</a></li>
                                                         <li><a href="login.html">My account</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
+                                                        <li><a href="/checkout">Checkout</a></li>
                                                         <li><a href="shop2.html">Shop</a></li>
                                                         <li><a href="wishlist.html">Wishlist</a></li>
                                                         <li><a href="question.html">Frequently</a></li>
