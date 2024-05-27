@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class BlogCategoryController extends Controller
@@ -13,7 +15,9 @@ class BlogCategoryController extends Controller
     public function index()
     {
         $blogcategory=BlogCategory::all();
-       return view('blogcategory.index')->with(['blogcategory'=>$blogcategory]);
+
+        $blogs=Blog::lastN(2);
+       return view('blogcategory.index')->with(['blogcategory'=>$blogcategory,'blogs'=>$blogs]);
     }
 
     /**
@@ -35,10 +39,11 @@ class BlogCategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(BlogCategory $blogCategory)
+    public function show($id)
     {
-        dd($blogCategory->blogs);
-       $blogs=$blogCategory->blogs;
+
+        $blogs=Blog::where('blog_category_id',$id)->get();
+ return view('blog.index')->with(['blogs'=>$blogs]);
 
     }
 

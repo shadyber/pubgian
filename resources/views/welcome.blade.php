@@ -129,7 +129,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -158,7 +158,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -186,7 +186,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -214,7 +214,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -242,7 +242,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -270,7 +270,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -298,7 +298,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -326,7 +326,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -362,7 +362,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -391,7 +391,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -419,7 +419,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -447,7 +447,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -475,7 +475,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -503,7 +503,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -531,7 +531,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -559,7 +559,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -604,7 +604,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -632,7 +632,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -660,7 +660,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -688,7 +688,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -716,7 +716,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -744,7 +744,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -772,7 +772,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -800,7 +800,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -835,7 +835,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -864,7 +864,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -892,7 +892,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -920,7 +920,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -948,7 +948,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -976,7 +976,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1004,7 +1004,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1032,7 +1032,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1075,7 +1075,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Coating design dining lamp</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1103,7 +1103,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1131,7 +1131,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clook</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1159,7 +1159,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Chair living room fiberglass</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1187,7 +1187,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1215,7 +1215,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1243,7 +1243,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1271,7 +1271,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">CARATOS  – Upholstered leather bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1306,7 +1306,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">KIIK  – Modular bench seating</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1335,7 +1335,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Designs Woolrich Klettersack Back</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1363,7 +1363,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">GRAY 15 – Upholstered bench</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1391,7 +1391,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1419,7 +1419,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1447,7 +1447,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">Wood design bedroom clock</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+add to cart</a>
+                                                                <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" >+add to cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1475,7 +1475,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1503,7 +1503,7 @@
                                                         <a href="single-product-3.html" class="product-title eright-turquoise-color-hover">LANDSCAPE  – Folding fabric deck chair</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$3.00</span>
-                                                                <a href="cart.html" class="add-cart text-capitalize switcher-item">+select options</a>
+                                                                <a href="/mycart" class="add-cart text-capitalize switcher-item">+select options</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1562,5 +1562,6 @@
         <script src="/js/jquery.magnific-popup.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
+        <script src="/js/cartjs.js"></script>
         </body>
     </html>

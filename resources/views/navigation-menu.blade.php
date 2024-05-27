@@ -31,7 +31,7 @@
                                         <ul class="submenu bold-content">
 
                                             @foreach(\App\Models\BlogCategory::allCategories() as $blogcategory)
-                                            <li><a href="/blogcategory/{{$blogcategory->slug}}"> {{$blogcategory->title}} </a></li>
+                                            <li><a href="/blogcategory/{{$blogcategory->id}}"> {{$blogcategory->title}} </a></li>
                                             @endforeach
 
                                         </ul>
@@ -166,7 +166,7 @@
                                     </div>
                                 </li>
                                 <li><a href="wishlist.html" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-                                <li><a href="cart.html"><i class="fal fa-shopping-bag"><span>5</span></i></a>
+                                <li><a href="/mycart"><i class="fal fa-shopping-bag"><span>5</span></i></a>
                                     <div class="minicart">
                                         <div class="minicart-body">
                                             <div class="minicart-content">
@@ -219,7 +219,7 @@
                                                 <span class="float-right price">503.00</span>
                                             </div>
                                             <div class="minicart-checkout-links">
-                                                <a href="cart.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
+                                                <a href="/mycart" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
                                                 <a href="checkout.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
                                             </div>
                                         </div>

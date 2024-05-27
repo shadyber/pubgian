@@ -96,7 +96,7 @@
                                                     <div class="single-product-action mt-35">
                                                         <ul>
                                                             <li><a href="wishlist.html"><i class="fal fa-heart"></i> add to wishlist</a></li>
-                                                            <li><a href="cart.html"><i class="fal fa-abacus"></i> add to compare</a></li>
+                                                            <li><a href="/mycart"><i class="fal fa-abacus"></i> add to compare</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="sku"><span>Sku: </span> <strong>ID:{{$item->id}}</strong></div>
@@ -278,7 +278,7 @@
                                                     <a href="/item/{{$li->slug}}" class="product-title"> {{$li->name}}</a>
                                                     <div class="price-switcher">
                                                         <span class="price switcher-item">$ETB {{$li->price}}</span>
-                                                        <a href="#add-to-cart" class="add-cart text-capitalize switcher-item">+add to
+                                                        <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" itemid="{{$li->id}}">+add to
                                                             cart</a>
                                                     </div>
                                                 </div>

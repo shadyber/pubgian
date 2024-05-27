@@ -16,7 +16,7 @@
                             <div class="primary-blog-box mb-60">
                                 <div class="blog-wrapper">
                                     <div class="blog-box-img">
-                                        <a href="/blogcategory/{{$bcat->slug}}"><img src="{{$bcat->photo}}" class="w-100" alt="{{$bcat->title}}"></a>
+                                        <a href="/blogcategory/{{$bcat->id}}"><img src="{{$bcat->photo}}" class="w-100" alt="{{$bcat->title}}"></a>
                                         <div class="blog-box-tags">
                                             <a href="#">{{$bcat->detail}}</a>
 

@@ -133,6 +133,7 @@
                                                                    <a href="javascript:void(0)"
                                                                       class="product-img-link quick-view-1 text-capitalize">Quick
                                                                        view</a>
+                                                                       view</a>
                                                                </div>
 
                                                                <div class="product-desc pb-20">
@@ -148,7 +149,7 @@
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
                                                                        <a href="#add-to-cart"
-                                                                          class="add-cart text-capitalize switcher-item">+add
+                                                                          class="add-cart text-capitalize switcher-item add-to-cart" itemid="{{$item->id}}">+add
                                                                            to cart</a>
                                                                    </div>
                                                                </div>
@@ -196,7 +197,7 @@
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
                                                                        <a href="#add-to-cart"
-                                                                          class="add-cart text-capitalize switcher-item">+add
+                                                                          class="add-cart text-capitalize switcher-item add-to-cart" itemid="{{$item->id}}">+add
                                                                            to cart</a>
                                                                    </div>
                                                                </div>
@@ -245,7 +246,7 @@
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
                                                                        <a href="#add-to-cart"
-                                                                          class="add-cart text-capitalize switcher-item">+add
+                                                                          class="add-cart text-capitalize switcher-item add-to-cart" itemid="{{$item->id}}">+add
                                                                            to cart</a>
                                                                    </div>
                                                                </div>
@@ -305,7 +306,7 @@
                                                                                    <li>–{{$item->tags}}</li>
 
                                                                                </ul>
-                                                                               <a href="cart.html"
+                                                                               <a href="/mycart"
                                                                                   class="list-add-cart-btn text-capitalize mt-40">+add
                                                                                    to cart</a>
                                                                                <a href="wishlist.html" data-toggle="tooltip"

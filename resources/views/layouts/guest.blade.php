@@ -237,7 +237,7 @@
                                         </div>
                                     </li>
                                     <li><a href="wishlist.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-                                    <li><a href="cart.html"><i class="fal fa-shopping-bag"><span>5</span></i></a>
+                                    <li><a href="/mycart"><i class="fal fa-shopping-bag"><span>5</span></i></a>
                                         <div class="minicart">
                                             <div class="minicart-body">
                                                 <div class="minicart-content">
@@ -290,7 +290,7 @@
                                                     <span class="float-right price">503.00</span>
                                                 </div>
                                                 <div class="minicart-checkout-links">
-                                                    <a href="cart.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
+                                                    <a href="/mycart" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
                                                     <a href="checkout.html" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
                                                 </div>
                                             </div>
@@ -513,6 +513,7 @@
     <script src="/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/cartjs.js"></script>
 
 
     </body>
