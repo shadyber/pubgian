@@ -95,7 +95,7 @@
                                                     </div>
                                                     <div class="single-product-action mt-35">
                                                         <ul>
-                                                            <li><a href="wishlist.html"><i class="fal fa-heart"></i> add to wishlist</a></li>
+                                                            <li><a href="/wishlist"><i class="fal fa-heart"></i> add to wishlist</a></li>
                                                             <li><a href="/mycart"><i class="fal fa-abacus"></i> add to compare</a></li>
                                                         </ul>
                                                     </div>

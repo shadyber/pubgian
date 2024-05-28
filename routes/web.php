@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\AdminAddProductComponent;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,4 +29,7 @@ Route::get('/multipleaddtocart/{id}/{qnt}',[\App\Http\Controllers\CartController
 Route::get('/removecart/{id}/',[\App\Http\Controllers\CartController::class,'removeCart'])->name('removeCart');
 Route::get('/destroyCart',[\App\Http\Controllers\CartController::class,'destroyCart'])->name('destroyCartm');
 
-Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart'); 
+Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart');
+
+Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
+Route::get('/admin/product',AdminAddProductComponent::class)->name('admin.products');

@@ -30,7 +30,7 @@
                                                         <li><a href="login.html">My account</a></li>
                                                         <li><a href="/checkout">Checkout</a></li>
                                                         <li><a href="shop2.html">Shop</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><a href="/wishlist">Wishlist</a></li>
                                                         <li><a href="question.html">Frequently</a></li>
                                                     </ul>
                                                 </div>

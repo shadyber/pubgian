@@ -141,7 +141,7 @@
                                                                            <a href="/shop"
                                                                               class="product-category"><span>{{$item->category->title}}</span></a>
                                                                        </div>
-                                                                       <a href="wishlist.html" class="wishlist float-right"><span><i
+                                                                       <a href="/wishlist" class="wishlist float-right"><span><i
                                                                                    class="fal fa-heart"></i></span></a>
                                                                    </div>
                                                                    <a href="single-product-4.html" class="product-title">{{substr( $item->detail,0,64)}}</a>
@@ -308,7 +308,7 @@
                                                                                <a href="/mycart"
                                                                                   class="list-add-cart-btn text-capitalize mt-40">+add
                                                                                    to cart</a>
-                                                                               <a href="wishlist.html" data-toggle="tooltip"
+                                                                               <a href="/wishlist" data-toggle="tooltip"
                                                                                   data-placement="top"
                                                                                   title="wishlist"><span><i
                                                                                            class="fal fa-heart"></i></span></a>

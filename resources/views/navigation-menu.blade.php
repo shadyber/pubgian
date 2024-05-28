@@ -165,7 +165,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="wishlist.html" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
+                                <li><a href="/wishlist" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
                                 <li><a href="/mycart"><i class="fal fa-shopping-bag"><span>{{count(\App\Models\Cart::myCart())}}</span></i></a>
                                     <div class="minicart">
                                         <div class="minicart-body">
@@ -203,11 +203,11 @@
                                 </li>
                                 <li><a href="javascript:void(0)"><i class="fal fa-align-right"></i></a>
                                     <ul class="text-right submenu bold-content">
-                                        <li><a href="registar.html">My Account</a></li>
+                                        <li><a href="/dashboard">My Account</a></li>
                                         <li><a href="/checkout">Checkout</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="question.html">Frequently</a></li>
+                                        <li><a href="/shop">Shop</a></li>
+                                        <li><a href="/wishlist">Wishlist</a></li>
+                                        <li><a href="/faq">Frequently</a></li>
                                     </ul>
                                 </li>
                             </ul>
