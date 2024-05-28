@@ -340,13 +340,7 @@
                         </div>
                     </section>
                     <!-- related product end -->
-
-
-
-
-
-
-                    <!-- product popup start -->
+     <!-- product popup start -->
                     <section id="product-popup">
                         <div class="product-popup-overlay"></div>
                         <div class="product-popup-container">

@@ -5,9 +5,8 @@
 
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="p-2">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-3">
                <div class="container">
                    <div class="shop-wrapper">
                        <div class="row">
@@ -345,5 +344,5 @@
 
             </div>
         </div>
-    </div>
+
 </x-app-layout>
