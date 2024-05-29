@@ -14,18 +14,18 @@ class AdminAddProductComponent extends Component
     use WithFileUploads;
     public $name;
     public $slug;
-    public $short_description;
-    public $description;
-    public $regular_price;
-    public $sale_price;
-    public $SKU;
-    public $stock_status;
-    public $featured;
-    public $quantity;
-    public $image;
-    public $category_id;
-    public $images;
-
+    public $detail;
+    public $item_category_id;
+    public $thumb;
+    public $photo;
+    public $color;
+    public $price;
+    public $user_id;
+    public $tags;
+    public $weight;
+    public $init_qnt;
+    public $status;
+    public $badge;
     public function mount()
     {
         $this->stock_status = 'instock';
@@ -42,48 +42,48 @@ class AdminAddProductComponent extends Component
         $this->validateOnly($fields,[
             'name' => 'required',
             'slug' => 'required|unique:products',
-            'short_description' => 'required',
-            'description' => 'required',
-            'regular_price' => 'required|numeric',
-            'sale_price' => 'numeric',
-            'SKU' => 'required',
-            'stock_status' => 'required',
-            'quantity' => 'required|numeric',
+             'detail' => 'required',
+             'price' => 'required|numeric',
+
+            'status' => 'required',
+            'init_qnt' => 'required|numeric',
             'image' => 'required|mimes:jpeg,png',
-            'category_id' => 'required'
+            'item_category_id' => 'required'
         ]);
     }
 
     public function addProduct()
     {
+        //
         $this->validate([
             'name' => 'required',
             'slug' => 'required|unique:products',
-            'short_description' => 'required',
-            'description' => 'required',
-            'regular_price' => 'required|numeric',
-            'sale_price' => 'numeric',
-            'SKU' => 'required',
-            'stock_status' => 'required',
-            'quantity' => 'required|numeric',
+            'detail' => 'required',
+            'price' => 'required|numeric',
+
+            'status' => 'required',
+            'init_qnt' => 'required|numeric',
             'image' => 'required|mimes:jpeg,png',
-            'category_id' => 'required'
+            'item_category_id' => 'required'
         ]);
         $product = new Item();
         $product->name = $this->name;
         $product->slug = $this->slug;
-        $product->short_description = $this->short_description;
-        $product->description = $this->description;
-        $product->regular_price = $this->regular_price;
-        $product->sale_price = $this->sale_price;
-        $product->SKU = $this->SKU;
-        $product->stock_status = $this->stock_status;
-        $product->featured = $this->featured;
-        $product->quantity = $this->quantity;
+        $product->detail = $this->detail;
+
+        $product->price = $this->price;
+
+        $product->status = $this->status;
+        $product->init_qnt = $this->init_qnt;
+        $product->whight = $this->weight;
+        $product->color = $this->color;
+        $product->tags = $this->tags;
+        $product->badge = $this->badge;
 
         $imageName = Carbon::now()->timestamp. '.' . $this->image->extension();
         $this->image->storeAs('products',$imageName);
-        $product->image = $imageName;
+        $product->thumb = $imageName;
+        $product->photo = $imageName;
 
         if($this->images)
         {
@@ -97,7 +97,7 @@ class AdminAddProductComponent extends Component
             $product->images = $imagesname;
         }
 
-        $product->category_id = $this->category_id;
+        $product->item_category_id = $this->item_category_id;
         $product->save();
         session()->flash('message','Product has been created successfully!');
     }
