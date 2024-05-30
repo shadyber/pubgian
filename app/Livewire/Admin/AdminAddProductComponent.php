@@ -18,6 +18,7 @@ class AdminAddProductComponent extends Component
     public $item_category_id;
     public $thumb;
     public $photo;
+    public $images;
     public $color;
     public $price;
     public $user_id;
@@ -53,19 +54,16 @@ class AdminAddProductComponent extends Component
     }
 
     public function addProduct()
-    {
-        //
-        $this->validate([
-            'name' => 'required',
-            'slug' => 'required|unique:products',
-            'detail' => 'required',
-            'price' => 'required|numeric',
+    {      $this->validate([
+        'name' => 'required',
+        'slug' => 'required|unique:products',
+        'detail' => 'required',
 
-            'status' => 'required',
-            'init_qnt' => 'required|numeric',
-            'image' => 'required|mimes:jpeg,png',
-            'item_category_id' => 'required'
-        ]);
+
+        'category_id' => 'required'
+    ]);
+
+
         $product = new Item();
         $product->name = $this->name;
         $product->slug = $this->slug;
