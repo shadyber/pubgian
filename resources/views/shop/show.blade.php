@@ -86,11 +86,11 @@
 
                                                     <div class="quick-quantity mt-60">
                                                         <form action="#" method="POST">
-                                                            <button type="submit" class="list-add-cart-btn red-hover-btn border-0"
+                                                            <a  href="#" class="add-to-cart list-add-cart-btn red-hover-btn border-0"
                                                                     style="padding-left: 80px;padding-right: 80px;transition: all .5s;">add
                                                                 to
                                                                 cart
-                                                            </button>
+                                                            </a>
                                                         </form>
                                                     </div>
                                                     <div class="single-product-action mt-35">

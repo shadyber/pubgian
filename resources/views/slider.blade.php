@@ -8,7 +8,7 @@
                                 <div class="single-slider-inner">
                                     <div class="pl-10 text-left single-slider-content light-content" style="text-align: left !important;">
                                         <div class="slider-heading small-heading-text" data-animation="flipInX" data-delay=".4s">
-                                            <h2 class="mb-0">Big Sale</h2>
+                                            <h2 class="mb-0"></h2>
                                             <h2 class="mb-0">New Trending 2019</h2>
                                         </div>
                                         <div class="slider-desc" data-animation="flipInX" data-delay=".6s">

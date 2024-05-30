@@ -12,6 +12,7 @@ Route::get('/shop', function () {
 });
 
 Route::resource('/item',\App\Http\Controllers\ItemController::class);
+Route::resource('/category',\App\Http\Controllers\ItemCategoryController::class);
 Route::resource('/blogcategory',\App\Http\Controllers\BlogCategoryController::class);
 
 Route::middleware([

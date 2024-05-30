@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
+            $table->bigInteger('parent_category_id')->default(0);
             $table->string('photo')->default('/images/category.png');
             $table->mediumText('detail')->nullable();
-        
+
             $table->timestamps();
         });
     }
