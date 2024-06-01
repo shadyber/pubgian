@@ -113,7 +113,7 @@
                                                 <div class="product-box-wrapper">
                                                     <div class="product-img">
                                                         <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                        <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                        <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                             <img src="{{$it1->photo}}" alt="" class="w-100">
                                                         </div></a>
                                                         <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
@@ -153,7 +153,7 @@
                                                     <div class="product-box-wrapper">
                                                         <div class="product-img">
                                                             <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                                     <img src="{{$it1->photo}}" alt="" class="w-100">
                                                                 </div></a>
                                                             <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
@@ -201,7 +201,7 @@
                                                     <div class="product-box-wrapper">
                                                         <div class="product-img">
                                                             <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                                     <img src="{{$it1->photo}}" alt="" class="w-100">
                                                                 </div></a>
                                                             <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
@@ -240,7 +240,7 @@
                                                     <div class="product-box-wrapper">
                                                         <div class="product-img">
                                                             <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                                     <img src="{{$it1->photo}}" alt="" class="w-100">
                                                                 </div></a>
                                                             <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
@@ -287,7 +287,7 @@
                                                     <div class="product-box-wrapper">
                                                         <div class="product-img">
                                                             <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                                     <img src="{{$it1->photo}}" alt="" class="w-100">
                                                                 </div></a>
                                                             <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
@@ -326,7 +326,7 @@
                                                     <div class="product-box-wrapper">
                                                         <div class="product-img">
                                                             <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="{{$it1->slug}}" class="d-block"><div class="second-img">
+                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
                                                                     <img src="{{$it1->photo}}" alt="" class="w-100">
                                                                 </div></a>
                                                             <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>

@@ -17,8 +17,7 @@ class AdminAddProductComponent extends Component
 
     }
 
-<<<<<<< Updated upstream
-=======
+
     public function generateSlug()
     {
         $this->slug = Str::slug($this->name,'-');
@@ -83,7 +82,7 @@ class AdminAddProductComponent extends Component
         $product->save();
         session()->flash('message','Product has been created successfully!');
     }
->>>>>>> Stashed changes
+
 
     public function render()
     {
