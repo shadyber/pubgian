@@ -14,14 +14,17 @@ class Wizard extends Component
     public $name,
         $price, $detail,
         $status = 1,
-        $photo,$thumb,
-        $color,$weight,
+        $photo,
+        $thumb,
+        $color,
+        $weight,
         $item_category_id,
         $init_qnt=1,
         $badge='new',
         $tags,
         $visit=0;
     public $successMessage = '';
+
 
     public $item_categories;
 
@@ -36,7 +39,8 @@ class Wizard extends Component
         $validatedData = $this->validate([
             'name' => 'required|unique:items',
             'detail' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
+            'init_qnt'=>'required|numeric',
             'item_category_id' => 'required|numeric',
         ]);
 

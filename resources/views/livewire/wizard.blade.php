@@ -37,7 +37,7 @@
                     <div class="form-group">
                         @error('price') <span class="error red-color">{{ $message }}</span> @enderror
                         <x-label for="price" value="{{ __('Price') }}" />
-                        <x-input id="price" type="text" name="price" :value="old('price')" required autofocus autocomplete="price"  wire:model="price" />
+                        <x-input id="price" type="number" name="price" :value="old('price')" required autofocus autocomplete="price"  wire:model="price" />
 
                     </div>
 
@@ -51,8 +51,9 @@
 
                     </div>
 
+                    <x-label for="item_category_id" value="{{ __('Select Category') }}" />
 
-                    @error('detail') <span class="error red-color">{{ $message }}</span> @enderror
+                    @error('item_category_id') <span class="error red-color">{{ $message }}</span> @enderror
 
                     <select wire:model="item_category_id" class="form-control black-color">
                         <option value="" selected>Choose Item Category</option>
@@ -66,8 +67,12 @@
                     </select>
 
                     <div class="form-group">
+                        @error('init_qnt') <span class="error red-color">{{ $message }}</span> @enderror
+                        <x-label for="init_qnt" value="{{ __('In Stock Qnt') }}" />
+                        <x-input id="init_qnt" type="number" name="init_qnt" :value="old('init_qnt')? old('init_qnt') : 1" required autofocus autocomplete="init_qnt"  wire:model="init_qnt" />
 
                     </div>
+
 
 
 
@@ -79,9 +84,9 @@
         <div class="row setup-content {{ $currentStep != 2 ? 'displayNone' : '' }}" id="step-2">
             <div class="col-xs-12">
                 <div class="col-md-12">
-                    <h3> Step 2</h3>
+                    <h3> Photo </h3>
+                    @livewire('multiple-image-upload')
 
-               step 2
                     <x-button class="btn-primary nextBtn pull-right" type="button" wire:click="secondStepSubmit">Next</x-button>
                     <x-button class="btn-danger nextBtn pull-right" type="button" wire:click="back(1)">Back</x-button>
                 </div>
@@ -147,15 +152,5 @@
         }
 
     </style>
-        <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-
-        <script>
-            ClassicEditor
-                .create( document.querySelector( '#editor' ) )
-                .catch( error => {
-                    console.error( error );
-                } );
-            CKEDITOR.replace( 'detail' );
-        </script>
 
 </div>

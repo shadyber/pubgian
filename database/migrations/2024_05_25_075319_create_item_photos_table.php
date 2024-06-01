@@ -16,12 +16,12 @@ return new class extends Migration
             $table->unsignedBigInteger('item_id');
             $table->foreign('item_id')->references('id')->on('items');
 
-            $table->string('photo');
-            $table->string('thumb');
+            $table->longText('photo');
+            $table->longText('thumb');
 
             $table->string('title')->default('item photo');
             $table->bigInteger('verity_id')->default(0);
- 
+
             $table->timestamps();
         });
     }
