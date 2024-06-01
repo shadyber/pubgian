@@ -55,7 +55,7 @@
 </div>
 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-3">
 <div class="logo">
-<a href="/"><img src="img/logo/logo1.png" alt=""></a>
+<a href="/"><img  src="/img/logo/logo1.png" alt=""></a>
 </div>
 </div>
 
@@ -109,7 +109,7 @@
 <ul class="text-left">
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/1.jpg" class="w-100" alt="">
+            <img  src="/img/product/1.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
@@ -118,7 +118,7 @@
     </li>
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/2.jpg" class="w-100" alt="">
+            <img  src="/img/product/2.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
@@ -127,7 +127,7 @@
     </li>
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/3.jpg" class="w-100" alt="">
+            <img  src="/img/product/3.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>
@@ -136,7 +136,7 @@
     </li>
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/1.jpg" class="w-100" alt="">
+            <img  src="/img/product/1.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
@@ -145,7 +145,7 @@
     </li>
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/2.jpg" class="w-100" alt="">
+            <img  src="/img/product/2.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
@@ -154,7 +154,7 @@
     </li>
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img src="img/product/3.jpg" class="w-100" alt="">
+            <img  src="/img/product/3.jpg" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
             <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>

@@ -352,34 +352,34 @@
                                             <div class="tab-content">
                                                 <div class="tab-pane fade show active" id="product-popup-1">
                                                     <div class="product-popup-img">
-                                                        <img src="img/product/10.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/10.jpg" class="w-100" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="product-popup-2">
                                                     <div class="product-popup-img">
-                                                        <img src="img/product/11.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/11.jpg" class="w-100" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="tab-pane fade" id="product-popup-3">
                                                     <div class="product-popup-img">
-                                                        <img src="img/product/12.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/12.jpg" class="w-100" alt="">
                                                     </div>
                                                 </div>
                                             </div>
                                             <ul class="nav nav-pills justify-content-center mt-10">
                                                 <li class="nav-item">
                                                     <a class="active" data-toggle="pill" href="#product-popup-1">
-                                                        <img src="img/product/10.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/10.jpg" class="w-100" alt="">
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="" data-toggle="pill" href="#product-popup-2">
-                                                        <img src="img/product/11.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/11.jpg" class="w-100" alt="">
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a class="" data-toggle="pill" href="#product-popup-3">
-                                                        <img src="img/product/12.jpg" class="w-100" alt="">
+                                                        <img  src="/img/product/12.jpg" class="w-100" alt="">
                                                     </a>
                                                 </li>
                                             </ul>

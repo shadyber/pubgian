@@ -3,7 +3,9 @@
 namespace App\Livewire;
 
 use App\Models\Item;
+use App\Models\ItemCategory;
 use Livewire\Component;
+
 
 class Wizard extends Component
 {
@@ -20,6 +22,8 @@ class Wizard extends Component
         $tags,
         $visit=0;
     public $successMessage = '';
+
+    public $item_categories;
 
 
     /**

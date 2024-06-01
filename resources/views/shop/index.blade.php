@@ -144,7 +144,7 @@
                                                                        <a href="/wishlist" class="wishlist float-right"><span><i
                                                                                    class="fal fa-heart"></i></span></a>
                                                                    </div>
-                                                                   <a href="single-product-4.html" class="product-title">{{substr( $item->detail,0,64)}}</a>
+                                                                   <a href="/item/{{$item->slug}}" class="product-title">{{substr( $item->detail,0,64)}}</a>
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
                                                                        <a href="#add-to-cart"
@@ -241,7 +241,7 @@
                                                                        <a href="/shop?list=wishlist" class="wishlist float-right"><span><i
                                                                                    class="fal fa-heart"></i></span></a>
                                                                    </div>
-                                                                   <a href="{{$item->name}}" class="product-title">{{$item->name}}</a>
+                                                                   <a href="/item/{{$item->slug}}" class="product-title">{{$item->name}}</a>
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
                                                                        <a href="#add-to-cart"

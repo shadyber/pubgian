@@ -44,16 +44,35 @@
 
                     <div class="form-group">
                         @error('detail') <span class="error red-color">{{ $message }}</span> @enderror
-                        <x-label for="detail" value="{{ __('Detail') }}" />
-                        <textarea id="detail" type="text" rows="3"   required autofocus autocomplete="detail"  wire:model="detail" >
-                            detil
-                        </textarea>
+                        <x-label for="detail" value="{{ __('Detail') }}" id="detail" />
+
+                        <textarea class="form-control ckeditor" id="detail" name="detail"  cols="30" rows="10"
+                                  wire:model.lazy="detail"></textarea>
+
+                    </div>
+
+
+                    @error('detail') <span class="error red-color">{{ $message }}</span> @enderror
+
+                    <select wire:model="item_category_id" class="form-control black-color">
+                        <option value="" selected>Choose Item Category</option>
+                        @foreach (\App\Models\ItemCategory::all()->all() as $mb)
+                            <option value="{{$mb->id}}" class="border-0 text-dark">
+                               @if($mb->parent_category_id !=0)
+                               -  {{\App\Models\ItemCategory::find($mb->parent_category_id)->title}} /
+                                @endif
+                                {{$mb->title}}    </option>
+                        @endforeach
+                    </select>
+
+                    <div class="form-group">
 
                     </div>
 
 
 
-                    <button class="btn btn-primary nextBtn btn-lg pull-right " wire:click="firstStepSubmit" type="button" >Next</button>
+                    <x-button class="btn-primary nextBtn pull-right" type="button"  wire:click="firstStepSubmit" type="button" >Next</x-button>
+
                 </div>
             </div>
         </div>
@@ -63,8 +82,8 @@
                     <h3> Step 2</h3>
 
                step 2
-                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" wire:click="secondStepSubmit">Next</button>
-                    <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(1)">Back</button>
+                    <x-button class="btn-primary nextBtn pull-right" type="button" wire:click="secondStepSubmit">Next</x-button>
+                    <x-button class="btn-danger nextBtn pull-right" type="button" wire:click="back(1)">Back</x-button>
                 </div>
             </div>
         </div>
@@ -75,8 +94,8 @@
 
                  form 3
 
-                    <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">Finish!</button>
-                    <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(2)">Back</button>
+                    <x-button  wire:click="submitForm" type="button">Finish!</x-button>
+                    <x-button  type="button" wire:click="back(2)">Back</x-button>
                 </div>
             </div>
         </div>
@@ -128,13 +147,15 @@
         }
 
     </style>
-        <script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+
         <script>
-            const editor = CKEDITOR.replace('detail');
-            editor.on('change', function(event){
-                console.log(event.editor.getData())
-            @this.set('detail', event.editor.getData());
-            })
+            ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+            CKEDITOR.replace( 'detail' );
         </script>
 
 </div>

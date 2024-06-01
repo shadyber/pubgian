@@ -11,13 +11,13 @@
                                     <div class="col-xl-5 col-lg-5 col-md-9">
                                         <div class="footer-item has-desc">
                                             <div class="footer-logo mb-25">
-                                                <img src="img/logo/logo2.png" width="120" height="31" alt="">
+                                                <img src="/img/logo/logo2.png" width="120" height="31" alt="">
                                             </div>
                                             <div class="footer-desc">
                                                 <p class="mb-10">Mazia store is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
                                             </div>
                                             <div class="footer-img mt-65">
-                                                <img src="img/logo/paypal.png" alt="">
+                                                <img  src="/img/logo/paypal.png" alt="">
                                             </div>
                                         </div>
                                     </div>

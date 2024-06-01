@@ -6,7 +6,7 @@
             <div class="col-xl-4 col-md-6">
                 <a href="shop3.html">
                     <div class="banner-img has-content body-banner">
-                        <img src="img/banner/banner61.png" class="w-100" alt="">
+                        <img  src="/img/banner/banner61.png" class="w-100" alt="">
                         <div class="banner-top-content">
                             <h4>Game Coins</h4>
                             <p>18 Products</p>
@@ -19,7 +19,7 @@
             <div class="col-xl-4 col-md-6">
                 <a href="shop3.html">
                     <div class="banner-img has-content body-banner">
-                        <img src="img/banner/banner62.png" class="w-100" alt="">
+                        <img  src="/img/banner/banner62.png" class="w-100" alt="">
                         <div class="banner-top-content">
                             <h4>Accessories </h4>
                             <p>80 Products</p>
@@ -32,7 +32,7 @@
            <div class="col-xl-4 col-md-6">
                 <a href="shop3.html">
                     <div class="banner-img has-content body-banner">
-                        <img src="img/banner/banner63.png" class="w-100" alt="">
+                        <img  src="/img/banner/banner63.png" class="w-100" alt="">
                         <div class="banner-top-content">
                             <h4>Devices</h4>
                             <p>8 Products</p>
