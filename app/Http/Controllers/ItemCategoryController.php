@@ -12,7 +12,8 @@ class ItemCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = ItemCategory::all();
+  return view('category.index')->with(['categories'=>$categories]);
     }
 
     /**
@@ -34,10 +35,11 @@ class ItemCategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ItemCategory $itemCategory)
+    public function show($id)
     {
-        //
-    }
+        $categories = ItemCategory::all();
+        $itemCategory=ItemCategory::find($id);
+        return view('category.show')->with(['categories'=>$categories,'category'=>$itemCategory]);    }
 
     /**
      * Show the form for editing the specified resource.

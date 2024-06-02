@@ -6,6 +6,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/offer', function () {
+    return view('offer');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+
 Route::get('/shop', function () {
     $items=\App\Models\Item::lastN(12);
     return view('shop.index')->with(['items'=>$items]);
