@@ -4,7 +4,9 @@ namespace App\Livewire;
 
 use App\Models\Item;
 use App\Models\ItemCategory;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Livewire\Component;
+use function Symfony\Component\String\Slugger\slug;
 
 
 class Wizard extends Component
@@ -12,6 +14,7 @@ class Wizard extends Component
 
     public $currentStep = 1;
     public $name,
+$item,
         $price, $detail,
         $status = 1,
         $photo,
@@ -25,8 +28,6 @@ class Wizard extends Component
         $visit=0;
     public $successMessage = '';
 
-
-    public $item_categories;
 
 
     /**
@@ -43,6 +44,16 @@ class Wizard extends Component
             'init_qnt'=>'required|numeric',
             'item_category_id' => 'required|numeric',
         ]);
+$this->item=Item::create(
+    [
+        'name'=>$this->name,
+        'price'=>$this->price,
+        'init_qnt'=>$this->init_qnt,
+        'item_category_id'=>$this->item_category_id,
+        'detail'=>$this->detail,
+        'user_id'=>1,
+    ]
+);
 
         $this->currentStep = 2;
     }
@@ -55,11 +66,8 @@ class Wizard extends Component
      */
     public function secondStepSubmit()
     {
-        $validatedData = $this->validate([
-            'init_qnt' => 'required',
-            'status' => 'required',
-            'photo' =>'required',
-        ]);
+
+
 
         $this->currentStep = 3;
     }
@@ -72,15 +80,10 @@ class Wizard extends Component
      */
     public function submitForm()
     {
-        Item::create([
-            'name' => $this->name,
-            'price' => $this->amount,
-            'detail' => $this->description,
-            'init_qnt' => $this->stock,
+       $this->item->update([
             'status' => $this->status,
             'color' => $this->status,
             'weight' => $this->status,
-            'item_category_id' => $this->status,
             'tags' => $this->status,
         ]);
 

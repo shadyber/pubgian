@@ -85,8 +85,9 @@
             <div class="col-xs-12">
                 <div class="col-md-12">
                     <h3> Photo </h3>
-                    @livewire('multiple-image-upload')
-
+                   @if($item)
+                     @livewire('upload-photo',['item'=>$item])
+                    @endif
                     <x-button class="btn-primary nextBtn pull-right" type="button" wire:click="secondStepSubmit">Next</x-button>
                     <x-button class="btn-danger nextBtn pull-right" type="button" wire:click="back(1)">Back</x-button>
                 </div>
@@ -95,9 +96,44 @@
         <div class="row setup-content {{ $currentStep != 3 ? 'displayNone' : '' }}" id="step-3">
             <div class="col-xs-12">
                 <div class="col-md-12">
-                    <h3> Step 3</h3>
+                    <h3>Additional Information</h3>
 
-                 form 3
+                    <div class="form-group">
+                        @error('color') <span class="error red-color">{{ $message }}</span> @enderror
+                        <x-label for="color" value="{{ __('Color') }}" />
+                        <x-input id="color" class="form-control" type="color" name="color" :value="old('color')" required autofocus autocomplete="color"  wire:model="color" />
+
+                    </div>
+
+                    <div class="form-group">
+                        @error('tags') <span class="error red-color">{{ $message }}</span> @enderror
+                        <x-label for="tags" value="{{ __('Tags') }}" />
+                        <x-input id="tags" class="form-control" type="text" name="tags" :value="old('tags')" required autofocus autocomplete="tags"  wire:model="tags" />
+
+                    </div>
+
+                    <div class="form-group">
+                        @error('weight') <span class="error red-color">{{ $message }}</span> @enderror
+                        <x-label for="weight" value="{{ __('Weight') }}" />
+                        <x-input id="weight" class="form-control" type="text" name="weight" :value="old('weight')" required autofocus autocomplete="weight"  wire:model="weight" />
+
+                    </div>
+<div class="form-group">
+    <x-label for="status" value="{{ __('Status') }}" />
+
+    @error('status') <span class="error red-color">{{ $message }}</span> @enderror
+    <select wire:model="status" class="form-control black-color">
+
+        <option value="" selected>Choose Item Status</option>
+
+        <option value="available" class="border-0 text-dark">available</option>
+        <option value="unavailable" class="border-0 text-dark">unavailable</option>
+        <option value="pending" class="border-0 text-dark">pending</option>
+
+    </select>
+
+</div>
+
 
                     <x-button  wire:click="submitForm" type="button">Finish!</x-button>
                     <x-button  type="button" wire:click="back(2)">Back</x-button>
@@ -105,7 +141,14 @@
             </div>
         </div>
     </div>
+        <div>
 
+            @if(!empty($successMessage))
+                <div class="alert alert-success">
+                    {{ $successMessage }}
+                </div>
+            @endif
+            <div>
     <style>
 
         .stepwizard-step p {

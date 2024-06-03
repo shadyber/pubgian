@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->longText('detail');
-            $table->string('photo');
-            $table->string('thumb');
+            $table->string('photo')->default('/images/item.png');
+            $table->string('thumb')->default('/images/item.png');;
             $table->string('color')->nullable();
             $table->double('price');
- 
+
             $table->string('weight')->default('0');
             $table->unsignedBigInteger('item_category_id');
             $table->foreign('item_category_id')->references('id')->on('item_categories');
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('badge')->nullable()->default('NEW');
             $table->string('tags')->nullable();
             $table->integer('visit')->default(0);
-        
+
             $table->timestamps();
         });
     }
