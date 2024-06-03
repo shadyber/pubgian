@@ -18,7 +18,7 @@
             @endif
             <div class="mb-3">
                 <label class="form-label">Image Upload</label>
-                <input type="file" class="form-control" wire:model="images[]" multiple>
+                <input type="file" name="images" class="form-control" wire:model="images" multiple>
                 <div wire:loading wire:target="images">Uploading...</div>
                 @error('images.*') <span class="error">{{ $message }}</span> @enderror
             </div>
