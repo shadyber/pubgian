@@ -39,7 +39,8 @@ class ItemCategoryController extends Controller
     {
         $categories = ItemCategory::all();
         $itemCategory=ItemCategory::find($id);
-        return view('category.show')->with(['categories'=>$categories,'category'=>$itemCategory]);    }
+        $items=$itemCategory->items;
+        return view('category.show')->with(['categories'=>$categories,'category'=>$itemCategory,'items'=>$items]);    }
 
     /**
      * Show the form for editing the specified resource.

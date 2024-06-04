@@ -21,46 +21,26 @@
                                                     <div class="col-2">
                                                         <div class="nav nav-pills" id="v-pills-tab" role="tablist"
                                                              aria-orientation="vertical">
-                                                            <a class="active" data-toggle="pill" href="#tab-1">
-                                                                <img src="{{$item->thumb}}" class="w-100" alt="">
+
+                                                           @foreach($item->itemPhotos as $key=>$thumb)
+                                                            <a class="@if($key===0) active @endif" data-toggle="pill" href="#tab-{{$key}}">
+                                                                <img src="{{$thumb->thumb}}" class="w-100" alt="">
                                                             </a>
-                                                            <a class="popup-images" data-toggle="pill" href="#tab-2">
-                                                                <img src="{{$item->thumb}}" class="w-100 mt-5-px" alt="">
-                                                            </a>
-                                                            <a class="popup-images" data-toggle="pill" href="#tab-3">
-                                                                <img src="{{$item->thumb}}" class="w-100 mt-5-px" alt="">
-                                                            </a>
-                                                            <a class="popup-images" data-toggle="pill" href="#tab-4">
-                                                                <img src="{{$item->thumb}}" class="w-100 mt-5-px" alt="">
-                                                            </a>
+                                                            @endforeach
+
                                                         </div>
                                                     </div>
                                                     <div class="col-10">
                                                         <div class="tab-content" id="v-pills-tabContent">
-                                                            <div class="tab-pane fade show active" id="tab-1">
+                                                            @foreach($item->itemPhotos as $key=>$photo)
+                                                            <div class="tab-pane fade show @if($key===0) active @endif" id="tab-{{$key}}">
                                                                 <div class="product-img">
-                                                                    <a class="popup-image" href="{{$item->photo}}"><img
-                                                                            src="{{$item->photo}}" class="w-100" alt="{{$item->name}}"></a>
+                                                                    <a class="popup-image" href="{{$photo->photo}}"><img
+                                                                            src="{{$photo->photo}}" class="w-100" alt="{{$item->name}}"></a>
                                                                 </div>
                                                             </div>
-                                                            <div class="tab-pane fade" id="tab-2">
-                                                                <div class="product-img">
-                                                                    <a class="popup-image" href="{{$item->photo}}"><img
-                                                                            src="{{$item->photo}}" class="w-100" alt=""></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="tab-3">
-                                                                <div class="product-img">
-                                                                    <a class="popup-image" href="{{$item->photo}}"><img
-                                                                            src="{{$item->photo}}" class="w-100" alt=""></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tab-pane fade" id="tab-4">
-                                                                <div class="product-img">
-                                                                    <a class="popup-image" href="{{$item->photo}}"><img
-                                                                            src="{{$item->photo}}" class="w-100" alt=""></a>
-                                                                </div>
-                                                            </div>
+                                                            @endforeach
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -104,7 +84,7 @@
                                                         <ul>
                                                             <li class="mb-0"><a href="javascript:void(0)" class="title">Categories: </a>
                                                             </li>
-                                                            <li class="mb-0"><a href="shop4.html">{{$item->category->title}}  </a></li>
+                                                            <li class="mb-0"><a href="/category/{{$item->category->id}}">{{$item->category->title}}  </a></li>
 
                                                         </ul>
                                                     </div>
