@@ -29,7 +29,7 @@
                                                         <li><a href="javascript:void(0)" class="title">MY ACCOUNT</a></li>
                                                         <li><a href="login.html">My account</a></li>
                                                         <li><a href="/checkout">Checkout</a></li>
-                                                        <li><a href="shop2.html">Shop</a></li>
+                                                        <li><a href="/shop">Shop</a></li>
                                                         <li><a href="/wishlist">Wishlist</a></li>
                                                         <li><a href="question.html">Frequently</a></li>
                                                     </ul>
@@ -40,11 +40,11 @@
                                                 <div class="footer-menu">
                                                     <ul>
                                                         <li><a href="javascript:void(0)" class="title">Quick Links</a></li>
-                                                        <li><a href="shop2.html">Special Offers</a></li>
-                                                        <li><a href="shop2.html">Gift Cards</a></li>
-                                                        <li><a href="shop2.html">F21 Red</a></li>
-                                                        <li><a href="about.html">Privacy Policy</a></li>
-                                                        <li><a href="about.html">Teams of Use</a></li>
+                                                        <li><a href="/shop">Special Offers</a></li>
+                                                        <li><a href="/shop">Gift Cards</a></li>
+                                                        <li><a href="/shop">F21 Red</a></li>
+                                                        <li><a href="/about">Privacy Policy</a></li>
+                                                        <li><a href="/about">Teams of Use</a></li>
                                                         <li><a href="portfolio.html">Portfolio</a></li>
                                                     </ul>
                                                 </div>
@@ -54,10 +54,10 @@
                                                 <div class="footer-menu">
                                                     <ul>
                                                         <li><a href="javascript:void(0)" class="title">Company Info</a></li>
-                                                        <li><a href="about.html">About us</a></li>
-                                                        <li><a href="blog.html">Careers</a></li>
+                                                        <li><a href="/about">About us</a></li>
+                                                        <li><a href="/blog">Careers</a></li>
                                                         <li><a href="portfolio2.html">Business With Us</a></li>
-                                                        <li><a href="shop2.html">Find a Store</a></li>
+                                                        <li><a href="/shop">Find a Store</a></li>
                                                         <li><a href="question.html">Teams of Use</a></li>
                                                         <li><a href="portfolio3.html">Press &amp; Talent</a></li>
                                                     </ul>

@@ -15,7 +15,7 @@
                                             <p class="mb-0 mt-35">New Spring drops from Over. Shop the Collection</p>
                                         </div>
                                         <div class="slider-link" data-animation="flipInX" data-delay=".8s">
-                                            <a href="shop.html" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
+                                            <a href="/shop" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                             <p class="mb-0 mt-35">New Spring drops from Over. Shop the Collection</p>
                                         </div>
                                         <div class="slider-link" data-animation="flipInX" data-delay=".8s">
-                                            <a href="shop.html" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
+                                            <a href="/shop" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                             <p class="mb-0 mt-35">New Spring drops from Over. Shop the Collection</p>
                                         </div>
                                         <div class="slider-link" data-animation="flipInX" data-delay=".8s">
-                                            <a href="shop.html" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
+                                            <a href="/shop" class="generic-btn mt-70 red-hover-btn text-uppercase" tabindex="0">Discover now</a>
                                         </div>
                                     </div>
                                 </div>

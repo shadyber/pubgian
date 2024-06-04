@@ -227,20 +227,20 @@
 </li>
 <li><a  class="pl-3" href="javascript:void(0)">Shop</a>
 <ul>
-<li><a href="shop.html">Shop Layout</a></li>
-<li><a href="shop4.html">Masonry – Grid</a></li>
-<li><a href="shop3.html">Pagination</a></li>
-<li><a href="shop2.html">Ajax Load More</a></li>
-<li><a href="shop2.html">Infinite Scroll</a></li>
-<li><a href="shop2.html">Sidebar Right</a></li>
-<li><a href="shop.html">Sidebar Left</a></li>
-<li><a href="shop.html">Shop Pages</a></li>
-<li><a href="shop2.html">List View</a></li>
-<li><a href="shop3.html">Small Products</a></li>
-<li><a href="shop2.html">Large Products</a></li>
-<li><a href="shop3.html">Shop — 3 Items</a></li>
-<li><a href="shop3.html">Shop — 4 Items</a></li>
-<li><a href="shop4.html">Shop — 5 Items</a></li>
+<li><a href="/shop">Shop Layout</a></li>
+<li><a href="/shop">Masonry – Grid</a></li>
+<li><a href="/shop">Pagination</a></li>
+<li><a href="/shop">Ajax Load More</a></li>
+<li><a href="/shop">Infinite Scroll</a></li>
+<li><a href="/shop">Sidebar Right</a></li>
+<li><a href="/shop">Sidebar Left</a></li>
+<li><a href="/shop">Shop Pages</a></li>
+<li><a href="/shop">List View</a></li>
+<li><a href="/shop">Small Products</a></li>
+<li><a href="/shop">Large Products</a></li>
+<li><a href="/shop">Shop — 3 Items</a></li>
+<li><a href="/shop">Shop — 4 Items</a></li>
+<li><a href="/shop">Shop — 5 Items</a></li>
 <li><a href="single-product-2.html">Product Layout</a></li>
 <li><a href="single-product.html">Description Sticky</a></li>
 <li><a href="single-product-2.html">Product Carousels</a></li>
@@ -252,7 +252,7 @@
 </li>
 <li><a href="javascript:void(0)">Blog</a>
 <ul>
-<li><a href="blog.html">Grid layout</a></li>
+<li><a href="/blog">Grid layout</a></li>
 <li><a href="blog2.html">Large image</a></li>
 <li><a href="blog3.html">Left Sidebar</a></li>
 <li><a href="blog4.html">Right Sidebar</a></li>
