@@ -19,10 +19,11 @@
                                         <img src="{{$cat->icon}}" alt="{{$cat->title}}"
                                              class="w-100">
                                     </div>
+                                    <h3>{{$cat->title}}</h3>
                                 </a>
 
                             </div>
-
+                       
 
                         </div>
                     </div>

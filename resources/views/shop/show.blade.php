@@ -21,9 +21,11 @@
                                                     <div class="col-2">
                                                         <div class="nav nav-pills" id="v-pills-tab" role="tablist"
                                                              aria-orientation="vertical">
-
+                                                            <a class="active" data-toggle="pill" href="#tab-0">
+                                                                <img src="{{$item->thumb}}" class="w-100" alt="">
+                                                            </a>
                                                            @foreach($item->itemPhotos as $key=>$thumb)
-                                                            <a class="@if($key===0) active @endif" data-toggle="pill" href="#tab-{{$key}}">
+                                                            <a class="" data-toggle="pill" href="#tab-{{$key}}">
                                                                 <img src="{{$thumb->thumb}}" class="w-100" alt="">
                                                             </a>
                                                             @endforeach
@@ -32,8 +34,14 @@
                                                     </div>
                                                     <div class="col-10">
                                                         <div class="tab-content" id="v-pills-tabContent">
+                                                            <div class="tab-pane fade show active" id="tab-0">
+                                                                <div class="product-img">
+                                                                    <a class="popup-image" href="{{$item->photo}}"><img
+                                                                            src="{{$item->photo}}" class="w-100" alt="{{$item->name}}"></a>
+                                                                </div>
+                                                            </div>
                                                             @foreach($item->itemPhotos as $key=>$photo)
-                                                            <div class="tab-pane fade show @if($key===0) active @endif" id="tab-{{$key}}">
+                                                            <div class="tab-pane fade show" id="tab-{{$key}}">
                                                                 <div class="product-img">
                                                                     <a class="popup-image" href="{{$photo->photo}}"><img
                                                                             src="{{$photo->photo}}" class="w-100" alt="{{$item->name}}"></a>

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('item_categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('icon')->default('/images/category.png');
+            $table->string('icon')->default('/img/placeholder.png');
             $table->bigInteger('parent_category_id')->default(0);
             $table->mediumText('detail');
 

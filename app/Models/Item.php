@@ -23,6 +23,10 @@ class Item extends Model
     }
 
 
+    public function addToCart(int $productId): void
+    {
+        Cart::add(Item::where('id', $productId)->first());
+    }
 
     public function user(){
         return $this->belongsTo(User::class);

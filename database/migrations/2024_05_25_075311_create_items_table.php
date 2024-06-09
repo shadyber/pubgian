@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->longText('detail');
-            $table->string('photo')->default('/images/item.png');
-            $table->string('thumb')->default('/images/item.png');;
+            $table->string('photo')->default('/img/placeholder.png');
+            $table->string('thumb')->default('/img/placeholder.png');;
             $table->string('color')->nullable();
             $table->double('price');
 

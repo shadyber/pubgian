@@ -20,7 +20,7 @@
                                                 <ul>
 
   @foreach(\App\Models\ItemCategory::where('parent_category_id',0)->get() as $ca)
-                                                        <li><a href="/category/{{$ca->slug}}">{{$ca->title}}</a></li>
+                                                        <li><a href="/category/{{$ca->id}}">{{$ca->title}}</a></li>
                                                     @endforeach
 <li><a href="/shop?list=latest">Latest Products</a></li>
 <li><a href="/shop?list=popular">Most Popular</a></li>
