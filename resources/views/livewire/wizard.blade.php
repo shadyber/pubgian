@@ -20,6 +20,11 @@
                     <a href="#step-3" type="button" class="btn btn-circle {{ $currentStep != 3 ? 'btn-default' : 'btn-primary' }}" disabled="disabled">3</a>
                     <p>Step 3</p>
                 </div>
+
+                <div class="stepwizard-step">
+                    <a href="#step-3" type="button" class="btn btn-circle {{ $currentStep != 4 ? 'btn-default' : 'btn-primary' }}" disabled="disabled">3</a>
+                    <p>Finished</p>
+                </div>
             </div>
         </div>
 
@@ -140,6 +145,20 @@
                 </div>
             </div>
         </div>
+    <div class="row setup-content {{ $currentStep != 4 ? 'displayNone' : '' }}" id="step-3">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3>Finally !</h3>
+
+
+
+
+
+                <x-button  wire:click="showProduct(@if($item->slug){{$item->slug}})@else '' @endif" type="button">Show the Product in Shop</x-button>
+                <x-button  type="button" wire:click="back(1)">Add New Product</x-button>
+            </div>
+        </div>
+    </div>
     </div>
         <div>
 

@@ -14,7 +14,7 @@ class Wizard extends Component
 
     public $currentStep = 1;
     public $name,
-$item,
+        $item,
         $price, $detail,
         $status = 1,
         $photo,
@@ -93,7 +93,13 @@ $this->item=Item::create(
 
         $this->currentStep = 1;
     }
+public function showProduct ($slug){
 
+
+    $this->successMessage = 'Product Created Successfully.';
+    $this->clearForm();
+
+}
 
     /**
      * Write code on Method
