@@ -372,7 +372,6 @@
 
 
 
-
   </main>
 
                 @include('footer')

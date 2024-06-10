@@ -50,24 +50,7 @@
 
     <!-- Page Heading -->
 @if (isset($header))
-    <!-- breadcrumb-area-start -->
-        <section class="breadcrumb-area" data-background="img/bg/page-title.png">
-            <div class="container p-2 m-2">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="breadcrumb-content" style="flex-direction: column;">
-                            <nav aria-label="breadcrumb">
-                                <ol class="p-0 m-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">{{ $header }}</li>
-                                </ol>
-                            </nav>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     @endif
            <main>

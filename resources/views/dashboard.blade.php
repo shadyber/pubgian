@@ -5,11 +5,21 @@
 
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
+    <!-- our products section start -->
+    <section class="our-products mt-120">
+        <div class="container">
+
+
+
+                @if(\Illuminate\Support\Facades\Auth::user()->id === 1)
+                    @livewire('admin-menu')
+                @else
+               @livewire('user-menu')
+                 @endif
+
+
         </div>
-    </div>
+    </section>
+
+
 </x-app-layout>

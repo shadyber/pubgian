@@ -154,7 +154,7 @@
 
 
 
-                <x-button  wire:click="showProduct(@if($item->slug){{$item->slug}})@else '' @endif" type="button">Show the Product in Shop</x-button>
+                <x-button  wire:click="showProduct(0)" type="button">Show the Product in Shop</x-button>
                 <x-button  type="button" wire:click="back(1)">Add New Product</x-button>
             </div>
         </div>

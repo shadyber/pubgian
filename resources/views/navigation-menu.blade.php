@@ -13,7 +13,7 @@
 
 
                                     </li>
-                                    <li class="position-static"><a href="javascript:void(0)"><span>Shop  <i class="fal fa-angle-down"></i></span></a>
+                                    <li class="position-static"><a href="/shop"><span>Shop  <i class="fal fa-angle-down"></i></span></a>
                                         <div class="mega-menu">
                                             <div class="pl-0 col-xl-7 position-static">
 
@@ -31,7 +31,7 @@
 </div>
 </div>
 </li>
-<li><a href="javascript:void(0)"><span>Blog <i class="fal fa-angle-down"></i></span> </a>
+<li><a href="/blog"><span>Blog <i class="fal fa-angle-down"></i></span> </a>
 <ul class="submenu bold-content">
 
 @foreach(\App\Models\BlogCategory::where('parent_category_id',0)->get() as $blogcategory)
@@ -46,6 +46,11 @@
 <li><a href="/about">About</a></li>
 <li><a href="/faq">Frequently Questions</a></li>
 <li><a href="/contact">Contact</a></li>
+
+
+    <form method="POST" id="logout-form" action="{{ route('logout') }}">
+        @csrf
+    </form>
 </ul>
 </li>
 
@@ -65,11 +70,16 @@
 
 
 @auth
-<li><a href="/register" class="account"> <article class="account-registar d-inline-block">User Name</article></a></li>
+<li><a href="/register" class="account flex"> <article class="account-registar d-inline-block">{{\Illuminate\Support\Facades\Auth::user()->name}}
+            <img src="{{ \Illuminate\Support\Facades\Auth::user()->profile_photo_url }}" alt="{{ \Illuminate\Support\Facades\Auth::user()->name }}" class="rounded-full h-10 w-10 inline"></article>  </a></li>
+    <li> <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class='fal fa-power-off'></i>
+        </a></li>
 
 @endauth
 @guest
 <li><a href="/register" class="account"><i class="fal fa-user-friends"></i> <article class="account-registar d-inline-block">Login/Sign up</article></a></li>
+
 
 @endguest
 
@@ -99,8 +109,8 @@
 </ul>
 
 <div class="search-form mt-35">
-<form action="#" method="post">
-    <input type="text" placeholder="Search Products...">
+<form action="/search" method="get">
+    <input type="text" name="key" placeholder="Search Products...">
     <button type="submit"><i class="fal fa-search"></i></button>
 </form>
 </div>

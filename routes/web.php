@@ -22,6 +22,8 @@ Route::get('/faq', function () {
 });
 
 
+Route::get('/search',[\App\Http\Controllers\SearchController::class,'search'])->name('search');
+
 Route::get('/shop', function () {
     $items=\App\Models\Item::lastN(12);
     return view('shop.index')->with(['items'=>$items]);
