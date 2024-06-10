@@ -33,6 +33,4 @@ class Cart extends Model
             return 0;
         }
     }
-
-     
 }
