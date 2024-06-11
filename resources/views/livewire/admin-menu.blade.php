@@ -67,7 +67,7 @@
             @elseif($page==2)
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             <div class="shadow-lg">
-                @foreach(\App\Models\Item::all() as $item)
+                @foreach(\App\Models\Item::orderBy('id','desc')->get() as $item)
                     <div class="product-box mb-1">
                         <div class="product-box-wrapper">
                             <div class="list-product mb-50">
