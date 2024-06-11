@@ -51,14 +51,14 @@
 
 
 
-        <div class="min-h-screen bg-gray-100 ">
+        <div class="">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
                 @if (isset($header))
                 <!-- breadcrumb-area-start -->
              <section class="breadcrumb-area" data-background="img/bg/page-title.png">
-                <div class="container p-2 m-2">
+                <div class="container pl-30 ml-20 mb-2">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="breadcrumb-content" style="flex-direction: column;">
@@ -82,7 +82,7 @@
                 {{ $slot }}
             </main>
         </div>
-
+@include('footer')
            @stack('modals')
 
            @livewireScripts

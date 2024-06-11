@@ -38,9 +38,16 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+Route::get('/checkout', function (){
+   return view('checkout');
+});
+
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
 });
 
 Route::get('/addtocart/{id}',[\App\Http\Controllers\CartController::class,'addToCart'])->name('addtocart');

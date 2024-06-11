@@ -1,9 +1,8 @@
 <div class="container">
-<div class="basic-login">
 
+<h3> Add New Product</h3>
     <livewire:wizard />
 
-</div>
-</div>
 
+</div>
 

@@ -5,9 +5,8 @@
 
     </x-slot>
 
-        <div class="p-2">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-3">
-               <div class="container">
+        <div class="p-1 m-1"  >
+             <div class="container">
                    <div class="shop-wrapper">
                        <div class="row">
 
@@ -115,11 +114,11 @@
                                <div class="filter-content">
                                    <div class="tab-content">
                                        <div class="tab-pane fade" id="shop-tab-1">
-                                           <div class="product-wrapper mt-55">
+                                           <div class="product-wrapper mt-1">
                                                <div class="row">
                                                    @foreach($items as $item)
                                                    <div class="col-6">
-                                                       <div class="product-box mb-40">
+                                                       <div class="product-box mb-1">
                                                            <div class="product-box-wrapper">
                                                                <div class="product-img">
                                                                    <img src="{{$item->thumb}}" class="w-100" alt="">
@@ -135,7 +134,7 @@
                                                                        view</a>
                                                                </div>
 
-                                                               <div class="product-desc pb-20">
+                                                               <div class="product-desc pb-2">
                                                                    <div class="product-desc-top">
                                                                        <div class="categories">
                                                                            <a href="/shop"
@@ -158,7 +157,7 @@
                                                    @endforeach
 
                                                </div>
-                                               <div class="text-center mt-20">
+                                               <div class="text-center mt-2">
                                                    <a href="/shop?list=more" class="load-more">LOAD MORE...</a>
                                                </div>
                                            </div>
@@ -168,7 +167,7 @@
                                                <div class="row">
                                                    @foreach($items as $item)
                                                    <div class="col-xl-4 col-md-4 col-6">
-                                                       <div class="product-box mb-40">
+                                                       <div class="product-box mb-1">
                                                            <div class="product-box-wrapper">
                                                                <div class="product-img">
                                                                    <img src="{{$item->thumb}}" class="w-100" alt="">
@@ -213,11 +212,11 @@
                                            </div>
                                        </div>
                                        <div class="tab-pane fade  show active" id="shop-tab-3">
-                                           <div class="product-wrapper mt-55">
+                                           <div class="product-wrapper mt-1">
                                                <div class="row">
                                                    @foreach($items as $item)
                                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                                       <div class="product-box mb-40">
+                                                       <div class="product-box mb-1">
                                                            <div class="product-box-wrapper">
                                                                <div class="product-img">
                                                                    <img src="{{$item->thumb}}" class="w-100" alt="{{$item->name}}">
@@ -262,9 +261,9 @@
                                            </div>
                                        </div>
                                        <div class="tab-pane fade" id="shop-tab-4">
-                                           <div class="product-wrapper mt-55">
+                                           <div class="product-wrapper mt-1">
                                                @foreach($items as $item)
-                                               <div class="product-box mb-40">
+                                               <div class="product-box mb-1">
                                                    <div class="product-box-wrapper">
                                                        <div class="list-product mb-50">
                                                            <div class="list-product-wrapper">
@@ -342,7 +341,6 @@
                    </div>
                </div>
 
-            </div>
         </div>
 
 </x-app-layout>
