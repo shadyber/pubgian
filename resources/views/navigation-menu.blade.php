@@ -180,7 +180,7 @@
 </div>
 </li>
 <li><a href="/wishlist" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-<li><a href="/mycart"><i class="fal fa-shopping-bag"><span>{{count(\App\Models\Cart::myCart())}}</span></i></a>
+<li>@livewire('show-cart-component')
 <div class="minicart">
 <div class="minicart-body">
 <div class="minicart-content">
