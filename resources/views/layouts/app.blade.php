@@ -87,7 +87,11 @@
 
            @livewireScripts
 
-
+           <script>
+               $(".add-to-cart").click(function(){
+                   alert("The paragraph was clicked.");
+               });
+           </script>
            <!-- JS here -->
            <script src="/js/vendor/jquery-1.12.4.min.js"></script>
            <script src="/js/popper.min.js"></script>

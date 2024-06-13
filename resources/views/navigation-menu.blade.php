@@ -9,7 +9,8 @@
                         <div class="header-nav">
                             <nav>
                                 <ul>
-                                    <li><a href="/" class="active"><span>Home </a>
+                                    <li>
+                                        <a href="/" class="active"><span>Home</span> </a>
 
 
                                     </li>
@@ -99,13 +100,10 @@
 <div class="search-content pt-55">
 <ul class="text-center">
 <li><a href="javascript:void(0)" class="active">All categories</a></li>
-<li><a href="javascript:void(0)">Clothing</a></li>
-<li><a href="javascript:void(0)">Gift Cards</a></li>
-<li><a href="javascript:void(0)">Handbag</a></li>
-<li><a href="javascript:void(0)">Kids</a></li>
-<li><a href="javascript:void(0)">Shoes</a></li>
-<li><a href="javascript:void(0)">Sneaker</a></li>
-<li><a  href="javascript:void(0)">Women</a></li>
+    @foreach(\App\Models\ItemCategory::where('parent_category_id',0)->get() as $ca)
+<li><a href="javascript:void(0)">$ca->title</a></li>
+    @endforeach
+
 </ul>
 
 <div class="search-form mt-35">
@@ -180,7 +178,7 @@
 </div>
 </li>
 <li><a href="/wishlist" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-<li>@livewire('show-cart-component')
+<li>  <a href="/mycart" data-toggle="tooltip" data-placement="bottom" title="view mycart"><i class="fal fa-shopping-bag"><span>{{count(\App\Models\Cart::myCart())}}</span></i></a>
 <div class="minicart">
 <div class="minicart-body">
 <div class="minicart-content">
@@ -235,38 +233,20 @@
 <li><a  class="pl-3" href="/">Home</a>
 
 </li>
-<li><a  class="pl-3" href="javascript:void(0)">Shop</a>
+<li><a  class="pl-3" href="/shop">Shop</a>
 <ul>
-<li><a href="/shop">Shop Layout</a></li>
-<li><a href="/shop">Masonry – Grid</a></li>
-<li><a href="/shop">Pagination</a></li>
-<li><a href="/shop">Ajax Load More</a></li>
-<li><a href="/shop">Infinite Scroll</a></li>
-<li><a href="/shop">Sidebar Right</a></li>
-<li><a href="/shop">Sidebar Left</a></li>
-<li><a href="/shop">Shop Pages</a></li>
-<li><a href="/shop">List View</a></li>
-<li><a href="/shop">Small Products</a></li>
-<li><a href="/shop">Large Products</a></li>
-<li><a href="/shop">Shop — 3 Items</a></li>
-<li><a href="/shop">Shop — 4 Items</a></li>
-<li><a href="/shop">Shop — 5 Items</a></li>
-<li><a href="single-product-2.html">Product Layout</a></li>
-<li><a href="single-product.html">Description Sticky</a></li>
-<li><a href="single-product-2.html">Product Carousels</a></li>
-<li><a href="single-product-3.html">Gallery Modern</a></li>
-<li><a href="single-product-4.html">Thumbnail Left</a></li>
-<li><a href="single-product-5.html">Thumbnail Right</a></li>
-<li><a href="single-product-6.html">Thumbnail Botttom</a></li>
+    @foreach(\App\Models\ItemCategory::all() as $ca)
+<li><a href="/category/{{$ca->id}}">{{$ca->title}}</a></li>
+    @endforeach
+
 </ul>
 </li>
-<li><a href="javascript:void(0)">Blog</a>
+<li><a href="/blog">Blog</a>
 <ul>
-<li><a href="/blog">Grid layout</a></li>
-<li><a href="blog2.html">Large image</a></li>
-<li><a href="blog3.html">Left Sidebar</a></li>
-<li><a href="blog4.html">Right Sidebar</a></li>
-<li><a href="blog5.html">No sidebar</a></li>
+    @foreach(\App\Models\BlogCategory::where('parent_category_id',0)->get() as $blogcategory)
+<li><a href="/blogcategory">{{$blogcategory->title}}</a></li>
+        @endforeach
+
 </ul>
 </li>
 

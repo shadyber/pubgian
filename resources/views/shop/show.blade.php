@@ -74,7 +74,10 @@
 
                                                     <div class="quick-quantity mt-60">
 
-                                                       @livewire('add-to-cart-component', ['id' => $item->id])
+                                                        <a href="#"
+                                                           class="btn btn-circle btn-outline-info bg-gray-50 text-capitalize switcher-item add-to-cart" itemid="{{$item->id}}">
+                                                            +add to cart
+                                                        </a>
                                                     </div>
                                                     <div class="single-product-action mt-35">
                                                         <ul>
