@@ -4,62 +4,53 @@ namespace App\Http\Controllers;
 
 use App\Models\ShipingInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShipingInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function saveshipinginfo(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+        ]);
+
+$shippinginfo=ShipingInfo::find(Auth::user()->shippinginfo);
+if($shippinginfo!=null){
+    $shippinginfo=ShipingInfo::update([
+        'user_id'=>\auth()->user()->getAuthIdentifier(),
+        'first_name'=>$request->input('first_name'),
+        'last_name'=>$request->input('first_name'),
+        'email'=>$request->input('email'),
+        'phone'=>$request->input('phone'),
+        'street_address'=>$request->input('street_address'),
+        'country_code'=>$request->input('country_code'),
+        'city'=>$request->input('city'),
+        'apartment_number'=>$request->input('apartment_number'),
+
+    ]);
+}
+else{
+
+    $shippinginfo=ShipingInfo::create([
+        'user_id'=>\auth()->user()->getAuthIdentifier(),
+        'first_name'=>$request->input('first_name'),
+        'last_name'=>$request->input('first_name'),
+        'email'=>$request->input('email'),
+        'phone'=>$request->input('phone'),
+        'street_address'=>$request->input('street_address'),
+        'country_code'=>$request->input('country_code'),
+        'city'=>$request->input('city'),
+        'apartment_number'=>$request->input('apartment_number'),
+    ]);
+}
+        Return redirect()->route('payment');
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(ShipingInfo $shipingInfo)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(ShipingInfo $shipingInfo)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, ShipingInfo $shipingInfo)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(ShipingInfo $shipingInfo)
-    {
-        //
-    }
 }

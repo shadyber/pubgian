@@ -38,15 +38,35 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
+
 Route::get('/checkout', function (){
-   return view('checkout');
+    $user=\Illuminate\Support\Facades\Auth::user();
+    $shippinginfo=$user->shippinginfo;
+   return view('checkout',['user'=>$user,'shippinginfo'=>$shippinginfo]);
 });
+
+
+
+
+
+    Route::get('/payment', function (){
+        $user=\Illuminate\Support\Facades\Auth::user();
+        $shippinginfo=$user->shippinginfo;
+        return view('payment',['user'=>$user,'shippinginfo'=>$shippinginfo]);
+    })->name('payment');
+
 
 
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 
+
+Route::post('/saveshipinginfo',[\App\Http\Controllers\ShipingInfoController::class,'saveshipinginfo'])->name('saveshipinginfo');
+
+    Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
+    Route::get('/admin/product',AdminAddProductComponent::class)->name('admin.products');
 
 });
 
@@ -56,6 +76,3 @@ Route::get('/removecart/{id}/',[\App\Http\Controllers\CartController::class,'rem
 Route::get('/destroyCart',[\App\Http\Controllers\CartController::class,'destroyCart'])->name('destroyCartm');
 
 Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart');
-
-Route::get('/admin/product/add',AdminAddProductComponent::class)->name('admin.addproduct');
-Route::get('/admin/product',AdminAddProductComponent::class)->name('admin.products');

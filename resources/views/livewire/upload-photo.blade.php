@@ -14,8 +14,8 @@
         @endif
 </div>
 
-        <input type="text" wire:model="item_id" value="{{$item->id}}">
-        <input type="file" wire:model="photos" multiple>
+        <input type="hidden" wire:model="item_id" value="{{$item->id}}">
+        <input type="file" wire:model="photos" multiple accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
 
         @error('photos.*') <span class="error">{{ $message }}</span> @enderror
 

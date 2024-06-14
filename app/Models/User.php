@@ -64,10 +64,10 @@ class User extends Authenticatable
     }
 
 
-    
+
     public function shippinginfo()
     {
-        return $this->hasOne(ShippingInfo::class);
+        return $this->hasOne(ShipingInfo::class);
     }
 
  public function comments()
@@ -85,16 +85,11 @@ class User extends Authenticatable
         return $this->hasMany(Blog::class);
     }
 
-    public function videos()
-    {
-        return $this->hasMany(Videos::class);
-    }
+
     public function orders()
     {
         return $this->hasMany(Order::class);
     }
 
-    public function role(){
-        return $this->belongsTo(Role::class);
-    }
+
 }

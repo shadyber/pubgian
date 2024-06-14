@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->json('cart');
             $table->bigInteger('shipping_address_id');
-            $table->bigInteger('payment_id');
+            $table->bigInteger('payments_id')->unsigned();
+            $table->foreign('payments_id')->references('id')->on('payments')->onDelete('cascade');
+
             $table->string('status')->default('created');
             $table->bigInteger('user_id')->unsigned();
           //FOREIGN KEY CONSTRAINTS

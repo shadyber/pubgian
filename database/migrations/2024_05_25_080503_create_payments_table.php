@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('payment_id');
-            $table->string('payer_id');
-            $table->string('payer_email');
+            $table->string('payer_email')->nullable();
+            $table->string('payer_name')->nullable();
+            $table->string('payer_tel')->nullable();
             $table->float('amount', 10, 2);
             $table->string('currency')->default('usd');
-            $table->string('payment_status');
+            $table->string('payment_status')->default('created');
+            $table->string('bank_name')->nullable();
+            $table->string('payment_reference');
+            $table->string('payment_proof');
             $table->bigInteger('user_id')->unsigned();
             //FOREIGN KEY CONSTRAINTS
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

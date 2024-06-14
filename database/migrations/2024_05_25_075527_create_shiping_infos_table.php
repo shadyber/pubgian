@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('shiping_infos', function (Blueprint $table) {
             $table->id();
-            
+
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->on('users')->references('id');
 
@@ -22,17 +22,17 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('payer_id')->nullable();
             $table->string('business_name')->nullable();
-            $table->string('country_code');
+            $table->string('country_code')->nullable();
             $table->string('city');
             $table->string('recipient_name')->nullable();
             $table->string('line1')->nullable();
-            $table->string('state')->nullable();
+            $table->string('state')->default('Ethiopia');
             $table->string('street_address')->nullable();
             $table->string('apartment_number')->nullable();
-            $table->string('postal_code');
+            $table->string('postal_code')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-          
+
             $table->timestamps();
         });
     }
