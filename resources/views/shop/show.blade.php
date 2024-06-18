@@ -74,10 +74,7 @@
 
                                                     <div class="quick-quantity mt-60">
 
-                                                        <a href="#"
-                                                           class="btn btn-circle btn-outline-info bg-gray-50 text-capitalize switcher-item add-to-cart" itemid="{{$item->id}}">
-                                                            +add to cart
-                                                        </a>
+                                                        @livewire('add-to-cart-component', ['itemid' => $item->id])
                                                     </div>
                                                     <div class="single-product-action mt-35">
                                                         <ul>
@@ -264,8 +261,7 @@
                                                     <a href="/item/{{$li->slug}}" class="product-title"> {{$li->name}}</a>
                                                     <div class="price-switcher">
                                                         <span class="price switcher-item">$ETB {{$li->price}}</span>
-                                                        <a href="#add-to-cart" class="add-to-cart text-capitalize switcher-item" itemid="{{$li->id}}">+add to
-                                                            cart</a>
+                                                         @livewire('add-to-cart-component', ['itemid' => $li->id])
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,8 +308,7 @@
                                                         <a href="/item/{{$li->slug}}" class="product-title"> {{$li->name}}</a>
                                                         <div class="price-switcher">
                                                             <span class="price switcher-item">$ETB {{$li->price}}</span>
-                                                            <a href="#add-to-cart" class="add-cart text-capitalize switcher-item">+add to
-                                                                cart</a>
+                                                              @livewire('add-to-cart-component', ['itemid' => $li->id])
                                                         </div>
                                                     </div>
                                                 </div>
@@ -327,7 +322,7 @@
                     </section>
                     <!-- related product end -->
      <!-- product popup start -->
-                    <section id="product-popup">
+                    <section id="product-popup">gi
                         <div class="product-popup-overlay"></div>
                         <div class="product-popup-container">
                             <div class="product-inner w-100">

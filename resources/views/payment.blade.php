@@ -98,6 +98,22 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div x-data="{ isExpanded: false }" class="divide-y divide-slate-300 overflow-hidden rounded-xl border border-slate-300 bg-slate-100/40 dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800/50">
+                                        <button id="controlsAccordionItemTwo" type="button" class="flex w-full items-center justify-between gap-2 bg-slate-100 p-4 text-left underline-offset-2 hover:bg-slate-100/75 focus-visible:bg-slate-100/75 focus-visible:underline focus-visible:outline-none dark:bg-slate-800 dark:hover:bg-slate-800/75 dark:focus-visible:bg-slate-800/75" aria-controls="accordionItemTwo" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold'  : 'text-onSurface dark:text-onSurfaceDark font-medium'" :aria-expanded="isExpanded ? 'true' : 'false'">
+                                         Credit / Debit Card Payment
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                                            </svg>
+                                        </button>
+                                        <div x-cloak x-show="isExpanded" id="accordionItemFour" role="region" aria-labelledby="controlsAccordionItemFour"  x-collapse>
+                                            <div class="p-4 text-sm sm:text-base text-pretty">
+                                               Card payment form here
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                     <div x-data="{ isExpanded: false }" class="divide-y divide-slate-300 overflow-hidden rounded-xl border border-slate-300 bg-slate-100/40 dark:divide-slate-700 dark:border-slate-700 dark:bg-slate-800/50">
                                         <button id="controlsAccordionItemThree" type="button" class="flex w-full items-center justify-between gap-2 bg-slate-100 p-4 text-left underline-offset-2 hover:bg-slate-100/75 focus-visible:bg-slate-100/75 focus-visible:underline focus-visible:outline-none dark:bg-slate-800 dark:hover:bg-slate-800/75 dark:focus-visible:bg-slate-800/75" aria-controls="accordionItemThree" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold'  : 'text-onSurface dark:text-onSurfaceDark font-medium'" :aria-expanded="isExpanded ? 'true' : 'false'">
                                          PayPal
@@ -107,7 +123,28 @@
                                         </button>
                                         <div x-cloak x-show="isExpanded" id="accordionItemThree" role="region" aria-labelledby="controlsAccordionItemThree"  x-collapse>
                                             <div class="p-4 text-sm sm:text-base text-pretty">
-                                           Paypal PayNow Form here
+
+
+
+                                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                                                    <!-- Saved buttons use the "secure click" command -->
+                                                    <input type="hidden" name="cmd" value="_s-xclick">
+
+                                                    <!-- Saved buttons are identified by their button IDs -->
+                                                    <input type="hidden" name="hosted_button_id" value="221">
+
+                                                    <!-- Saved buttons display an appropriate button image. -->
+                                                    <input type="image" name="submit"
+                                                           src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                                                           alt="PayPal - The safer, easier way to pay online">
+                                                    <img alt="" width="1" height="1"
+                                                         src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+                                                </form>
+
+
+
                                             </div>
                                         </div>
                                     </div>

@@ -1,3 +1,3 @@
 <div>
-    {{-- Success is as dangerous as failure. --}}
+    <i class="fal fa-shopping-bag"><span>{{$cart_counter}}</span></i>
 </div>
