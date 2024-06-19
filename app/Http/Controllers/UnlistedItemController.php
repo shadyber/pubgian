@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Item;
+use App\Models\UnlistedItem;
 use Illuminate\Http\Request;
 
-use Cviebrock\EloquentSluggable\Services\SlugService;
-class ItemController extends Controller
+class UnlistedItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,6 @@ class ItemController extends Controller
     public function index()
     {
         //
-        return 'index';
     }
 
     /**
@@ -22,8 +20,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-
-        $slug = SlugService::createSlug(Item::class, 'slug', 'My First Post');
+       return view('unlisted.create');
     }
 
     /**
@@ -37,24 +34,15 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($slug)
+    public function show(UnlistedItem $unlistedItem)
     {
-
-        $item=Item::where('slug',$slug)->get();
-
-
-          if(count($item)>0){
-
-              return view('shop.show')->with(['item'=>$item[0]]);
-          }
-
-              return  view('shop.index')->with(['error'=>'item not found','items'=>Item::lastN(12)]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Item $item)
+    public function edit(UnlistedItem $unlistedItem)
     {
         //
     }
@@ -62,7 +50,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Item $item)
+    public function update(Request $request, UnlistedItem $unlistedItem)
     {
         //
     }
@@ -70,7 +58,7 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Item $item)
+    public function destroy(UnlistedItem $unlistedItem)
     {
         //
     }

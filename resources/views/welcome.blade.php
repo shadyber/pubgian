@@ -170,7 +170,7 @@
                                                             <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
                                                             <div class="price-switcher">
                                                                 <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                                @livewire('add-to-cart-component', ['itemid' => it1->id])
+                                                                @livewire('add-to-cart-component', ['itemid' => $it1->id])
                                                             </div>
                                                         </div>
                                                     </div>

@@ -46,6 +46,7 @@ Route::get('/checkout', function (){
    return view('checkout',['user'=>$user,'shippinginfo'=>$shippinginfo]);
 });
 
+    Route::resource('/unlisted',\App\Http\Controllers\UnlistedItemController::class);
 
 
 
