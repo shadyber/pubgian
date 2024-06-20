@@ -128,10 +128,9 @@
                                                                                 class="w-100">
                                                                        </div>
                                                                    </a>
-                                                                   <a href="javascript:void(0)"
-                                                                      class="product-img-link quick-view-1 text-capitalize">Quick
-                                                                       view</a>
-                                                                       view</a>
+                                                                   <div>
+                                                                       @livewire('add-to-cart-component', ['itemid' => $item->id])
+                                                                   </div>
                                                                </div>
 
                                                                <div class="product-desc pb-2">
@@ -146,10 +145,7 @@
                                                                    <a href="/item/{{$item->slug}}" class="product-title">{{substr( $item->detail,0,64)}}</a>
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
-                                                                       <div>
-                                                                            @livewire('add-to-cart-component', ['itemid' => $item->id])
 
-                                                                       </div>
 
 
                                                                    </div>
@@ -180,9 +176,7 @@
                                                                                 class="w-100">
                                                                        </div>
                                                                    </a>
-                                                                   <a href="javascript:void(0)"
-                                                                      class="product-img-link quick-view-1 text-capitalize">Quick
-                                                                       view</a>
+                                                                   @livewire('add-to-cart-component', ['itemid' => $item->id])
                                                                </div>
 
                                                                <div class="product-desc pb-20">
@@ -197,7 +191,7 @@
                                                                    <a href="/item/{{$item->slug}}" class="product-title">{{$item->name}}</a>
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
-                                                                        @livewire('add-to-cart-component', ['itemid' => $item->id])
+
                                                                    </div>
                                                                </div>
                                                            </div>
@@ -227,9 +221,7 @@
                                                                                 class="w-100">
                                                                        </div>
                                                                    </a>
-                                                                   <a href="javascript:void(0)"
-                                                                      class="product-img-link quick-view-1 text-capitalize">Quick
-                                                                       view</a>
+                                                                   @livewire('add-to-cart-component', ['itemid' => $item->id])
                                                                </div>
 
                                                                <div class="product-desc pb-20">
@@ -244,7 +236,7 @@
                                                                    <a href="/item/{{$item->slug}}" class="product-title">{{$item->name}}</a>
                                                                    <div class="price-switcher">
                                                                        <span class="price switcher-item">$ETB {{$item->price}}</span>
-                                                                       @livewire('add-to-cart-component', ['itemid' => $item->id])
+
                                                                    </div>
                                                                </div>
                                                            </div>
@@ -278,9 +270,7 @@
                                                                                             alt="{{$item->name}}" class="w-100">
                                                                                    </div>
                                                                                </a>
-                                                                               <a href="javascript:void(0)"
-                                                                                  class="product-img-link quick-view-1 text-capitalize">Quick
-                                                                                   view</a>
+                                                                               @livewire('add-to-cart-component', ['itemid' => $item->id])
                                                                                <span
                                                                                    class="sale bg-red text-white">{{$item->badge}}</span>
                                                                            </div>
@@ -303,9 +293,7 @@
                                                                                    <li>–{{$item->tags}}</li>
 
                                                                                </ul>
-                                                                               <a href="/mycart"
-                                                                                  class="list-add-cart-btn text-capitalize mt-40">+add
-                                                                                   to cart</a>
+
                                                                                <a href="/wishlist" data-toggle="tooltip"
                                                                                   data-placement="top"
                                                                                   title="wishlist"><span><i

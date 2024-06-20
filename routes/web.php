@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Livewire\Admin\AdminAddProductComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -71,9 +72,7 @@ Route::post('/saveshipinginfo',[\App\Http\Controllers\ShipingInfoController::cla
 
 });
 
-Route::get('/addtocart/{id}',[\App\Http\Controllers\CartController::class,'addToCart'])->name('addtocart');
-Route::get('/multipleaddtocart/{id}/{qnt}',[\App\Http\Controllers\CartController::class,'addMultipleToCart'])->name('addmultipletocart');
-Route::get('/removecart/{id}/',[\App\Http\Controllers\CartController::class,'removeCart'])->name('removeCart');
-Route::get('/destroyCart',[\App\Http\Controllers\CartController::class,'destroyCart'])->name('destroyCartm');
+Route::get('/removecart/{id}/',[CartController::class,'removeCart'])->name('removeCart');
+Route::get('/destroyCart',[CartController::class,'destroyCart'])->name('destroyCartm');
 
-Route::get('/mycart',[\App\Http\Controllers\CartController::class,'myCart'])->name('mycart');
+Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');

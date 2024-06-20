@@ -61,7 +61,7 @@
                                                     <div class="single-product-title">
                                                         <h2>{{$item->name}}</h2>
                                                     </div>
-                                                    <div class="single-product-price">$<span>44.00</span>–<span>$ETB {{$item->price}}</span></div>
+                                                    <div class="single-product-price"> <span>$ETB {{$item->price}}</span></div>
                                                     <div class="single-product-desc mb-25">
                                                         {{ substr(strip_tags($item->detail),0,512)}}
                                                         <div class="product-list single-product-list">
@@ -78,8 +78,8 @@
                                                     </div>
                                                     <div class="single-product-action mt-35">
                                                         <ul>
-                                                            <li><a href="/wishlist"><i class="fal fa-heart"></i> add to wishlist</a></li>
-                                                            <li><a href="/mycart"><i class="fal fa-abacus"></i> add to compare</a></li>
+                                                            <li><a href="#"><i class="fal fa-heart"></i> add to wishlist</a></li>
+                                                            <li><a href="#"><i class="fal fa-abacus"></i> add to compare</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="sku"><span>Sku: </span> <strong>ID:{{$item->id}}</strong></div>

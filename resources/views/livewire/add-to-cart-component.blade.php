@@ -1,6 +1,7 @@
 <div>
-    <a href="#"
-       class=" text-capitalize switcher-item add-to-cart" itemid="{{$itemid}}" wire:click="addCounter">
+    <a href="javascript:addCartCounter({{$itemid}});" class="add-to-cart list-add-cart-btn text-capitalize item{{$itemid}}" itemid="{{$itemid}}" qnt="1"  wire:click="addCounter()">
         +add to cart
     </a>
+
+
 </div>

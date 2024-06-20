@@ -9,10 +9,12 @@ class Cart extends Component
     public  $cart_counter;
 
 
-    #[On('addCartCount')]
+      #[On('addCartCount')]
+      public function addCartCount (){
+          $this->cart_counter++;
+      }
      public function render()
     {
-
         $this->cart_counter=count(\App\Models\Cart::myCart());
         return view('livewire.cart');
     }

@@ -182,7 +182,7 @@
 </div>
 </li>
 <li><a href="/wishlist" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
-<li>  <a href="/mycart" data-toggle="tooltip" data-placement="bottom" title="view mycart">@livewire('cart')</a>
+<li>  <a href="/mycart" data-toggle="tooltip" data-placement="bottom" title="view mycart" >@livewire('cart')</a>
 <div class="minicart">
 <div class="minicart-body">
 <div class="minicart-content">

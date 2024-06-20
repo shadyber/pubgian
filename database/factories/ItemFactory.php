@@ -20,10 +20,12 @@ class ItemFactory extends Factory
             'name'=>$this->faker->word,
             'slug'=>$this->faker->word,
             'detail'=>$this->faker->sentence,
-            'photo'=>$this->faker->imageUrl('720','640',),
-            'thumb'=>$this->faker->imageUrl('640','480',),
+           // 'photo'=>$this->faker->imageUrl('720','640',),
+           // 'thumb'=>$this->faker->imageUrl('640','480',),
+             'photo'=> '/img/product/1.jpg',
+            'thumb'=> '/img/product/2.jpg',
             'color'=>$this->faker->colorName,
-            
+
             'weight'=>$this->faker->word,
             'price'=>180,
             'item_category_id'=>$this->faker->numberBetween(1,2),
