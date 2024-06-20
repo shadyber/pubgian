@@ -1,5 +1,13 @@
 <div>
-    <form method="POST" >
+
+    @if(!empty($successMessage))
+        <div class="alert alert-success">
+            {{ $successMessage }}
+        </div>
+    @endif
+
+
+    <form method="POST" action="submitForm" >
 @csrf
 
     <div>
@@ -14,8 +22,8 @@
     </div>
 
         <div>
-            <x-label for="price_range" value="{{ __('Item Images') }}" />
-            <x-input id="images" class="block mt-1 w-full" type="file" name="images" :value="old('images')"  />
+            <x-label for="image" value="{{ __('Item Images') }}" />
+            <x-input id="image" class="block mt-1 w-full" type="file" name="images" :value="old('image')"  />
         </div>
 
         <div>
@@ -62,9 +70,18 @@
 
 
     <div>
-       <x-button> Submit</x-button>
+        <x-button  wire:click="submitForm" type="button">Send Order Now!</x-button>
     </div>
     </form>
+
+
+        @if(!empty($successMessage))
+            <div class="alert alert-success">
+                {{ $successMessage }}
+            </div>
+        @endif
+
+
 </div>
 
 

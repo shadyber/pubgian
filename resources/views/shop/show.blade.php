@@ -129,7 +129,9 @@
                                             <div class="tab-pane fade show active" id="desc-tab-1">
                                                 <div class="single-product-tab-content">
                                                     <h3 class="title mb-30">Description</h3>
-
+                                                    @if($item->video_url !=null)
+                                                    <iframe width="560" height="315" src="{{$item->video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                   @endif
                                                      {!!$item->detail!!}
                                                 </div>
                                             </div>

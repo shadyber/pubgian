@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UnlistedItem extends Model
 {
+
+
+
     use HasFactory;
 }
