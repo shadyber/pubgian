@@ -1,14 +1,22 @@
-<x-guest-layout>
-    <div class="pt-4 bg-gray-100 dark:bg-gray-900">
-        <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
-            <div>
-                Unlisted Items
-            </div>
+<x-app-layout>
+    <x-slot name="header">
 
-            <div class="w-full bg-gray-50 p-lg-2 m-lg-2">
-              @livewire('forms.item-request-form')
+        {{ __('Order Unlisted Item') }}
 
-            </div>
+    </x-slot>
+
+    <!-- our products section start -->
+    <section class="our-products mt-120">
+        <div class="container">
+
+
+            @livewire('forms.item-request-form')
+
+
         </div>
-    </div>
-</x-guest-layout>
+    </section>
+
+
+</x-app-layout>
+
+@livewire('forms.item-request-form')

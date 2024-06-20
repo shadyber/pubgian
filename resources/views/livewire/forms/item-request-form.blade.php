@@ -1,6 +1,6 @@
 <div>
-    <form method="POST" action="{{ route('unlisted.storep') }}">
-
+    <form method="POST" >
+@csrf
 
     <div>
         <x-label for="name" value="{{ __('Item Name') }}" />
@@ -18,7 +18,15 @@
             <x-input id="images" class="block mt-1 w-full" type="file" name="images" :value="old('images')"  />
         </div>
 
+        <div>
+            <x-label for="video_url" value="{{ __('Video Url') }}" />
+            <x-input id="video_url" class="block mt-1 w-full" type="text" name="video_url" :value="old('video_url')"  />
+        </div>
 
+        <div>
+            <x-label for="shop_url" value="{{ __('Shop Url') }}" />
+            <x-input id="shop_url" class="block mt-1 w-full" type="text" name="shop_url" :value="old('shop_url')"  />
+        </div>
 
         <div>
         <x-label for="description" value="{{__('Item Description')}}" />

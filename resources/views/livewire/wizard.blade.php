@@ -103,6 +103,16 @@
                 <div class="col-md-12">
                     <h3>Additional Information</h3>
 
+
+                    <div class="form-group">
+                        @error('video_url') <span class="error red-color">{{ $message }}</span> @enderror
+                        <x-label for="video_url" value="{{ __('Youtube Video Url ') }}" />
+                        <x-input id="video_url" class="form-control" type="text" name="video_url" :value="old('video_url')" required autofocus autocomplete="video_url"  wire:model="video_url" />
+
+                    </div>
+
+
+
                     <div class="form-group">
                         @error('color') <span class="error red-color">{{ $message }}</span> @enderror
                         <x-label for="color" value="{{ __('Color') }}" />

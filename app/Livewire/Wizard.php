@@ -18,6 +18,7 @@ class Wizard extends Component
         $price, $detail,
         $status = 1,
         $photo,
+        $video_url,
         $thumb,
         $color,
         $weight,
@@ -85,6 +86,7 @@ $this->item=Item::create(
             'color' => $this->status,
             'weight' => $this->status,
             'tags' => $this->status,
+            'video_url' => $this->video_url,
         ]);
 
         $this->successMessage = 'Product Created Successfully.';
