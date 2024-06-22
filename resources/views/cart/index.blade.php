@@ -54,7 +54,7 @@
                                                     </td>
                                                     <td>
                                                         <div class="table-data">
-                                                            <input type="number" value="1" style="margin-right: 20px; width: 119px;">
+                                                            <input type="number" value="{{$cart['quantity']}}" style="margin-right: 20px; width: 119px;">
                                                         </div>
                                                     </td>
                                                     <td>

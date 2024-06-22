@@ -22,8 +22,8 @@ class ItemFactory extends Factory
             'detail'=>$this->faker->sentence,
            // 'photo'=>$this->faker->imageUrl('720','640',),
            // 'thumb'=>$this->faker->imageUrl('640','480',),
-             'photo'=> '/img/product/1.jpg',
-            'thumb'=> '/img/product/2.jpg',
+             'photo'=> '/img/banner/banner661.jpg',
+            'thumb'=> '/img/banner/banner661.jpg',
             'color'=>$this->faker->colorName,
 
             'weight'=>$this->faker->word,

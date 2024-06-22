@@ -183,39 +183,7 @@
 </li>
 <li><a href="/wishlist" data-toggle="tooltip" data-placement="bottom" title="view wishlist"><i class="fal fa-heart"><span>0</span></i></a></li>
 <li>  <a href="/mycart" data-toggle="tooltip" data-placement="bottom" title="view mycart" >@livewire('cart')</a>
-<div class="minicart">
-<div class="minicart-body">
-<div class="minicart-content">
-<ul class="text-left">
-@foreach(\App\Models\Cart::myCart() as $cart)
-<li>
-    <div class="minicart-img">
-        <a href="/item/{{$cart['slug']}}" class="p-0"><img src="{{$cart['thumb']}}" class="w-100" alt=""></a>
-    </div>
-    <div class="minicart-desc">
-        <a href="/item/{{$cart['slug']}}" class="p-0">{{$cart['name']}}</a>
-        <strong>{{$cart['quantity']}} × $ETB {{$cart['price']}}</strong>
-    </div>
-    <div class="remove">
-        <a href="/removecart/{{$cart['id']}}"><i class="fa fa-times"></i></a>
-    </div>
-</li>
-@endforeach
-
-</ul>
-</div>
-</div>
-<div class="minicart-checkout">
-<div class="mt-8 overflow-hidden minicart-checkout-heading mb-25">
-<strong class="float-left">Subtotal:</strong>
-<span class="float-right price">{{\App\Models\Cart::totalCart()}}</span>
-</div>
-<div class="minicart-checkout-links">
-<a href="/mycart" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">View cart</a>
-<a href="/checkout" class="mb-20 generic-btn black-hover-btn text-uppercase w-100">Checkout</a>
-</div>
-</div>
-</div>
+@livewire('mini-cart-component')
 </li>
 <li><a href="javascript:void(0)"><i class="fal fa-align-right"></i></a>
 <ul class="text-right submenu bold-content">
