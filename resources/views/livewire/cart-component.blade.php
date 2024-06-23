@@ -5,7 +5,7 @@
             <div class="col-xl-8">
 
                 <div class="product-content">
-                    <form action="#">
+                    <form  wire:submit.prevent="updateAllCart(Object.fromEntries(new FormData($event.target)))">
                         <div class="table-responsive">
                             <table class="table table-2">
                                 <thead>
@@ -19,7 +19,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($carts as $cart)
+                                @foreach($carts as $id=>$cart )
+
                                     <tr>
                                         <td>
                                             <div class="table-data">
@@ -43,7 +44,7 @@
                                         </td>
                                         <td>
                                             <div class="table-data">
-                                                <input name="qnt{{$cart['id']}}" type="number" value="{{$cart['quantity']}}" style="margin-right: 20px; width: 119px;" wire:change="changeCartQnt({{$cart['id']}})">
+                                                <input name="cartsQnt{{$id}}"    type="number" value="{{$cart['quantity']}}" style="margin-right: 20px; width: 119px;" >
                                             </div>
                                         </td>
                                         <td>
@@ -62,7 +63,7 @@
 
                             <input type="text" placeholder="Cupon code" class="text-left pl-3" style="margin-right: 20px; width: 119px;">
                             <button class="generic-btn border-0 red-hover-btn text-uppercase">Apply Cupon</button>
-                            <button class="generic-btn border-0 red-hover-btn text-uppercase float-right">Update Cart</button>
+                            <button class="generic-btn border-0 red-hover-btn text-uppercase float-right" type="submit">Update Cart</button>
 
                         </div></form>
 

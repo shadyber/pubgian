@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Http\Controllers\CartController;
+use http\Client\Request;
 use Livewire\Component;
 
 class CartComponent extends Component
@@ -10,10 +12,6 @@ class CartComponent extends Component
 
 public  $carts;
 
-    public function changeCartQnt($cartid){
-
-        request('qnt'.$cartid);
-    }
 
 
     public function removeCart($id){
@@ -26,13 +24,22 @@ public  $carts;
         }
         if($cart[$id]){
             unset($cart[$id]);
+            $this->dispatch('$refresh');
         }
         session()->put('cart',$cart);
+        $this->dispatch('$refresh');
 
     }
 
-    public function updateAllCart(){
+    public function updateAllCart($formdata){
 
+      foreach ($this->carts as $id=>$cart){
+$this->carts[$id]["quantity"]=$formdata['cartsQnt'.$id];
+          session()->put('cart', $this->carts);
+
+ $this->dispatch('$refresh');
+
+      }
     }
 
     public function refreshComponent(){
@@ -42,6 +49,7 @@ public  $carts;
     public function render()
     {
         $this->carts=\App\Models\Cart::myCart();
+
         return view('livewire.cart-component');
     }
 }

@@ -49,9 +49,14 @@
                 @endif
 
                 <x-label for="name" value="{{ __('Payment Proof Screenshot or Recipt') }}" />
-                <x-input id="payment_proof" class="block mt-1 w-full" type="file" name="payment_proof" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"  wire:model="payment_proof" :value="old('payment_proof')" required autofocus autocomplete="payment_proof" />
+                <x-input id="payment_proof" class="block mt-1 w-full" type="file" name="payment_proof"
+                         accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"
+                         wire:model="payment_proof" :value="old('payment_proof')" required autofocus autocomplete="payment_proof" />
             </div>
-            <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">Save Payment Information</button>
+            <button class="focus:outline-none focus:ring-2 dark:bg-gray-800 dark:text-white focus:ring-gray-500 focus:ring-offset-2 mt-8 text-base
+            font-medium focus:ring-2 focus:ring-ocus:ring-gray-800 leading-4 hover:bg-black py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800">
+               Confirm Payment and Place Order
+            </button>
 
 
 

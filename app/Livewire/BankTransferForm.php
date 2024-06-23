@@ -23,6 +23,7 @@ public function savePayment(){
         $this->user=Auth::user();
 
         $this->cart=json_encode(\App\Models\Cart::myCart());
+
         $this->shippinginfo=$this->user->shippinginfo;
         $this->payer_name=$this->user->name;
         $this->payer_email=$this->user->email;

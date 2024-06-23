@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\ShipingInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,7 @@ class ShipingInfoController extends Controller
 
 $shippinginfo=ShipingInfo::find(Auth::user()->shippinginfo);
 if($shippinginfo!=null){
-    $shippinginfo=ShipingInfo::update([
+    $shippinginfo= (new \App\Models\ShipingInfo)->update([
         'user_id'=>\auth()->user()->getAuthIdentifier(),
         'first_name'=>$request->input('first_name'),
         'last_name'=>$request->input('first_name'),
@@ -49,6 +50,13 @@ else{
         'apartment_number'=>$request->input('apartment_number'),
     ]);
 }
+
+
+
+ $cart_json=json_encode(Cart::myCart());
+
+
+
         Return redirect()->route('payment');
 
     }
