@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\ShipingInfo;
+use App\Models\TemporaryOrder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,6 +57,14 @@ else{
  $cart_json=json_encode(Cart::myCart());
 
 
+TemporaryOrder::create(
+  [
+      'cart'=>$cart_json,
+      'user_id' =>\auth()->user()->getAuthIdentifier(),
+      'shipping_address_id'=>\auth()->user()->shippingInfo->id
+  ]
+);
+//notify email
 
         Return redirect()->route('payment');
 

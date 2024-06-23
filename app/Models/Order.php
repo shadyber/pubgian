@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    
+
+    protected $fillable=[
+        'cart' , 'shipping_address_id' , 'user_id' ,'status' ,'payments_id'
+    ];
     public function address(){
         return $this->hasOne(ShippingInfo::class,'id');
     }

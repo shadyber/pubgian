@@ -5,7 +5,7 @@
             {{ $successMessage }}
         </div>
     @endif
-<div>
+         <div>
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
                 <div class="stepwizard-step">
@@ -170,7 +170,7 @@
         </div>
     </div>
     </div>
-        <div>
+  <div>
 
             @if(!empty($successMessage))
                 <div class="alert alert-success">

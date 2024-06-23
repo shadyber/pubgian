@@ -1,21 +1,31 @@
 <div>
+    @if(!empty($successMessage))
+        <div class="alert alert-success">
+            {{ $successMessage }}
+        </div>
+    @endif
+
+
     <form wire:submit="savePayment">
 
         <div class="form-group">
 
             <div>
+                @error('name') <span class="error red-color">{{ $message }}</span> @enderror
                 <x-label for="name" value="{{ __('Payer Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="payer_name" wire:model="payer_name" :value="old('payer_name')" required autofocus autocomplete="payer_name" />
+                <input id="name" class="block mt-1 w-full" type="text" name="payer_name" wire:model="payer_name" :value="old('payer_name')" required autofocus autocomplete="payer_name" />
             </div>
 
 
             <div>
+                @error('email') <span class="error red-color">{{ $message }}</span> @enderror
                 <x-label for="name" value="{{ __('Payer Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="payer_email" wire:model="payer_email" :value="old('payer_email')" autofocus autocomplete="payer_email" />
+                <input id="email" class="block mt-1 w-full" type="email" name="payer_email" wire:model="payer_email" :value="old('payer_email')" autofocus autocomplete="payer_email" />
             </div>
 
             <div>
-                <x-label for="name" value="{{ __('Bank Name') }}" />
+                @error('bank_name') <span class="error red-color">{{ $message }}</span> @enderror
+                <x-label for="bank_name" value="{{ __('Bank Name') }}" />
                 <select id="bank_name" class="block mt-1 w-full" type="text" name="bank_name" wire:model="bank_name" :value="old('bank_name')" required autofocus autocomplete="bank_name" >
                     <option value="cbe"> Commercial Bank Of Ethiopia : 1000218140428</option>
                     <option value="cbe">Telebirr: 0912852989</option>
@@ -26,14 +36,17 @@
             </div>
 
             <div>
-                <x-label for="name" value="{{ __('Payment Reference Number') }}" />
-                <x-input id="payment_reference" class="block mt-1 w-full" type="text" name="payment_reference" wire:model="payment_reference" :value="old('payment_reference')" required autofocus autocomplete="payment_reference" />
+                @error('payment_reference') <span class="error red-color">{{ $message }}</span> @enderror
+                <x-label for="payment_reference" value="{{ __('Payment Reference Number') }}" />
+                <input id="payment_reference" class="block mt-1 w-full" type="text" name="payment_reference" wire:model="payment_reference" :value="old('payment_reference')" required autofocus autocomplete="payment_reference" />
             </div>
 
             <div>
-                <x-label for="name" value="{{ __('Amount') }}" />
-                <x-input id="amount" class="block mt-1 w-full" type="text" name="amount" wire:model="amount" :value="old('amount')" required readonly />
-            </div>
+                @error('amount') <span class="error red-color">{{ $message }}</span> @enderror
+                <x-label for="amount" value="{{ __('Amount') }}" />
+
+                <input type="number" name="amount" id="amount" class="form-control" value="{{\App\Models\Cart::totalCart()}}" required wire:model="amount" />
+             </div>
 
 
 
@@ -49,7 +62,7 @@
                 @endif
 
                 <x-label for="name" value="{{ __('Payment Proof Screenshot or Recipt') }}" />
-                <x-input id="payment_proof" class="block mt-1 w-full" type="file" name="payment_proof"
+                <input id="payment_proof" class="block mt-1 w-full" type="file" name="payment_proof"
                          accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps"
                          wire:model="payment_proof" :value="old('payment_proof')" required autofocus autocomplete="payment_proof" />
             </div>
@@ -58,7 +71,11 @@
                Confirm Payment and Place Order
             </button>
 
-
+            @if(!empty($successMessage))
+                <div class="alert alert-success">
+                    {{ $successMessage }}
+                </div>
+            @endif
 
         </div>
     </form>

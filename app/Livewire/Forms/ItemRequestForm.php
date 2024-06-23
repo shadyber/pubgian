@@ -15,11 +15,7 @@ class ItemRequestForm extends Component
 
 
 
-    public function upload($photo)
-    {
-        $img= $photo->storePublicly( 'images', 'public');
-return $img;
-    }
+
 
     public $name,
         $price_range,
