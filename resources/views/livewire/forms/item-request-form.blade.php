@@ -7,45 +7,69 @@
     @endif
 
 
-    <form method="POST" action="submitForm" >
-@csrf
+    <form wire:submit="submitForm" >
+
 
     <div>
+        @error('name') <span class="error red-color">{{ $message }}</span> @enderror
         <x-label for="name" value="{{ __('Item Name') }}" />
-        <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+        <input type="text" name="name" id="name" class="form-control" required wire:model="name">
     </div>
 
 
     <div>
-        <x-label for="price_range" value="{{ __('Price Range') }}" />
-        <x-input id="price_range" class="block mt-1 w-full" type="text" name="price_range" :value="old('price_range')"  />
+        @error('price_range') <span class="error red-color">{{ $message }}</span> @enderror
+        <x-label for="price_range" value="{{ __('Price Range (ETB)') }}" />
+        <x-input id="price_range" class="block mt-1 w-full" type="text" name="price_range" wire:model="price_range" :value="old('price_range')"  />
     </div>
 
+        <div class="row">
+
+
+            @if ($images)
+                @foreach($images as $image)
+                    <div class="card col-md-2 p-2 m-2">
+
+                        <img src="{{ $image->temporaryUrl() }}" width="100px" height="100px">
+                    </div>
+                @endforeach
+            @endif
+        </div>
+
+
         <div>
-            <x-label for="image" value="{{ __('Item Images') }}" />
-            <x-input id="image" class="block mt-1 w-full" type="file" name="images" :value="old('image')"  />
+            @error('images') <span class="error red-color">{{ $message }}</span> @enderror
+            <x-label for="images" value="{{ __('Item Images') }}" />
+            <input type="file" wire:model="images" multiple  accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps">
+
         </div>
 
         <div>
+            @error('video_url') <span class="error red-color">{{ $message }}</span> @enderror
             <x-label for="video_url" value="{{ __('Video Url') }}" />
-            <x-input id="video_url" class="block mt-1 w-full" type="text" name="video_url" :value="old('video_url')"  />
+            <x-input id="video_url" class="block mt-1 w-full" type="url" name="video_url" wire:model="video_url" :value="old('video_url')"  />
         </div>
 
         <div>
+            @error('shop_url') <span class="error red-color">{{ $message }}</span> @enderror
             <x-label for="shop_url" value="{{ __('Shop Url') }}" />
-            <x-input id="shop_url" class="block mt-1 w-full" type="text" name="shop_url" :value="old('shop_url')"  />
+            <x-input id="shop_url" class="block mt-1 w-full" type="url" name="shop_url" wire:model="shop_url" :value="old('shop_url')"  />
         </div>
 
         <div>
-        <x-label for="description" value="{{__('Item Description')}}" />
-        <textarea name="description" id="" cols="30" rows="10" id="description" class="form-control">
+            @error('description') <span class="error red-color">{{ $message }}</span> @enderror
+            <x-label for="description" value="{{__('Item Description')}}" />
 
-        </textarea>
+            <textarea name="description" id="description" class="form-control" required wire:model="description">
+
+            </textarea>
+
     </div>
 
 
 <div class="p-lg-1 m-lg-1">
-    <select wire:model="item_category_id" class="form-control black-color">
+    @error('item_category_id') <span class="error red-color">{{ $message }}</span> @enderror
+    <select wire:model="item_category_id" class="form-control black-color" wire:model="item_category_id">
         <option value="" selected>Choose Item Category</option>
         @foreach (\App\Models\ItemCategory::all()->all() as $mb)
             <option value="{{$mb->id}}" class="border-0 text-dark">
@@ -59,7 +83,8 @@
 
 
     <div class="p-lg-1 m-lg-1">
-        <select wire:model="order_urgency" class="form-control black-color">
+        @error('order_urgency') <span class="error red-color">{{ $message }}</span> @enderror
+        <select wire:model="order_urgency" class="form-control black-color" wire:model="order_urgency">
             <option value="" selected>Select Order Urgency</option>
             <option value="30" selected> less than a month</option>
             <option value="365" selected>This Year</option>
@@ -69,17 +94,19 @@
     </div>
 
 
-    <div>
-        <x-button  wire:click="submitForm" type="button">Send Order Now!</x-button>
-    </div>
-    </form>
+        <div>
+            <button type="submit" class="button btn-primary form-control">Save Item Order Request</button>
 
+        </div>
 
         @if(!empty($successMessage))
             <div class="alert alert-success">
                 {{ $successMessage }}
             </div>
         @endif
+
+
+    </form>
 
 
 </div>

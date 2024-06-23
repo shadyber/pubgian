@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -15,11 +16,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('price_range');
-            $table->string('image');
+            $table->string('images');
             $table->string('video_url');
             $table->string('shop_url');
             $table->bigInteger('item_category_id')->unsigned();
-            $table->string('urgency');
+            $table->string('order_urgency');
             $table->longText('description');
             $table->timestamps();
         });

@@ -5,6 +5,9 @@ namespace App\Livewire\Forms;
 use App\Models\UnlistedItem;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use function MongoDB\BSON\toJSON;
+use function Pest\Laravel\put;
+use function Ramsey\Collection\add;
 
 class ItemRequestForm extends Component
 {
@@ -12,14 +15,15 @@ class ItemRequestForm extends Component
 
 
 
-    public function upload($name)
+    public function upload($photo)
     {
-        $this->image->storeAs('/', $name,  'images');
+        $img= $photo->storePublicly( 'images', 'public');
+return $img;
     }
 
     public $name,
         $price_range,
-        $image,
+        $images,
         $description,
         $video_url,
         $shop_url,
@@ -44,7 +48,16 @@ class ItemRequestForm extends Component
             'item_category_id' =>'required'
         ]);
 
-        $img= $this->image->storePublicly( 'images', 'public');
+        $imagesarray =array();
+
+        foreach ($this->images as  $key =>$image) {
+
+            // Store the file in the "photos" directory, with "public" visibility in a configured "s3" disk
+            $img= $image->storePublicly( 'images', 'public');
+            $imagesarray[]=$img;
+
+            }
+
 
         UnlistedItem::create([
             'name' => $this->name,
@@ -54,9 +67,10 @@ class ItemRequestForm extends Component
             'video_url' =>$this->video_url,
             'shop_url' =>$this->shop_url,
             'order_urgency' =>$this->order_urgency,
+            'images'=>json_encode($imagesarray),
         ]);
 
-        $this->successMessage = 'Product Created Successfully.';
+        $this->successMessage = 'Order is  Created Successfully. We will notify you ASAP';
 
     }
 

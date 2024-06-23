@@ -130,7 +130,7 @@
                                                         <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
                                                         <div class="price-switcher">
                                                                 <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                               @livewire('add-to-cart-component', ['itemid' => $it1->id])
+                                                            @livewire('add-to-cart-component', ['itemid' => $it1->id])
                                                         </div>
                                                     </div>
                                                 </div>
@@ -381,7 +381,30 @@
             @livewireScripts
 
 
+             <script type="text/javascript">
+                 function addCartCounter (itemid) {
+                     var cart_counter=document.getElementById('cart-counter');
 
+                     cart_counter.innerText++;
+
+
+
+                     var callerbtn=document.getElementsByClassName('item'+itemid);
+
+
+                     for(var i = 0; i < callerbtn.length; i++)
+                     {
+
+
+                         callerbtn[i].innerHTML='<i class="fa fa-check-double"></i> Add to Cart'
+
+
+                     }
+
+
+
+                 }
+             </script>
 
 
         <!-- JS here -->
@@ -402,6 +425,5 @@
         <script src="/js/jquery.magnific-popup.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
-        <script src="/js/cartjs.js"></script>
         </body>
     </html>

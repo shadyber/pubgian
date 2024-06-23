@@ -18,9 +18,9 @@ class MiniCartComponent extends Component
 
           $cart=session()->get('cart');
           if(!$cart){
-              return redirect()->back();
+
           }else if(!$cart[$id]){
-              return redirect()->back();
+
           }
           if($cart[$id]){
               unset($cart[$id]);
