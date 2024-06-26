@@ -45,6 +45,8 @@ class ItemRequestForm extends Component
         ]);
 
         $imagesarray =array();
+if($imagesarray!=null){
+
 
         foreach ($this->images as  $key =>$image) {
 
@@ -54,7 +56,7 @@ class ItemRequestForm extends Component
 
             }
 
-
+    }
         UnlistedItem::create([
             'name' => $this->name,
             'description' => $this->description,

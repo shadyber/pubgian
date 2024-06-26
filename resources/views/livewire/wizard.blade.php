@@ -87,8 +87,8 @@
             </div>
         </div>
         <div class="row setup-content {{ $currentStep != 2 ? 'displayNone' : '' }}" id="step-2">
-            <div class="col-xs-12">
-                <div class="col-md-12">
+            <div class="col-md-12 col-xs-12 m-2 p-1">
+                <div class="col-lg-12 col-md-12">
                     <h3> Photo </h3>
                    @if($item)
                      @livewire('upload-photo',['item'=>$item])
@@ -99,8 +99,8 @@
             </div>
         </div>
         <div class="row setup-content {{ $currentStep != 3 ? 'displayNone' : '' }}" id="step-3">
-            <div class="col-xs-12">
-                <div class="col-md-12">
+            <div class="col-md-12 col-xs-12 m-2 p-1">
+                <div class="col-lg-12 col-md-12">
                     <h3>Additional Information</h3>
 
 
@@ -156,8 +156,8 @@
             </div>
         </div>
     <div class="row setup-content {{ $currentStep != 4 ? 'displayNone' : '' }}" id="step-3">
-        <div class="col-xs-12">
-            <div class="col-md-12">
+        <div class="col-md-12 col-xs-12 m-2 p-1">
+            <div class="col-lg-12 col-md-12">
                 <h3>Finally !</h3>
 
 

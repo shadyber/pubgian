@@ -116,7 +116,7 @@
             </div>
             </div>
             @elseif($page==3)
-Inboxs
+                  Inboxs
 
             @elseif($page==4)
 
@@ -126,7 +126,7 @@ Inboxs
                 @livewire('admin.admin-add-product-component')
             </div>
 @elseif($page==6)
-            Orders
+           @livewire('my-order-component')
             @endif
     </div>
 

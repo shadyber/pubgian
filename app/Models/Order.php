@@ -28,6 +28,11 @@ class Order extends Model
     public static function pendingOrders(){
         return Order::where('status','LIKE','created')->get();
 }
+
+public function getCart(){
+        return json_decode($this->cart);
+}
+
     public static function ordersByDate($start , $end){
         return Order::where('created_at','>=',$start)
             ->where('created_at','<=',$end)

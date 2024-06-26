@@ -93,7 +93,7 @@ $this->item=Item::create(
 
         $this->clearForm();
 
-        $this->currentStep = 1;
+        $this->currentStep =4 ;
     }
 public function showProduct ($slug){
 

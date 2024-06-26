@@ -53,7 +53,7 @@ class BankTransferForm extends Component
 
         ]);
       //  Auth::user()->notify(new NewOrderNotification($order));
-
+        Session()->remove('cart');
         $this->successMessage="Payment Confirmation Saved ! We Will Respond ASAP.";
 
 }
