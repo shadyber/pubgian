@@ -62,29 +62,33 @@
                                         <div class="d-lg-flex align-items-center">
                                             <i class="fal fa-clipboard-list fa-3x me-lg-4 mb-3 mb-lg-0"></i>
                                             <div>
-                                                <p class="fw-bold mb-1">Order</p>
-                                                <p class="fw-bold mb-0">Placed</p>
+                                                <p class="fw-bold mb-1">Order Placed</p>
+
+                                                <p class="fw-bold mb-0">@if($order->status=='created' || $order->status=='processing' || $order->status=='in-route' || $order->status=='delivered')   <i class="fal fa-check fa-2x"></i>  @endif </p>
                                             </div>
                                         </div>
                                         <div class="d-lg-flex align-items-center">
                                             <i class="fal fa-box-open fa-3x me-lg-4 mb-3 mb-lg-0"></i>
                                             <div>
-                                                <p class="fw-bold mb-1">Order</p>
-                                                <p class="fw-bold mb-0">Processed</p>
+                                                <p class="fw-bold mb-1">Order Processing </p>
+                                                <p class="fw-bold mb-0">@if($order->status=='processing' || $order->status=='in-route' || $order->status=='delivered')   <i class="fal fa-check fa-2x"></i>  @endif </p>
+
                                             </div>
                                         </div>
                                         <div class="d-lg-flex align-items-center">
                                             <i class="fal fa-shipping-fast fa-3x me-lg-4 mb-3 mb-lg-0"></i>
                                             <div>
-                                                <p class="fw-bold mb-1">Order</p>
-                                                <p class="fw-bold mb-0">In Route</p>
+                                                <p class="fw-bold mb-1">Order On The Way</p>
+                                                <p class="fw-bold mb-0">@if( $order->status=='in-route' || $order->status=='delivered')   <i class="fal fa-check fa-2x"></i>  @endif </p>
+
                                             </div>
                                         </div>
                                         <div class="d-lg-flex align-items-center">
                                             <i class="fal fa-home fa-3x me-lg-4 mb-3 mb-lg-0"></i>
                                             <div>
-                                                <p class="fw-bold mb-1">Order</p>
-                                                <p class="fw-bold mb-0">Arrived</p>
+                                                <p class="fw-bold mb-1">Order Delivered</p>
+                                                <p class="fw-bold mb-0">@if( $order->status=='delivered')   <i class="fal fa-check fa-2x"></i>  @endif </p>
+
                                             </div>
                                         </div>
                                     </div>
