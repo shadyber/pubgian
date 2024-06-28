@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\ItemController;
@@ -39,6 +40,7 @@ Route::get('/shop', function () {
     return view('shop.index')->with(['items'=>$items]);
 });
 
+Route::resource('/blog', BlogController::class)->middleware('auth.basic');
 Route::resource('/item', ItemController::class);
 Route::resource('/order', OrderController::class);
 Route::resource('/category', ItemCategoryController::class);
