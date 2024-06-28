@@ -24,7 +24,7 @@ class ShipingInfoController extends Controller
 
 $shippinginfo=ShipingInfo::find(Auth::user()->shippinginfo);
 if($shippinginfo!=null){
-    $shippinginfo= (new \App\Models\ShipingInfo)->update([
+    $shippinginfo= (new ShipingInfo)->update([
         'user_id'=>\auth()->user()->getAuthIdentifier(),
         'first_name'=>$request->input('first_name'),
         'last_name'=>$request->input('first_name'),

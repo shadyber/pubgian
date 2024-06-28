@@ -29,4 +29,9 @@ class Payment extends Model
         }
         return $totalpayment;
     }
+
+
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

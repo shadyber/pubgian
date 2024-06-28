@@ -35,6 +35,9 @@ Order::find($formdata['order_id'])->update([
 
     }
 
+    public function orderDetail (){
+return $this->redirect('order.index');
+    }
     public function render()
     {
         return view('livewire.my-order-component');

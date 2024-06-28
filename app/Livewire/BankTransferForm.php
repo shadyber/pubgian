@@ -39,7 +39,7 @@ class BankTransferForm extends Component
             'payer_name'=>$this->payer_name,
 
             'payer_email'=>$this->payer_email,
-            'amount'=>$this->amount,
+            'amount'=>\App\Models\Cart::totalCart(),
             'bank_name'=>$this->bank_name,
             'payment_reference'=>$this->payment_reference,
             'payment_proof'=>env('APP_URL').'/'.$img,
@@ -49,7 +49,7 @@ class BankTransferForm extends Component
             'cart'=>$cart_json,
             'user_id' =>\auth()->user()->getAuthIdentifier(),
             'shipping_address_id'=>Auth::user()->shippinginfo->id,
-            'payments_id'=>$payment->id
+            'payment_id'=>$payment->id
 
         ]);
       //  Auth::user()->notify(new NewOrderNotification($order));

@@ -20,6 +20,7 @@
                                     <div class="d-flex justify-content-between align-items-center mb-5">
                                         <div>
 
+
                                             <h5 class="mb-0">INVOICE <span class="text-primary font-weight-bold">#ORDR0-{{$order->id}}</span>  </h5>
 
                                            @if($user->id==1) <form  wire:submit.prevent="updateStatus(Object.fromEntries(new FormData($event.target)))">
@@ -35,18 +36,20 @@
                                                     <option value="delivered">Delivered</option>
 
                                                 </select>
-                                                        <x-button type="submit" class="col-sm-4 text-xs" > <i class="fal fa-save"></i> </x-button>
+                                             <x-button type="submit" class="col-sm-4 text-xs" > <i class="fal fa-save"></i> </x-button>
 
                                             </div>
                                             </form>
                                                @endif
                                         </div>
                                         <div class="text-end">
-                                            <p class="mb-0">Expected Arrival <span>{{$order->created_at ->addDays(31)->diffForHumans()}}</span></p>
+                                            <p class="mb-0">  <span> <a href="/order/{{$order->id}}" class="btn-dark col-sm-3 text-xs"> Detail <i class="fal fa-external-link"></i> </a>
+                                        </span> Expected Arrival <span>{{$order->created_at ->addDays(31)->diffForHumans()}}</span></p>
                                             <p> @foreach ($order->getCart() as $c)
                                                 <span> <img src="{{$c->thumb}}" alt="{{$c->name}}" width="32px" height="32px" class="product-thumbnail card inline" > </span>
                                                 @endforeach
                                             </p>
+
 
                                         </div>
                                     </div>

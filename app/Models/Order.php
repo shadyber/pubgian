@@ -10,10 +10,10 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable=[
-        'cart' , 'shipping_address_id' , 'user_id' ,'status' ,'payments_id'
+        'cart' , 'shipping_address_id' , 'user_id' ,'status' ,'payment_id'
     ];
     public function address(){
-        return $this->hasOne(ShippingInfo::class,'id');
+        return $this->hasOne(ShipingInfo::class,'id');
     }
 
 
@@ -21,8 +21,8 @@ class Order extends Model
         return $this->belongsTo(User::class,'id');
     }
 
-    public function payment(){
-        return $this->hasOne(Payment::class,'id','payment_id');
+    public function payments(){
+        return $this->hasMany(Payment::class, 'id');
     }
 
     public static function pendingOrders(){
