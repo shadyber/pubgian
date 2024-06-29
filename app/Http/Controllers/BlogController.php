@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\BlogCreated;
 use App\Models\Blog;
 use App\Models\User;
+use App\Notifications\BlogCreatedNotification;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
@@ -51,6 +53,8 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
+
         if(!Auth::user()->id==1){
             return redirect()->back()->with('error','You Don\'t Have This Permission');
         }
@@ -82,7 +86,8 @@ class BlogController extends Controller
 
         $users=User::all();
         foreach ($users as $user){
-           // $user->Notify(new BlogCreatedNotification($lastblog));
+            $user->Notify(new BlogCreatedNotification($lastblog));
+            event(new BlogCreated($user));
         }
 
         return redirect()->back()->with('success','Article Created Succusfully!');

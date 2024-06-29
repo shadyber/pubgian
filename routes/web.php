@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ShipingInfoController;
@@ -88,3 +89,10 @@ Route::get('/removecart/{id}/',[CartController::class,'removeCart'])->name('remo
 Route::get('/destroyCart',[CartController::class,'destroyCart'])->name('destroyCartm');
 
 Route::get('/mycart',[CartController::class,'myCart'])->name('mycart');
+
+
+Route::get('/notifications',                [NotificationController::class, 'index']);
+Route::get('/notifications-unread',         [NotificationController::class, 'indexUnreadNotifications']);
+Route::patch('/mark-notification/{id}',     [NotificationController::class, 'markNotification']);
+Route::patch('/mark-notifications',         [NotificationController::class, 'markAllNotifications']);
+Route::delete('/notification/{id}',         [NotificationController::class, 'destroy']);
