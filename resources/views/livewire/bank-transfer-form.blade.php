@@ -45,7 +45,7 @@
                 @error('amount') <span class="error red-color">{{ $message }}</span> @enderror
                 <x-label for="amount" value="{{ __('Amount' ) }}" />
                 <p class="text-xs color-purple">Please Deposit Amount value from Cart Total ; if you send money that is not listed to our cart and order system we might not confirm or find your payment  </p>
-                <input type="number" name="amount" id="amount" class="form-control" value="{{\App\Models\Cart::totalCart()}}" required readonly wire:model="amount" />
+                <input type="number" name="amount" id="amount" class="form-control" value="{{$amount}}" required readonly wire:model="amount" />
              </div>
 
 

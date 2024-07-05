@@ -9,11 +9,11 @@ class TemporaryOrder extends Model
 {
     use HasFactory;
 protected $fillable=[
-    'cart' , 'shipping_address_id' , 'user_id' ,'status' 
+    'cart' , 'shipping_address_id' , 'user_id' ,'status','items_count','payment_expected'
 ];
 
     public function address(){
-        return $this->hasOne(ShippingInfo::class,'id');
+        return $this->hasOne(ShipingInfo::class,'id');
     }
 
 

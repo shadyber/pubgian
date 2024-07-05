@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Order;
 use App\Models\Payment;
+use App\Models\User;
 use App\Notifications\NewOrderNotification;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -52,7 +53,8 @@ class BankTransferForm extends Component
             'payment_id'=>$payment->id
 
         ]);
-      //  Auth::user()->notify(new NewOrderNotification($order));
+         Auth::user()->notify(new NewOrderNotification($order));
+         User::find(1)->notify(new NewOrderNotification($order));
         Session()->remove('cart');
         $this->successMessage="Payment Confirmation Saved ! We Will Respond ASAP.";
 

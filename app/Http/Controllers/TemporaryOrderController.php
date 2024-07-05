@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
+use App\Models\ShipingInfo;
 use App\Models\TemporaryOrder;
 use Illuminate\Http\Request;
 
@@ -34,9 +36,20 @@ class TemporaryOrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TemporaryOrder $temporaryOrder)
+    public function show($temporaryOrder)
     {
-        //
+
+       $order=TemporaryOrder::find($temporaryOrder);
+       $cart=json_decode($order->cart);
+       $user=$order->user_id;
+       $shipping_address=ShipingInfo::find($order->shipping_address_id);
+
+       session()->remove('cart');
+
+       foreach ($cart as $car){
+           CartController::manualcart($car->id,$car->quantity);
+       }
+        return view('checkout.late')->with(['order'=>$order,'user_id'=>$user,'carts'=>$cart,'shippinginfo'=>$shipping_address]);
     }
 
     /**

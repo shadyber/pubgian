@@ -2,25 +2,22 @@
 
 namespace App\Notifications;
 
-use App\Broadcasting\DatabaseChannel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class BlogCreatedNotification extends Notification
+class TemporaryOrderNotification extends Notification
 {
     use Queueable;
-    private $blog;
-    private $user;
-
-
+private  $order, $shippingInfo;
     /**
      * Create a new notification instance.
      */
-    public function __construct($blog)
+    public function __construct($order,$shipinInfo)
     {
-        $this->blog = $blog;
+       $this->order=$order;
+       $this->shippingInfo=$shipinInfo;
     }
 
     /**
@@ -30,7 +27,7 @@ class BlogCreatedNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return [DatabaseChannel::class,'mail'];
+        return ['mail'];
     }
 
     /**
@@ -39,11 +36,8 @@ class BlogCreatedNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('Hi  ,'.$notifiable->name)
-                    ->line('New Blog Post Is created ')
-
-                    ->action('Click to Read ', url('/blog/'.$this->blog->id))
-
+                    ->line('Hi .',$notifiable->name)
+                    ->action('Click to Continue', url('/finish_order/'.$this->order->id))
                     ->line('Thank you for using our application!');
     }
 
@@ -55,8 +49,7 @@ class BlogCreatedNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'title' => 'Blog Created',
-            'body'  => 'Hi ,' . $this->user->name . '!',
+            //
         ];
     }
 }

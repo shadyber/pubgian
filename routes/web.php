@@ -61,6 +61,7 @@ Route::get('/checkout', function (){
 });
 
     Route::resource('/unlisted', UnlistedItemController::class);
+    Route::resource('/finish_order', \App\Http\Controllers\TemporaryOrderController::class);
 
 
 
