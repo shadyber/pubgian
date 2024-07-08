@@ -14,8 +14,13 @@
 
                     <div class="flex flex-col justify-start  items-start bg-gray-50 dark:bg-gray-800 w-full p-6 md:p-14 mr-3">
                         <div>
+                            @if(!$user_id==\Illuminate\Support\Facades\Auth::user()->id)
+                                <h3>Are You Sure , You Order This Cart ? </h3>
+                            @endif
                             <h1 class="text-2xl  dark:text-white font-semibold leading-6 text-gray-800">Order Summary</h1>
+
                         </div>
+
                         <div class="flex mt-7 flex-col items-end w-full space-y-6">
                             <div class="flex justify-between w-full items-center">
                                 <p class="text-lg dark:text-gray-300 leading-4 text-gray-600">Total items</p>

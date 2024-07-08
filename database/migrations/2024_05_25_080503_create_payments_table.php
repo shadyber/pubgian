@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('payer_email')->nullable();
             $table->string('payer_name')->nullable();
             $table->string('payer_tel')->nullable();
+            $table->string('note')->nullable();
             $table->float('amount', 10, 2);
             $table->string('currency')->default('usd');
             $table->string('payment_status')->default('created');

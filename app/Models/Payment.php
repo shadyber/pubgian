@@ -10,7 +10,7 @@ class Payment extends Model
     use HasFactory;
 
     protected $fillable=[
-        'cart', 'user_id', 'bank_name' , 'payer_name' , 'payer_tel', 'payer_email', 'shippingInfo', 'payment_reference' , 'payment_proof' , 'amount'
+        'cart', 'user_id', 'bank_name' , 'payer_name' , 'payer_tel', 'payer_email', 'shippingInfo', 'payment_reference' , 'payment_proof' , 'amount' , 'note'
     ];
     public static function paymentsByDate($start , $end){
         return Payment::where('created_at','>=',$start)

@@ -49,6 +49,12 @@
              </div>
 
 
+            <div>
+                @error('note') <span class="error red-color">{{ $message }}</span> @enderror
+                <x-label for="payment_reference" value="{{ __('Send Us a Note') }}" />
+                <p class="text-xs"> Note: if you are purchasing Digitall Assets such as 'Pubg Us' you must Put Your Game Profile ID  here </p>
+                <input id="note" class="block mt-1 w-full" type="text" name="note" wire:model="note" :value="old('note')"  autofocus autocomplete="note" />
+            </div>
 
             <div>
 

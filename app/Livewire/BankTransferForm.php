@@ -15,7 +15,7 @@ use function Pest\Subscribers\notify;
 class BankTransferForm extends Component
 {
     use WithFileUploads;
-    public $user_id, $cart , $shippinginfo , $payer_name, $payer_email, $amount , $payment_reference,  $payment_proof, $bank_name;
+    public $user_id, $cart , $shippinginfo , $payer_name, $payer_email, $amount , $payment_reference,  $payment_proof, $bank_name , $note;
 
     public $successMessage = '';
 
@@ -43,6 +43,7 @@ class BankTransferForm extends Component
             'amount'=>\App\Models\Cart::totalCart(),
             'bank_name'=>$this->bank_name,
             'payment_reference'=>$this->payment_reference,
+            'note'=>$this->note,
             'payment_proof'=>env('APP_URL').'/'.$img,
         ]);
        $cart_json=json_encode(\App\Models\Cart::myCart());
