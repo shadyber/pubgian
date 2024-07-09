@@ -6,8 +6,10 @@ use App\Models\Cart;
 use App\Models\ShipingInfo;
 use App\Models\TemporaryOrder;
 use App\Notifications\TemporaryOrderNotification;
+use http\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function NunoMaduro\Collision\Exceptions\getMessage;
 
 class ShipingInfoController extends Controller
 {
@@ -69,7 +71,12 @@ $temp_order=TemporaryOrder::create(
   ]
 );
 //notify email
-Auth::user()->Notify(new TemporaryOrderNotification($temp_order,$shippinginfo));
+        try {
+            Auth::user()->Notify(new TemporaryOrderNotification($temp_order,$shippinginfo));
+
+        }catch (Exception $ex){
+             
+        }
 
 
         Return redirect()->route('payment');
