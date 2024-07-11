@@ -75,7 +75,7 @@ $temp_order=TemporaryOrder::create(
             Auth::user()->Notify(new TemporaryOrderNotification($temp_order,$shippinginfo));
 
         }catch (Exception $ex){
-             
+
         }
 
 
