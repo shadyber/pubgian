@@ -11,6 +11,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ShipingInfoController;
 use App\Http\Controllers\UnlistedItemController;
 use App\Livewire\Admin\AdminAddProductComponent;
+use App\Mail\MyTestEmail;
 use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -97,3 +98,24 @@ Route::get('/notifications-unread',         [NotificationController::class, 'ind
 Route::patch('/mark-notification/{id}',     [NotificationController::class, 'markNotification']);
 Route::patch('/mark-notifications',         [NotificationController::class, 'markAllNotifications']);
 Route::delete('/notification/{id}',         [NotificationController::class, 'destroy']);
+
+
+Route::get('/clear/route', function() {
+
+    \Artisan::call('cache:clear');
+    \Artisan::call('config:clear');
+    \Artisan::call('route:clear');
+
+    return 'Server Reset !';
+});
+
+Route::get('/send-mail', function () {
+
+    $name = "Funny Coder";
+
+    // The email sending is done using the to method on the Mail facade
+    Mail::to('shady.ber9@gmail.com')->send(new MyTestEmail($name));
+
+
+    return 'Email sent!';
+});

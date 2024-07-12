@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory(10)->create();
 
-        Item::factory(30)->create();
+     //   Item::factory(30)->create();
        BlogCategory::factory(5)->create();
 
 
