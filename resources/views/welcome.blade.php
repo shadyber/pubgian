@@ -36,8 +36,8 @@
         <![endif]-->
 
             <!-- preloader -->
-            <div id="loader-wrapper">
-                <div id="loader"></div>
+            <div id="loader-wrapper" class="flex items-center justify-center">
+                <div class="loader"></div>
             </div>
 
 

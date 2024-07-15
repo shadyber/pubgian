@@ -119,60 +119,21 @@
 
 <div class="search-result-list">
 <ul class="text-left">
+
+    @foreach(\App\Models\Item::lastN(7) as $it)
     <li class="d-block d-flex align-items-center">
         <div class="search-result-img">
-            <img  src="/img/product/1.jpg" class="w-100" alt="">
+            <img  src="{{$it->thumb}}" class="w-100" alt="">
         </div>
         <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
-            <div class="price">$<span>399</span></div>
+            <a href="/item/{{$it->slug}}" class="px-0 title">
+                {{$it->name}}
+            </a>
+            <div class="price">$ETB <span> {{$it->price}}</span></div>
         </div>
     </li>
-    <li class="d-block d-flex align-items-center">
-        <div class="search-result-img">
-            <img  src="/img/product/2.jpg" class="w-100" alt="">
-        </div>
-        <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
-            <div class="price">$<span>399</span></div>
-        </div>
-    </li>
-    <li class="d-block d-flex align-items-center">
-        <div class="search-result-img">
-            <img  src="/img/product/3.jpg" class="w-100" alt="">
-        </div>
-        <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>
-            <div class="price">$<span>399</span></div>
-        </div>
-    </li>
-    <li class="d-block d-flex align-items-center">
-        <div class="search-result-img">
-            <img  src="/img/product/1.jpg" class="w-100" alt="">
-        </div>
-        <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">ELLE  - Recliner syntheti chair</a>
-            <div class="price">$<span>399</span></div>
-        </div>
-    </li>
-    <li class="d-block d-flex align-items-center">
-        <div class="search-result-img">
-            <img  src="/img/product/2.jpg" class="w-100" alt="">
-        </div>
-        <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">RIMINI  - Folding leather deck chair</a>
-            <div class="price">$<span>399</span></div>
-        </div>
-    </li>
-    <li class="d-block d-flex align-items-center">
-        <div class="search-result-img">
-            <img  src="/img/product/3.jpg" class="w-100" alt="">
-        </div>
-        <div class="pl-10 search-result-desc">
-            <a href="single-product-2.html" class="px-0 title">LANDSCAPE  - Folding fabric deck chair</a>
-            <div class="price">$<span>399</span></div>
-        </div>
-    </li>
+        @endforeach
+
 </ul>
 </div>
 </div>

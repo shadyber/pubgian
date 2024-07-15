@@ -12,14 +12,19 @@ use Livewire\WithFileUploads;
 
 class AdminAddProductComponent extends Component
 {
-
-
+public $user;
+  public function __construct()
+  {$this->user=Auth::user();
+      if($this->user->id!=1){
+          return $this->redirect('dashboard');
+      }
+  }
 
     public function render()
     {
         $categories = ItemCategory::all();
-        $user=Auth::user();
 
-        return view('livewire.admin.admin-add-product-component',['categories'=>$categories])->layout('layouts.guest');
+
+        return view('livewire.admin.admin-add-product-component',['categories'=>$categories])->layout('layouts.admin');
     }
 }

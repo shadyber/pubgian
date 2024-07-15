@@ -48,50 +48,32 @@
   z-index: 999999;
   background-color: #fff;
 }
-
-#loader {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  height: 100px;
-  margin: -100px 0 0 -100px;
-  border-top: 3px solid #3498db;
-  border-radius: 50%;
-
-  -webkit-animation: spin 3.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 3.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 0 0 #0004;
+    animation: l2 1.5s infinite linear;
+    position: relative;
 }
-
-#loader:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  right: 5px;
-  border-top: 3px solid #e74c3c;
-  border-radius: 50%;
-
-  -webkit-animation: spin 2.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 2.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 #0004;
+    animation: inherit;
+    animation-delay: -0.5s;
 }
-
-#loader:after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  bottom: 15px;
-  right: 15px;
-  border-top: 3px solid #f9c922;
-  border-radius: 50%;
-
-  -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+.loader:after {
+    animation-delay: -1s;
 }
-
+@keyframes l2 {
+    100% {box-shadow: 0 0 0 40px #0000}
+}
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
@@ -121,7 +103,9 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   font-style: normal;
+   cursor: url('/cursor.svg') 12 12, auto;
 }
+
 .container-fluid {
   padding-left: 70px;
   padding-right: 70px;

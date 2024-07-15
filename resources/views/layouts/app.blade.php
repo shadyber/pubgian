@@ -45,11 +45,10 @@
            <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-
-            <!-- preloader -->
-            <div id="loader-wrapper">
-                <div id="loader"></div>
-            </div>
+           <!-- preloader -->
+           <div id="loader-wrapper" class="flex items-center justify-center">
+               <div class="loader"></div>
+           </div>
 
 
 
