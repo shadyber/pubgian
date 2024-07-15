@@ -5,8 +5,8 @@
             {{ $successMessage }}
         </div>
     @endif
-         <div>
-        <div class="stepwizard">
+    <div>
+         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
                 <div class="stepwizard-step">
                     <a href="#step-1" type="button" class="btn btn-circle {{ $currentStep != 1 ? 'btn-default' : 'btn-primary' }}">1</a>
@@ -27,7 +27,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row setup-content {{ $currentStep != 1 ? 'displayNone' : '' }}" id="step-1">
             <div class="col-md-12 col-xs-12 m-2 p-1">
                 <div class="col-lg-12 col-md-12">
@@ -91,7 +90,9 @@
                 <div class="col-lg-12 col-md-12">
                     <h3> Photo </h3>
                    @if($item)
-                     @livewire('upload-photo',['item'=>$item])
+                    <div class="mt-3 mb-3 ml-3">
+                        @livewire('upload-photo',['item'=>$item])
+                    </div>
                     @endif
                     <x-button class="btn-primary nextBtn pull-right" type="button" wire:click="secondStepSubmit">Next</x-button>
                     <x-button class="btn-danger nextBtn pull-right" type="button" wire:click="back(1)">Back</x-button>
@@ -155,7 +156,7 @@
                 </div>
             </div>
         </div>
-    <div class="row setup-content {{ $currentStep != 4 ? 'displayNone' : '' }}" id="step-3">
+         <div class="row setup-content {{ $currentStep != 4 ? 'displayNone' : '' }}" id="step-3">
         <div class="col-md-12 col-xs-12 m-2 p-1">
             <div class="col-lg-12 col-md-12">
                 <h3>Finally !</h3>
@@ -170,59 +171,61 @@
         </div>
     </div>
     </div>
+
+        @if(!empty($successMessage))
+            <div class="alert alert-success">
+                {{ $successMessage }}
+            </div>
+        @endif
   <div>
 
-            @if(!empty($successMessage))
-                <div class="alert alert-success">
-                    {{ $successMessage }}
-                </div>
-            @endif
-            <div>
-    <style>
+      <style>
 
-        .stepwizard-step p {
-            margin-top: 10px;
-        }
-        .stepwizard-row {
-            display: table-row;
-        }
-        .stepwizard {
-            display: table;
-            width: 100%;
-            position: relative;
-        }
-        .stepwizard-step button[disabled] {
-            opacity: 1 !important;
-            filter: alpha(opacity=100) !important;
-        }
-        .stepwizard-row:before {
-            top: 14px;
-            bottom: 0;
-            position: absolute;
-            content: " ";
-            width: 100%;
-            height: 1px;
-            background-color: #ccc;
-            z-order: 0;
-        }
-        .stepwizard-step {
-            display: table-cell;
-            text-align: center;
-            position: relative;
-        }
-        .btn-circle {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            padding: 6px 0;
-            font-size: 12px;
-            line-height: 1.428571429;
-            border-radius: 15px;
-        }
-        .displayNone{
-            display: none;
-        }
+          .stepwizard-step p {
+              margin-top: 10px;
+          }
+          .stepwizard-row {
+              display: table-row;
+          }
+          .stepwizard {
+              display: table;
+              width: 100%;
+              position: relative;
+          }
+          .stepwizard-step button[disabled] {
+              opacity: 1 !important;
+              filter: alpha(opacity=100) !important;
+          }
+          .stepwizard-row:before {
+              top: 14px;
+              bottom: 0;
+              position: absolute;
+              content: " ";
+              width: 100%;
+              height: 1px;
+              background-color: #ccc;
+              z-order: 0;
+          }
+          .stepwizard-step {
+              display: table-cell;
+              text-align: center;
+              position: relative;
+          }
+          .btn-circle {
+              width: 30px;
+              height: 30px;
+              text-align: center;
+              padding: 6px 0;
+              font-size: 12px;
+              line-height: 1.428571429;
+              border-radius: 15px;
+          }
+          .displayNone{
+              display: none;
+          }
 
-    </style>
+      </style>
+  <div>
 
-</div>
+
+
