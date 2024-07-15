@@ -66,10 +66,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
 
 
-    public function  implements Email()
-    {
-        return $this->hasOne(ShipingInfo::class);
-    }
 
  public function comments()
     {
