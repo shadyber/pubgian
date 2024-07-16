@@ -1,7 +1,7 @@
 <div>
 
     <form action="review"  method="POST" >
-        <input type="hidden" name="item_id" value="{{$item->id}}">
+        <input type="hidden" name="item_id" value="{{$itemid}}">
         <div class=" d-flex justify-content-center mt-5">
             <div class=" text-center mb-5">
                 <div class="rating"> <input type="radio" name="rating" value="5" id="5">

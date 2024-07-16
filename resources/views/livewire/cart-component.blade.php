@@ -6,63 +6,41 @@
 
                 <div class="product-content">
                     <form  wire:submit.prevent="updateAllCart(Object.fromEntries(new FormData($event.target)))">
-                        <div class="table-responsive">
-                            <table class="table table-2">
-                                <thead>
-                                <tr>
-                                    <th class="remove-porduct"></th>
-                                    <th class="product-image"></th>
-                                    <th class="product-title">Product</th>
-                                    <th>Price</th>
-                                    <th class="quantity">Quantity</th>
-                                    <th class="total">Total</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($carts as $id=>$cart )
+                        <div class="table">
 
-                                    <tr>
-                                        <td>
-                                            <div class="table-data">
-                                                <a href="#" wire:click="removeCart({{$cart['id']}})" ><i class="fa fa-times"></i></a>
+                                @foreach($carts as $id=>$cart )
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <div>
+                                                    <a href="/item/{{$cart['slug']}}">
+                                                    <img src="{{$cart['thumb']}}" class="img-fluid rounded-3" alt="Shopping item {{$cart['name']}}" style="width: 65px;">
+                                                    </a> </div>
+                                                <div class="ms-3">
+                                                    <h5>{{$cart['name']}}</h5>
+                                                    <p class="small mb-0"><input  name="cartsQnt{{$id}}"   type="number" value="{{$cart['quantity']}}"> </p>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-data">
-                                                <img src="{{$cart['thumb']}}" width="80" alt="">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <div style="width: 50px;">
+                                                    <h5 class="fw-normal mb-0">{{$cart['quantity']}}</h5>
+                                                </div>
+                                                <div style="width: 80px;">
+                                                    <h5 class="mb-0">$ETB {{$cart['price']* $cart['quantity']}}</h5>
+                                                </div>
+                                                <a href="#!" style="color: #cecece;"  wire:click="removeCart({{$cart['id']}})" ><i class="fas fa-trash-alt"></i></a>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-data">
-                                                <h6><a href="/item/{{$cart['slug']}}" class="title">{{$cart['name']}}</a></h6>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-data">
-                                                <span class="price">$ETB {{$cart['price']}}</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-data">
-                                                <input name="cartsQnt{{$id}}"    type="number" value="{{$cart['quantity']}}" style="margin-right: 20px; width: 119px;" >
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="table-data">
-                                                <span class="total">$ETB{{$cart['price'] * $cart['quantity']}}</span>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 @endforeach
 
 
-                                </tbody>
-                            </table>
                         </div>
                         <div class="cupon">
-
-                            <input type="text" placeholder="Cupon code" class="text-left pl-3" style="margin-right: 20px; width: 119px;">
-                            <button class="generic-btn border-0 red-hover-btn text-uppercase">Apply Cupon</button>
+                                <p>Click Update Cart if you do Quantity Changes</p>
                             <button class="generic-btn border-0 red-hover-btn text-uppercase float-right" type="submit">Update Cart</button>
 
                         </div></form>

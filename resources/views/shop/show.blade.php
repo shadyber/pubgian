@@ -176,7 +176,7 @@
                                                     @endforeach
                                                     <p>There are no more reviews yet.</p>
                                                     <h4>Add a review</h4>
-@livewire('rating-form')
+@livewire('rating-form', ['itemid' => $item->id])
 
 
                                                 </div>
