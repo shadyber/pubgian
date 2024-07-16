@@ -4,12 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome {{env('APP_NAME')}}</title>
+        <title>Welcome {{env('APP_NAME','Shegerstor')}}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
+        <meta property="og:title" content="Addisstor The Ultimate Gaming Store for Gamers for Ethiopians and For African" />
+        <meta property="og:description" content="GAMES, COMMUNITY AND DIGITAL EXPERIENCES, CREATED WITH AMBITION, INNOVATION, AND CARE.
+" />
+        <meta property="og:image" content="https://shegerstor.com/img/slider/20.jpg" />
+        <meta name="robots" content="noindex,nofollow">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 

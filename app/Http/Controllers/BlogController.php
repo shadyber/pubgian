@@ -6,6 +6,10 @@ use App\Events\BlogCreated;
 use App\Models\Blog;
 use App\Models\User;
 use App\Notifications\BlogCreatedNotification;
+use Artesaos\SEOTools\Facades\JsonLd;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
@@ -99,6 +103,12 @@ class BlogController extends Controller
 
 
 
+        SEOTools::setTitle(''.$lastblog->title);
+        SEOTools::setDescription(' '.$lastblog->detail);
+        SEOTools::opengraph()->setUrl(env('APP_URL'.'/blog/'.$lastblog->slug));
+        SEOTools::opengraph()->setCanonical(env('APP_URL'.'/blog/'.$lastblog->slug));
+
+        SEOTools::opengraph()->addProperty('type', 'articles');
 
 
 
@@ -124,6 +134,34 @@ class BlogController extends Controller
         if($blog!=null){
             $blog->visit++;
             $blog->save();
+
+
+            SEOMeta::setTitle($blog->title);
+            SEOMeta::setDescription($blog->detail);
+            SEOMeta::addMeta('article:published_time', $blog->created_at->toW3CString(), 'property');
+            SEOMeta::addMeta('article:section', $blog->category->title, 'property');
+            SEOMeta::addKeyword([$blog->tags]);
+
+            OpenGraph::setDescription($blog->detail);
+            OpenGraph::setTitle($blog->title);
+            OpenGraph::setUrl(env('APP_URL'.'/blog/'.$blog->slug));
+            OpenGraph::addProperty('type', 'article');
+            OpenGraph::addProperty('locale', 'en-us');
+            OpenGraph::addProperty('locale:alternate', ['en-uk', 'en-us']);
+
+            OpenGraph::addImage($blog->thumb);
+            OpenGraph::addImage($blog->photo);
+            OpenGraph::addImage(['url' =>env('app_url').$blog->photo, 'size' => 300]);
+            OpenGraph::addImage(env('app_url').$blog->photo, ['height' => 300, 'width' => 300]);
+
+            JsonLd::setTitle($blog->title);
+            JsonLd::setDescription($blog->detail);
+            JsonLd::setType('Article');
+            JsonLd::addImage($blog->photo);
+
+
+
+
             return view('blog.show')->with('blog',$blog);
         }
 
