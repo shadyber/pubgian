@@ -163,11 +163,8 @@
                                                                         <div class="col-5 pr-5-px pl-0">
                                                                             <div class="rating text-right">
                                                                                 ({{$rv->stars}})
-                                                                                <i class="fal fa-star red-color"></i>
-                                                                                <i class="fal fa-star red-color"></i>
-                                                                                <i class="fal fa-star red-color"></i>
-                                                                                <i class="fal fa-star"></i>
-                                                                                <i class="fal fa-star"></i>
+
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -179,29 +176,9 @@
                                                     @endforeach
                                                     <p>There are no more reviews yet.</p>
                                                     <h4>Add a review</h4>
+@livewire('rating-form')
 
-                                                    <form action="#" method="POST">
-                                                        <label for="rating">Your Rating</label>
-                                                        <input type="radio" id="rating">
-                                                    </form>
-                                                    <p class="star-rating">
-                                                        <a href="javascript:void(0)"><i class="fal fa-star"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fal fa-star"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fal fa-star"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fal fa-star"></i></a>
-                                                        <a href="javascript:void(0)"><i class="fal fa-star"></i></a>
-                                                    </p>
 
-                                                    <div class="form-group">
-                                                        <label for="review">Review</label>
-                                                        <textarea name="review" id="review" cols="30" rows="6"
-                                                                  class="form-control"></textarea>
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <button type="submit" class="generic-btn red-hover-btn"
-                                                                style="font-size: 14px !important;">Submit</button>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="desc-tab-3">

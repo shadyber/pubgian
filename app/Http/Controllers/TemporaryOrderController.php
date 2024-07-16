@@ -39,16 +39,16 @@ class TemporaryOrderController extends Controller
     public function show($temporaryOrder)
     {
 
-       $order=TemporaryOrder::find($temporaryOrder);
-       $cart=json_decode($order->cart);
-       $user=$order->user_id;
-       $shipping_address=ShipingInfo::find($order->shipping_address_id);
+        $order=TemporaryOrder::find($temporaryOrder);
+        $cart=json_decode($order->cart);
+        $user=$order->user_id;
+        $shipping_address=ShipingInfo::find($order->shipping_address_id);
 
-       session()->remove('cart');
+        session()->remove('cart');
 
-       foreach ($cart as $car){
-           CartController::manualcart($car->id,$car->quantity);
-       }
+        foreach ($cart as $car){
+            CartController::manualcart($car->id,$car->quantity);
+        }
         return view('checkout.late')->with(['order'=>$order,'user_id'=>$user,'carts'=>$cart,'shippinginfo'=>$shipping_address]);
     }
 

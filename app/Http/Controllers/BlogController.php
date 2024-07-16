@@ -34,7 +34,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+
 
         //
         if(!Auth::user()->id==1){
@@ -67,21 +67,39 @@ class BlogController extends Controller
             'photo'=>'required|mimes:jpg,png,jpeg|max:5048',
         ]);
 
+        try {
+            $imageName = time().'.'.$request->photo->extension();
+          $request->photo->move(public_path('images'), $imageName);
+           // $img=  $request->photo->storePublicly( 'images', 'public');
 
 
-        $lastblog=  Blog::create([
-                'title'=>$request->input('title'),
-                'detail'=>$request->input('detail'),
-                'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title.$request->_token),
-                'photo'=>'/images/blog/',
-                'thumb'=>'/images/blog/thumbnails/',
-                'tags'=>$request->input('tags'),
 
-                'user_id'=>auth()->user()->id,
 
-                'blog_category_id'=>$request->input('blog_category_id'),
-            ]
-        );
+
+            $lastblog=  Blog::create([
+                    'title'=>$request->input('title'),
+                    'detail'=>$request->input('detail'),
+                    'slug'=>SlugService::createSlug(Blog::class,'slug',$request->title.$request->_token),
+                    'photo'=>'/images/'.$imageName,
+                    'thumb'=>'/images/'.$imageName,
+                    'tags'=>$request->input('tags'),
+
+                    'user_id'=>auth()->user()->id,
+
+                    'blog_category_id'=>$request->input('blog_category_id'),
+                ]
+            );
+
+
+
+        }catch (Exception $ex){
+
+        }
+
+
+
+
+
 
 
         $users=User::all();

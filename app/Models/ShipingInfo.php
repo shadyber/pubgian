@@ -18,9 +18,9 @@ class ShipingInfo extends Model
     ];
     public function user() {
         return $this->belongsTo(User::class,'id');
-   }
+    }
 
-   public function order(){
-       return $this->belongsTo(Order::class);
-   }
+    public function order(){
+        return $this->belongsTo(Order::class);
+    }
 }

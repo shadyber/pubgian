@@ -17,6 +17,7 @@ class Wizard extends Component
         $item,
         $price, $detail,
         $status = 1,
+        $condition,
         $photo,
         $video_url,
         $thumb,
@@ -52,6 +53,7 @@ $this->item=Item::create(
         'init_qnt'=>$this->init_qnt,
         'item_category_id'=>$this->item_category_id,
         'detail'=>$this->detail,
+        'condition'=>$this->condition,
         'user_id'=>1,
     ]
 );

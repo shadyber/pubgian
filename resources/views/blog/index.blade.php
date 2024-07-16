@@ -1,45 +1,139 @@
 <x-app-layout>
     <x-slot name="header">
 
-        {{ __('Blog ') }}
+        {{ __('Blog Detail') }}
 
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="col-xl-12">
-                    <div class="row">
-                        @foreach($blogs as $blog)
-                            <div class="col-lg-6 col-md-6 col-xl-4 mb-50px">
-                                <div class="single-blog">
-                                    <div class="blog-image">
-                                        <a href="/blog/{{$blog->slug}}"><img src="{{$blog->thumb}}" class="img-responsive w-100" alt="{{$blog->title}}"></a>
-                                    </div>
-                                    <div class="blog-text">
-                                        <div class="blog-athor-date">
-                                            <a class="blog-date height-shape" href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{$blog->created_at->diffForHumans()}}</a>
-                                            <a class="blog-mosion" href="/blog/{{$blog->slug}}"><i class="fa fa-commenting" aria-hidden="true"></i> {{$blog->visit}}</a>
-                                        </div>
-                                        <h5 class="blog-heading"><a class="blog-heading-link" href="/blog/{{$blog->slug}}">{{$blog->title}}</a></h5>
+    <section id="blog">
+        <div class="p-3 m-3">
 
-                                        <p>{{substr($blog->detail,0,100)}}</p>
 
-                                        <a href="/blog/{{$blog->slug}}" class="btn btn-primary blog-btn"> Read More<i class="fa fa-arrow-right ml-5px" aria-hidden="true"></i></a>
-                                    </div>
+            <div class="row">
+
+
+                <div class="col-xl-3 hidden-xl">
+                    <!-- widget -->
+                    <div class="widget pr-0 mb-50">
+                        <h4 class="mb-30">Search</h4>
+                        <div class="sidebar-search-form">
+                            <form action="#" method="POST">
+                                <input type="text" placeholder="Search">
+                                <button type="submit"><i class="fal fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="widget blog-list pr-0 mb-50">
+                        <h4 class="mb-30">Categories</h4>
+                        <div class="accordion" id="accordionExample">
+                            @foreach(\App\Models\BlogCategory::all() as $cat)
+                                <div class="list">
+                                    <a href="/blogcategory/{{$cat->id}}">{{$cat->title}} <span>({{count($cat->blogs)}})</span></a>
+                                    <button class="float-right text-right" type="button" data-toggle="collapse" data-target="#collapse-1">
+                                        <span class="float-right"><i class="fal fa-angle-right"></i></span>
+                                    </button>
+
                                 </div>
-                            </div>
-                            <!-- End single blog -->
-                        @endforeach
+                            @endforeach
+
+                        </div>
+                    </div>
+                    <div class="widget pr-0 mb-50">
+                        <h4 class="mb-30">Recent Post</h4>
+                        <div class="post-box">
+                            <ul>
+                                @foreach(\App\Models\Blog::lastN(5) as $blg)
+                                    <li>
+                                        <div class="post-img">
+                                            <img src="{{$blg->thumb}}" class="w-100" alt="{{$blg->title}}">
+                                        </div>
+                                        <div class="post-img-desc">
+                                            <a href="/blog/{{$blg->category->title}}">{{$blg->category->title}}</a>
+                                            <div class="price"> {{$blg->created_at->diffForHumans()}} </div>
+                                        </div>
+                                    </li>
+                                @endforeach
+
+                            </ul>
+                        </div>
                     </div>
 
 
-                    <div class="text-center mt-60 load-btn">
-                        <a href="javascript:void(0)" class="load-more generic-btn transparent-bg-red">Load More...</a>
+                </div>
+
+
+
+                <div class="col-xl-9">
+                    <div class="row">
+
+                        <div class="row justify-content-center">
+                            @foreach($blogs as $blog)
+                                <div class="col-md-6 col-sm-12 col-lg-4">
+
+                                    <div class="blog-wrapper">
+                                        <div class="blog-box-img">
+                                            <a href="/blog/{{$blog->slug}}"><img src="{{$blog->thumb}}" class="w-100" alt="{{$blog->thumb}}"></a>
+                                            <div class="blog-box-tags">
+                                                {{$blog->tags}}
+                                            </div>
+                                        </div>
+                                        <div class="blog-box-desc primary-desc text-center">
+                                            <div class="blog-box-link">
+                                                <h3><a href="/blog/{{$blog->slug}}">{{$blog->title}}</a></h3>
+                                            </div>
+                                            <ul class="post-entry-data">
+                                                <li class="post-date"> {{$blog->created_at->diffForHumans()}}</li>
+                                                <li class="post-by">Posted by <a href="javascript:void(0)" class="red-color f-400"><strong>admin</strong></a></li>
+                                                <li class="post-comments"><i class="fal fa-envelope"></i> 0 Comment(s)</li>
+                                            </ul>
+                                            <div class="blog-short-content">
+                                                <p> {{substr(strip_tags($blog->detail), 0, 300 )}} ...</p>
+                                            </div>
+                                            <a href="/blog/{{$blog->slug}}" class="blog-box-action pt-10 red-color">Continue Reading</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            @endforeach
+                        </div>
+
+
+                        <div class="text-center mt-60 load-btn">
+                            <a href="javascript:void(0)" class="load-more generic-btn transparent-bg-red">Load More...</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 </x-app-layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

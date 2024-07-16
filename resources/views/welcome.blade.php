@@ -84,289 +84,67 @@
             <p>Feel Free to choose any product in our shop </p>
             <p>and you can order anytime.</p>
         </div>
-        <ul class="mb-3 nav nav-pills nav-2 pl-15 left-tab-link justify-content-center mt-65" >
-            <li class="nav-item">
-              <a class="active" data-toggle="pill" href="#main-tab-1">Vertual Coins <sup>(15)</sup></a>
-            </li>
-            <li class="nav-item">
-              <a class="" data-toggle="pill" href="#main-tab-2">Accessories <sup>(10)</sup></a>
-            </li>
-            <li class="nav-item">
-              <a class=""  data-toggle="pill" href="#main-tab-3">Devices <sup>(18)</sup></a>
-            </li>
-        </ul>
 
-        <div class="tab-content mt-25">
 
-            <div class="tab-pane fade show active" id="main-tab-1">
-                <div class="product-content-inner">
-                    <div class="product-grid">
-                        <div class="row">
+<div class="container">
 
-                            <div class="col-xl-6">
-                                <div class="product-grid-left">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::popularNCategory(9,1) as $it1)
+        <div class="container py-5">
+            <div class="row">
 
-                                        <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                            <div class="mb-40 product-box position-relative middle-view">
-                                                <div class="product-box-wrapper">
-                                                    <div class="product-img">
-                                                        <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                        <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                            <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                        </div></a>
-                                                        <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                    </div>
+                @foreach(\App\Models\Item::lastN(12) as $it)
+                 <div class="col-md-3 col-sm-6 col-lg-3 pb-3 mb-2">
+                     <article class="max-w-sm w-full bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-700">
+                           <span class="position-absolute top-0 right-0
+                         translate-middle p-3 m-2 rounded-pill
+                         border border-light
+                         badge">
+                <span class="visually-hidden">
+                {{$it->badge}}
+                </span>
+            </span>
+                         <a href="/item/{{$it->slug}}">
 
-                                                    <div class="product-desc">
-                                                        <div class="product-desc-top">
-                                                            <div class="categories">
-                                                                <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
+                         <div>
+                             <img class="object-cover h-64 w-full" src="{{$it->thumb}}" alt="{{$it->name}}" />
+                         </div>
+                         </a>
+                         <a href="/item/{{$it->slug}}">
+                         <div class="flex flex-col gap-1 mt-4 px-4">
+                             <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-50">{{substr($it->name, 0,64)}}</h2>
+                             <span class="font-normal text-gray-600 dark:text-gray-300">{{$it->category->title}}</span>
+                             <span class="font-semibold text-gray-800 dark:text-gray-50">$ETB {{$it->price}}</span>
+                         </div>
+                         </a>
 
-                                                            </div>
-                                                            <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                        </div>
-                                                        <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                        <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                            @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endforeach
 
-                                    </div>
-                                </div>
-                            </div>
+                         <div class="mt-4 p-4 border-t border-gray-200 dark:border-gray-500">
+                             <button class="w-full flex justify-between items-center font-bold cursor-pointer hover:underline text-gray-800 dark:text-gray-50">
+                                 <span class="text-base"> <a href="#">Add to Wishlist</a></span>
+                                 @livewire('add-to-cart-component', ['itemid' => $it->id])
+                             </button>
+                         </div>
+                     </article>
+                 </div>
+                @endforeach
 
-                            <!-- /. product grid left -->
-                            <div class="col-xl-6">
-                                <div class="product-grid-right">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::lastNCategory(9,2) as $it1)
 
-                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                                <div class="mb-40 product-box position-relative middle-view">
-                                                    <div class="product-box-wrapper">
-                                                        <div class="product-img">
-                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                                </div></a>
-                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                        </div>
 
-                                                        <div class="product-desc">
-                                                            <div class="product-desc-top">
-                                                                <div class="categories">
-                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
 
-                                                                </div>
-                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                            </div>
-                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                            <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                                @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /. product grid right -->
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade pl-15" id="main-tab-2">
-
-            <div class="product-grid">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="product-grid-left">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::lastNCategory(9,2) as $it1)
-
-                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                                <div class="mb-40 product-box position-relative middle-view">
-                                                    <div class="product-box-wrapper">
-                                                        <div class="product-img">
-                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                                </div></a>
-                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                        </div>
-
-                                                        <div class="product-desc">
-                                                            <div class="product-desc-top">
-                                                                <div class="categories">
-                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
-
-                                                                </div>
-                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                            </div>
-                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                            <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                                @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /. product grid left -->
-                            <div class="col-xl-6">
-                                <div class="product-grid-right">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::popularNCategory(9,2) as $it1)
-
-                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                                <div class="mb-40 product-box position-relative middle-view">
-                                                    <div class="product-box-wrapper">
-                                                        <div class="product-img">
-                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                                </div></a>
-                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                        </div>
-
-                                                        <div class="product-desc">
-                                                            <div class="product-desc-top">
-                                                                <div class="categories">
-                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
-
-                                                                </div>
-                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                            </div>
-                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                            <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                                @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /. product grid right -->
-                        </div>
-                    </div>
-
-                </div>
-
-            <div class="tab-pane fade pl-15" id="main-tab-3">
-               <div class="product-grid">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="product-grid-left">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::popularNCategory(9,3) as $it1)
-
-                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                                <div class="mb-40 product-box position-relative middle-view">
-                                                    <div class="product-box-wrapper">
-                                                        <div class="product-img">
-                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                                </div></a>
-                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                        </div>
-
-                                                        <div class="product-desc">
-                                                            <div class="product-desc-top">
-                                                                <div class="categories">
-                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
-
-                                                                </div>
-                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                            </div>
-                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                            <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                                @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /. product grid left -->
-                            <div class="col-xl-6">
-                                <div class="product-grid-right">
-                                    <div class="row">
-                                        @foreach(\App\Models\Item::lastNCategory(9,3) as $it1)
-
-                                            <div class="@if(($it1->id%3) !=0) col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 @else col-xl-12 @endif">
-                                                <div class="mb-40 product-box position-relative middle-view">
-                                                    <div class="product-box-wrapper">
-                                                        <div class="product-img">
-                                                            <img src="{{$it1->thumb}}" class="w-100" alt="">
-                                                            <a href="/item/{{$it1->slug}}" class="d-block"><div class="second-img">
-                                                                    <img src="{{$it1->photo}}" alt="" class="w-100">
-                                                                </div></a>
-                                                            <a href="javascript:void(0)" class="product-img-link quick-view-1 text-capitalize eright-turquoise-color-hover">Quick view</a>
-                                                        </div>
-
-                                                        <div class="product-desc">
-                                                            <div class="product-desc-top">
-                                                                <div class="categories">
-                                                                    <a href="/cattegory/{{$it1->category->slug}}" class="product-category"><span>{{$it1->category->title}}</span></a>
-
-                                                                </div>
-                                                                <a href="#wishlist" class="float-right wishlist"><span><i class="fal fa-heart"></i></span></a>
-                                                            </div>
-                                                            <a href="/item/{{$it1->slug}}" class="product-title eright-turquoise-color-hover">{{$it1->name}}</a>
-                                                            <div class="price-switcher">
-                                                                <span class="price switcher-item">$ETB {{$it1->price}}</span>
-                                                               @livewire('add-to-cart-component', ['itemid' => $it1->id])
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /. product grid right -->
-                        </div>
-                    </div>
             </div>
         </div>
-    </div>
+
+
+</div>
+
+
 <div class="container gray-border-bottom pb-110 load-btn">
         <div class="text-center mt-60">
             <a href="/shop" class="load-more">MORE PRODUCTS</a>
        </div>
     </div>
 
-
+    </div>
 </section>
 <!-- new arrival section end -->
 
@@ -425,5 +203,13 @@
         <script src="/js/jquery.magnific-popup.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
-        </body>
+             <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+             <script type="text/javascript">
+                 aclib.runAutoTag({
+                     zoneId: 'ccyux5g1bm',
+                 });
+             </script>
+
+    </body>
     </html>

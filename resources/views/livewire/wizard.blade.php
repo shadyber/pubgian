@@ -54,7 +54,7 @@
                                   wire:model.lazy="detail"></textarea>
 
                     </div>
-
+                    <div class="form-group">
                     <x-label for="item_category_id" value="{{ __('Select Category') }}" />
 
                     @error('item_category_id') <span class="error red-color">{{ $message }}</span> @enderror
@@ -69,6 +69,24 @@
                                 {{$mb->title}}    </option>
                         @endforeach
                     </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <x-label for="item_category_id" value="{{ __('Select Condition') }}" />
+
+                        @error('condition') <span class="error red-color">{{ $message }}</span> @enderror
+
+                        <select wire:model="condition" class="form-control black-color">
+                            <option value="" selected>Choose Item Condition</option>
+                            <option value="new">New</option>
+                            <option value="slightly used">Slightly Used</option>
+                            <option value="defect">Small Defect</option>
+                            <option value="damaged">Damaged</option>
+                        </select>
+                    </div>
+
+
 
                     <div class="form-group">
                         @error('init_qnt') <span class="error red-color">{{ $message }}</span> @enderror

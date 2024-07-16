@@ -42,7 +42,9 @@ Route::get('/shop', function () {
     return view('shop.index')->with(['items'=>$items]);
 });
 
-Route::resource('/blog', BlogController::class)->middleware('auth.basic');
+Route::get('/blog', [BlogController::class,'index']);
+Route::get('/blog/{slug}', [BlogController::class,'show']);
+
 Route::resource('/item', ItemController::class);
 Route::resource('/order', OrderController::class);
 Route::resource('/category', ItemCategoryController::class);
@@ -54,6 +56,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
+
+    Route::resource('/blog', BlogController::class)->except('index','show');
+    Route::get('/newblog',[BlogController::class,'create']);
 
 Route::get('/checkout', function (){
     $user= Auth::user();
