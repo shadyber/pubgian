@@ -114,6 +114,16 @@ Route::get('/clear/route', function() {
     return 'Server Reset !';
 });
 
+
+
+Route::get('/sitemap/generate', function() {
+
+    \Artisan::call('sitemap:generate');
+
+
+    return 'Sitemap Generated to Public directory ! <br>  https://shegerstor.com/sitemap.xml';
+});
+
 Route::get('/send-mail', function () {
 
     $name = "Funny Coder";
