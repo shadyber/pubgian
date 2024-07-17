@@ -31,7 +31,7 @@ return new class extends Migration
 
             $table->unsignedInteger('init_qnt')->default(1);
             $table->string('status')->default('available');
-            $table->string('condition')->default('new');
+            $table->string('item_condition')->default('new');
             $table->string('badge')->nullable()->default('NEW');
             $table->string('tags')->nullable();
             $table->integer('visit')->default(0);

@@ -12,7 +12,7 @@ class Item extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo', 'video_url', 'color','price','user_id','tags','weight','init_qnt','status', 'condition', 'badge'];
+    protected $fillable=['name','slug','detail','item_category_id','thumb', 'photo', 'video_url', 'color','price','user_id','tags','weight','init_qnt','status', 'item_condition', 'badge'];
 
     public function sluggable(): array
     {

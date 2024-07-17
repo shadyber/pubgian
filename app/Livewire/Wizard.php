@@ -53,7 +53,7 @@ $this->item=Item::create(
         'init_qnt'=>$this->init_qnt,
         'item_category_id'=>$this->item_category_id,
         'detail'=>$this->detail,
-        'condition'=>$this->condition,
+        'item_condition'=>$this->condition,
         'user_id'=>1,
     ]
 );

@@ -116,43 +116,40 @@
                                        <div class="tab-pane fade" id="shop-tab-1">
                                            <div class="product-wrapper mt-1">
                                                <div class="row">
-                                                   @foreach($items as $item)
-                                                   <div class="col-6">
-                                                       <div class="product-box mb-1">
-                                                           <div class="product-box-wrapper">
-                                                               <div class="product-img">
-                                                                   <img src="{{$item->thumb}}" class="w-100" alt="">
-                                                                   <a href="/item/{{$item->slug}}" class="d-block">
-                                                                       <div class="second-img">
-                                                                           <img src="{{$item->photo}}" alt="{{$item->price}}"
-                                                                                class="w-100">
-                                                                       </div>
-                                                                   </a>
+                                                   @foreach($items as $it)
+                                                       <div class="col-md-3 col-sm-6 col-lg-3 pb-3 mb-2">
+                                                           <article class="max-w-sm w-full bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-700">
+                           <span class="position-absolute top-0 right-0
+                         translate-middle p-3 m-2 rounded-pill
+                         border border-light
+                         badge">
+                <span class="visually-hidden">
+                {{$it->badge}}
+                </span>
+            </span>
+                                                               <a href="/item/{{$it->slug}}">
+
                                                                    <div>
-                                                                       @livewire('add-to-cart-component', ['itemid' => $item->id])
+                                                                       <img class="object-cover h-64 w-full" src="{{$it->thumb}}" alt="{{$it->name}}" />
                                                                    </div>
+                                                               </a>
+                                                               <a href="/item/{{$it->slug}}">
+                                                                   <div class="flex flex-col gap-1 mt-4 px-4">
+                                                                       <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-50">{{substr($it->name, 0,64)}}</h2>
+                                                                       <span class="font-normal text-gray-600 dark:text-gray-300">{{$it->category->title}}</span>
+                                                                       <span class="font-semibold text-gray-800 dark:text-gray-50">$ETB {{$it->price}}</span>
+                                                                   </div>
+                                                               </a>
+
+
+                                                               <div class="mt-4 p-4 border-t border-gray-200 dark:border-gray-500">
+                                                                   <button class="w-full flex justify-between items-center font-bold cursor-pointer hover:underline text-gray-800 dark:text-gray-50">
+                                                                       <span class="text-base"> <a href="#">Add to Wishlist</a></span>
+                                                                       @livewire('add-to-cart-component', ['itemid' => $it->id])
+                                                                   </button>
                                                                </div>
-
-                                                               <div class="product-desc pb-2">
-                                                                   <div class="product-desc-top">
-                                                                       <div class="categories">
-                                                                           <a href="/shop"
-                                                                              class="product-category"><span>{{$item->category->title}}</span></a>
-                                                                       </div>
-                                                                       <a href="/wishlist" class="wishlist float-right"><span><i
-                                                                                   class="fal fa-heart"></i></span></a>
-                                                                   </div>
-                                                                   <a href="/item/{{$item->slug}}" class="product-title">{{substr( $item->detail,0,64)}}</a>
-                                                                   <div class="price-switcher">
-                                                                       <span class="price switcher-item">$ETB {{$item->price}}</span>
-
-
-
-                                                                   </div>
-                                                               </div>
-                                                           </div>
+                                                           </article>
                                                        </div>
-                                                   </div>
                                                    @endforeach
 
                                                </div>
