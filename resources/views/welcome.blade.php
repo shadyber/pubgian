@@ -227,13 +227,6 @@
         <script src="/js/jquery.magnific-popup.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
-             <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-
-             <script type="text/javascript">
-                 aclib.runAutoTag({
-                     zoneId: 'ccyux5g1bm',
-                 });
-             </script>
 
     </body>
     </html>

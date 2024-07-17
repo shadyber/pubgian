@@ -56,10 +56,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-
     Route::resource('/blog', BlogController::class)->except('index','show');
     Route::get('/newblog',[BlogController::class,'create']);
-
+Route::resource('/wishlist',\App\Http\Controllers\WishlistController::class);
 Route::get('/checkout', function (){
     $user= Auth::user();
     $shippinginfo=$user->shippinginfo;
