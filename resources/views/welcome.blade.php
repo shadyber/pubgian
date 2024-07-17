@@ -11,7 +11,8 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <meta property="og:title" content="Addisstor The Ultimate Gaming Store for Gamers for Ethiopians and For African" />
-        <meta property="og:description" content="GAMES, COMMUNITY AND DIGITAL EXPERIENCES, CREATED WITH AMBITION, INNOVATION, AND CARE.
+        <meta property="og:tags" content="addisstor, addisstore , gamming , headset , uc , pubg , mobile, laptop , electronics , shop in ethiopia, addis ababa, gamming shope, addis store" />
+        <meta property="og:description" content="GAMES, COMMUNITY AND DIGITAL EXPERIENCES, CREATED WITH AMBITION, INNOVATION, AND CARE. shegerstore is Your All in one Shopping place from home.
 " />
         <meta property="og:image" content="https://shegerstor.com/img/slider/20.jpg" />
         <meta name="robots" content="noindex,nofollow">

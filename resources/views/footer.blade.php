@@ -14,7 +14,7 @@
                                                 <img src="/img/logo/logo2.png" width="120" height="31" alt="">
                                             </div>
                                             <div class="footer-desc">
-                                                <p class="mb-10">Mazia store is a premium theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready.</p>
+                                                <p class="mb-10">GAMES, COMMUNITY AND DIGITAL EXPERIENCES, CREATED WITH AMBITION, INNOVATION, AND CARE..</p>
                                             </div>
                                             <div class="footer-img mt-65">
                                                 <img  src="/img/logo/paypal.png" alt="">

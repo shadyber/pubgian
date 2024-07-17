@@ -120,7 +120,6 @@ Route::get('/sitemap/generate', function() {
 
     \Artisan::call('sitemap:generate');
 
-
     return 'Sitemap Generated to Public directory ! <br>  https://shegerstor.com/sitemap.xml';
 });
 
