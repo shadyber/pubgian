@@ -74,6 +74,7 @@
                                 <div class="list-product-wrapper">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-4 col-md-4">
+
                                             <div class="list-product-img">
                                                 <div class="product-img">
                                                     <img src="{{$item->photo}}" class="w-100"
@@ -85,11 +86,15 @@
                                                         </div>
                                                     </a>
 
+
                                                     <span
-                                                        class="sale bg-red text-white">{{$item->badge}}</span>
+                                                        class="sale bg-red text-white"><a href="#"><i class="fas fa-trash"></i></a></span>
+
                                                 </div>
                                             </div>
+
                                         </div>
+
                                         <div class="col-xl-8 col-lg-8 col-md-8">
                                             <div class="list-product-desc">
                                                 <h3><a href="/item/{{$item->slug}}" class="title mb-15">{{$item->name}}</a></h3>
@@ -99,6 +104,17 @@
                                                     <p>{{$item->detail}}</p>
                                                     <ul>
                                                         <li>–{{$item->tags}}</li>
+
+                                                        <li class="justify-content-between items-center">
+                                                            <span
+                                                                class="text-red-500"><button wire:click="deletItem({{$item->id}})" wire:confirm="Are you sure you want to delete this Item?"><i class="fas fa-trash"></i></button>
+                                                            </span>
+                                                            <span
+                                                                class="text-dark"><a href="#" ><i class="fas fa-pencil"></i></a>
+                                                            </span>
+
+
+                                                        </li>
 
                                                     </ul>
 
@@ -125,8 +141,11 @@
             <div class="m-2 p-2 ">
                 @livewire('admin.admin-add-product-component')
             </div>
-@elseif($page==6)
+           @elseif($page==6)
            @livewire('my-order-component')
+            @elseif($page==7)
+            @livewire('my-order-component')
+
             @endif
     </div>
 
